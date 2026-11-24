@@ -1,3 +1,10 @@
 {
-    "rust-analyzer.cargo.features": "all"
+    "rust-analyzer.cargo.features": "all",
+    "tinymist.exportTarget": "paged",
+    "tinymist.typstExtraArgs": [
+        "--features=html,bundle",
+        "--input=lang=en",
+        "--input=target=pdf",
+        "--input=goal=translation"
+    ]
 }
