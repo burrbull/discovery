@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Debug it
 <debug-it>
 == How does this even work?

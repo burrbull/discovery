@@ -1,3 +1,5 @@
+#import "config.typ": *
+
 = Discovery
 <discovery>
 #quote(block: true)[

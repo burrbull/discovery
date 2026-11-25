@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = \*nix tooling
 <nix-tooling>
 == Connecting the micro:bit board

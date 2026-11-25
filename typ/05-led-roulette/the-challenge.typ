@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = The challenge
 <the-challenge>
 You are now well armed to face a challenge! Your task will be to

@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = UART
 <uart>
 The microcontroller has a peripheral called UART, which stands for

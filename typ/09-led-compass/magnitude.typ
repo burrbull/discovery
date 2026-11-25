@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Magnitude
 <magnitude>
 We have been working with the direction of the magnetic field but what

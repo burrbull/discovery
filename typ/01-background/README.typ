@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Background
 <background>
 == What's a microcontroller?

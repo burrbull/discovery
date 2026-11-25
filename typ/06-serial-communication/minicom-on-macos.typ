@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Minicom on macOS
 <minicom-on-macos>
 === Finding Your Command Key

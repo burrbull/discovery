@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Echo server
 <echo-server>
 Let's merge transmission and reception into a single program and write

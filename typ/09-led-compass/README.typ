@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = LED compass
 <led-compass>
 In this section, we'll implement a compass using the LEDs on the

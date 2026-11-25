@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = General protocol
 <general-protocol>
 The I2C protocol is more elaborate than the serial communication

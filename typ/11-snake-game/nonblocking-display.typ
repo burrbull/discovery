@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Using the non-blocking display
 <using-the-non-blocking-display>
 We now have a basic functioning snake game. But you might find that when

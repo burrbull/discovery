@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = It blinks
 <it-blinks>
 == Delaying

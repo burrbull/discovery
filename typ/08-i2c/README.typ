@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = I2C
 <i2c>
 We just saw the serial communication protocol. It's a widely used

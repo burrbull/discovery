@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Read a single register
 <read-a-single-register>
 Let's put all that theory into practice!

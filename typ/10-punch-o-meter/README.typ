@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Punch-o-meter
 <punch-o-meter>
 In this section we'll be playing with the accelerometer that's in the

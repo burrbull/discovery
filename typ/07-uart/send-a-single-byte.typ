@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Send a single byte
 <send-a-single-byte>
 Our first task will be to send a single byte from the microcontroller to

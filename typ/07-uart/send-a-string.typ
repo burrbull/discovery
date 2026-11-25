@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Send a string
 <send-a-string>
 The next task will be to send a whole string from the microcontroller to

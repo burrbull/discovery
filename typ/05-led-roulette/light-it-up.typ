@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Light it up
 <light-it-up>
 == embedded-hal

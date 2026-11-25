@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Controls
 <controls>
 Our protagonist will be controlled by the two buttons on the front of

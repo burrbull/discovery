@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Receive a single byte
 <receive-a-single-byte>
 So far we can send data from the microcontroller to your computer. It's

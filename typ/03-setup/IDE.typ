@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Getting the most out of your IDE
 <getting-the-most-out-of-your-ide>
 All code in this book assumes that you use a simple terminal to build

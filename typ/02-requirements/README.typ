@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Hardware/knowledge requirements
 <hardwareknowledge-requirements>
 The primary knowledge requirement to read this book is to know

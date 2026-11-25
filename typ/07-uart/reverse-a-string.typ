@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Reverse a string
 <reverse-a-string>
 Alright, next let's make the server more interesting by having it

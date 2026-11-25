@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Game logic
 <game-logic>
 First, we are going to describe the game logic. You are probably

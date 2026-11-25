@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Setting up a development environment
 <setting-up-a-development-environment>
 Dealing with microcontrollers involves several tools as we'll be dealing

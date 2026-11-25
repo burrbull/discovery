@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Using a driver
 <using-a-driver>
 As we already discussed in chapter 5 `embedded-hal` provides

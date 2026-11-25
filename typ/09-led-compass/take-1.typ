@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Take 1
 <take-1>
 What's the simplest way in which we can implement the LED compass, even

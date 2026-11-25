@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Flash it
 <flash-it>
 Flashing is the process of moving our program into the microcontroller's

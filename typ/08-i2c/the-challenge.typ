@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = The challenge
 <the-challenge>
 The challenge for this chapter is, to build a small application that

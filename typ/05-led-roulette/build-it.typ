@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Build it
 <build-it>
 The first step is to build our "binary" crate. Because the

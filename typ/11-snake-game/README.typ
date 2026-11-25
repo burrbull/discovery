@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Snake game
 <snake-game>
 We're now going to implement a basic

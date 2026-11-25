@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Solution 1
 <solution-1>
 ```rust

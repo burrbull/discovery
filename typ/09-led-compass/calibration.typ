@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Calibration
 <calibration>
 One very important thing to do before using a sensor and trying to

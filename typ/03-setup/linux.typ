@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Linux
 <linux>
 Here are the installation commands for a few Linux distributions.

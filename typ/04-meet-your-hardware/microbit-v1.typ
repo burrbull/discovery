@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Nordic nRF51822 (the "nRF51", micro:bit v1)
 <nordic-nrf51822-the-nrf51-microbit-v1>
 Our MCU has 48 tiny metal #strong[pins] sitting right underneath it

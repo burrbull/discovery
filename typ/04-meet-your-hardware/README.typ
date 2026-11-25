@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Meet your hardware
 <meet-your-hardware>
 Let's get familiar with the hardware we'll be working with.

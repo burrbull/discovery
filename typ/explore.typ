@@ -1,3 +1,5 @@
+#import "config.typ": *
+
 = What's left for you to explore
 <whats-left-for-you-to-explore>
 We have barely scratched the surface! There's lots of stuff left for you

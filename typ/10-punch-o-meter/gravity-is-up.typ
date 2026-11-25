@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Gravity is up?
 <gravity-is-up>
 What's the first thing we'll do?

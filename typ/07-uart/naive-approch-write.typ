@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Naive approach and `write!`
 <naive-approach-and-write>
 == Naive approach

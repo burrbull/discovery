@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Verify the installation
 <verify-the-installation>
 Let's verify that all the tools were installed correctly.

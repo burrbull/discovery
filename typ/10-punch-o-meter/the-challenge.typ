@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = The challenge
 <the-challenge>
 To keep things simple, we'll measure the acceleration only in the X axis

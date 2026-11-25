@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Windows
 <windows>
 == `arm-none-eabi-gdb`

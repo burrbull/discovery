@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = LSM303AGR
 <lsm303agr>
 Both of the motion sensors on the micro:bit, the magnetometer and the

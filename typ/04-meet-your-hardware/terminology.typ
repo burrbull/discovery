@@ -1,3 +1,5 @@
+#import "../config.typ": *
+
 = Rust Embedded terminology
 <rust-embedded-terminology>
 Before we dive into programming the micro:bit let's have a quick look at
