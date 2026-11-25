@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Controls
-<controls>
+
 Our protagonist will be controlled by the two buttons on the front of
 the micro:bit. Button A will turn to the (snake's) left, and button B
 will turn to the (snake's) right.
@@ -13,7 +13,7 @@ micro:bit's GPIOTE (#strong[G]eneral #strong[P]urpose
 peripheral.
 
 == The `controls` module
-<the-controls-module>
+
 Code in this section should be placed in a separate file, `controls.rs`,
 in our `src` directory.
 
@@ -163,7 +163,7 @@ takes a single boolean argument, `reset`. If `reset` is `true`, the
 value of `TURN` is reset, i.e., set to `Turn::None`.
 
 == Updating the `main` file
-<updating-the-main-file>
+
 Returning to our `main` function, we need to add a call to
 `init_buttons` before our main loop, and in the game loop, replace our
 placeholder `Turn::None` argument to the `game.step` method with the

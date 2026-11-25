@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = The challenge
-<the-challenge>
+
 To keep things simple, we'll measure the acceleration only in the X axis
 while the board remains horizontal. That way we won't have to deal with
 subtracting that #emph[fictitious] `1g` we observed before which would

@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Game logic
-<game-logic>
+
 First, we are going to describe the game logic. You are probably
 familiar with snake games, but if not, the basic idea is that the player
 guides a snake around a 2D grid. At any given time, there is some "food"
@@ -14,7 +14,7 @@ grid we are going to implement a "wraparound" rule where, if the snake
 goes off one edge of the grid, it will continue from the opposite edge.
 
 == The `game` module
-<the-game-module>
+
 The code in this section should go in a separate file, `game.rs`, in our
 `src` directory.
 
@@ -421,7 +421,7 @@ impl Game {
 ```
 
 == The `main` file
-<the-main-file>
+
 The following code should be placed in our `main.rs` file.
 
 ```rust

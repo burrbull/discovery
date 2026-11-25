@@ -1,9 +1,9 @@
 #import "../config.typ": *
 
 = \*nix tooling
-<nix-tooling>
+
 == Connecting the micro:bit board
-<connecting-the-microbit-board>
+
 If you connect the micro:bit board to your computer you should see a new
 TTY device appear in `/dev`.
 
@@ -35,7 +35,7 @@ You should see the orange LED on the micro:bit, right next to the USB
 port, blink for a moment, whenever you enter this command.
 
 == minicom
-<minicom>
+
 We'll use the program `minicom` to interact with the serial device using
 the keyboard.
 
@@ -84,7 +84,7 @@ pay attention to the yellow LED on top of the micro:bit though, you will
 notice that it blinks whenever you type something.
 
 == `minicom` commands
-<minicom-commands>
+
 `minicom` exposes commands via keyboard shortcuts. On Linux, the
 shortcuts start with `Ctrl+A`. On Mac, the shortcuts start with the
 `Meta` key. Some useful commands below:

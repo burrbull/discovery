@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Getting the most out of your IDE
-<getting-the-most-out-of-your-ide>
+
 All code in this book assumes that you use a simple terminal to build
 your code, run it, and interact with it. It also makes no assumption
 about your text editor.
@@ -12,7 +12,7 @@ explains how to get the most out of your IDE using the code obtained
 from this book's repo.
 
 = Auto-completion, type annotation, and more
-<auto-completion-type-annotation-and-more>
+
 Some IDEs fail to understand the code, because they fail to determine
 whether a term is defined in the microbit or microbit-v2 codebase. If
 you fail to get auto-completion to work, you may want to try to edit the
@@ -22,14 +22,14 @@ references to the version of microbit you are not using. That is: in the
 use (the part guarded by `#[cfg(feature = "vI")]` and the guard itself)
 
 = IDE configuration
-<ide-configuration>
+
 Below, we explain how to configure your IDE to get the most out of this
 book. If your IDE is not listed below, please improve this book by
 adding a section, so that the next reader can get the best experience
 out of it.
 
 == How to build with IntelliJ
-<how-to-build-with-intellij>
+
 When editing the IntelliJ build configuration, here are a few
 non-default values: \* You should edit the command. When this book tells
 you to run `cargo embed FLAGS`, You'll need to replace the default value

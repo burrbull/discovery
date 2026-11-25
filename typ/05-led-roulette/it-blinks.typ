@@ -1,9 +1,9 @@
 #import "../config.typ": *
 
 = It blinks
-<it-blinks>
+
 == Delaying
-<delaying>
+
 Now we're going to take a brief look into delay abstractions provided by
 `embedded-hal` before combining this with the GPIO abstractions from the
 previous chapter in order to finally make an LED blink.
@@ -77,7 +77,7 @@ And now after putting the code into `src/main.rs` and another quick
 MCU.
 
 == Blinking
-<blinking>
+
 Now we've arrived at the point where we can combine our new knowledge
 about GPIO and delay abstractions in order to actually make an LED on
 the back of the micro:bit blink. The resulting program is really just a

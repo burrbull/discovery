@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Read a single register
-<read-a-single-register>
+
 Let's put all that theory into practice!
 
 First things first we need to know the target addresses of both the
@@ -56,7 +56,7 @@ with the chip to the constructor; and then the frequency we wish the bus
 to operate on, in this case 100 kHz (`K100`).
 
 == Testing it
-<testing-it>
+
 As always you have to modify `Embed.toml` to fit your MCU and can then
 use:
 

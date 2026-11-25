@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = LED roulette
-<led-roulette>
+
 Alright, let's start by building the following application:
 
 I'm going to give you a high level API to implement this app but don't

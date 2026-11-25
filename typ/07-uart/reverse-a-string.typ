@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Reverse a string
-<reverse-a-string>
+
 Alright, next let's make the server more interesting by having it
 respond to the client with the reverse of the text that they sent. The
 server will respond to the client every time they press the ENTER key.

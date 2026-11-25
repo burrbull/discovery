@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Nordic nRF51822 (the "nRF51", micro:bit v1)
-<nordic-nrf51822-the-nrf51-microbit-v1>
+
 Our MCU has 48 tiny metal #strong[pins] sitting right underneath it
 (it's a so called
 #link("https://en.wikipedia.org/wiki/Flat_no-leads_package")[QFN48]
@@ -48,7 +48,7 @@ information about the chip, for example that it is based on an ARM®
 Cortex™-M0 32-bit processor.
 
 === Arm? Cortex-M0?
-<arm-cortex-m0>
+
 If our chip is manufactured by Nordic, then who is Arm? And if our chip
 is the nRF51822, what is the Cortex-M0?
 

@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Flash it
-<flash-it>
+
 Flashing is the process of moving our program into the microcontroller's
 (persistent) memory. Once flashed, the microcontroller will execute the
 flashed program every time it is powered on.

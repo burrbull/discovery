@@ -1,9 +1,9 @@
 #import "../config.typ": *
 
 = Naive approach and `write!`
-<naive-approach-and-write>
+
 == Naive approach
-<naive-approach>
+
 You probably came up with a program similar to the following:
 
 ```rs
@@ -73,7 +73,7 @@ want to have all the nice perks of `print!` such as argument formatting
 and so on. If you are wondering how to do that, read on.
 
 == `write!` and `core::fmt::Write`
-<write-and-corefmtwrite>
+
 The `core::fmt::Write` trait allows us to use any struct that implements
 it in basically the same way as we use `print!` in the `std` world. In
 this case, the `Uart` struct from the `nrf` HAL does implement

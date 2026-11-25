@@ -1,7 +1,7 @@
 #import "config.typ": *
 
 = Discovery
-<discovery>
+
 #quote(block: true)[
 Discover the world of microcontrollers through
 #link("https://www.rust-lang.org/")[Rust]!
@@ -12,7 +12,7 @@ systems that uses Rust as the teaching language rather than the usual
 C/C++.
 
 == Scope
-<scope>
+
 The following topics will be covered (eventually, I hope):
 
 - How to write, build, flash and debug an "embedded" (Rust) program.
@@ -29,7 +29,7 @@ The following topics will be covered (eventually, I hope):
   actuators, open loop control, closed loop control, etc.
 
 == Approach
-<approach>
+
 - Beginner friendly. No previous experience with microcontrollers or
   embedded systems is required.
 
@@ -41,7 +41,7 @@ The following topics will be covered (eventually, I hope):
   Using LEDs as a debugging mechanism has no place here.
 
 == Non-goals
-<non-goals>
+
 What's out of scope for this book:
 
 - Teaching Rust. There's plenty of material on that topic already. We'll
@@ -59,14 +59,14 @@ Also I don't intend to port this material to other development boards;
 this book will make exclusive use of the micro:bit development board.
 
 == Reporting problems
-<reporting-problems>
+
 The source of this book is in
 #link("https://github.com/rust-embedded/discovery")[this repository]. If
 you encounter any typo or problem with the code report it on the
 #link("https://github.com/rust-embedded/discovery/issues")[issue tracker].
 
 == Other embedded Rust resources
-<other-embedded-rust-resources>
+
 This Discovery book is just one of several embedded Rust resources
 provided by the
 #link("https://github.com/rust-embedded/wg")[Embedded Working Group].

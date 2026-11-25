@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = The challenge
-<the-challenge>
+
 The challenge for this chapter is, to build a small application that
 communicates with the outside world via the serial interface introduced
 in the last chapter. It should be able to receive the commands

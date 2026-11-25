@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Send a single byte
-<send-a-single-byte>
+
 Our first task will be to send a single byte from the microcontroller to
 the computer over the serial connection.
 
@@ -66,7 +66,7 @@ the case with the UARTE implementation). Calling `flush()` forces it to
 write the bytes it currently has right now instead of waiting for more.
 
 == Testing it
-<testing-it>
+
 Before flashing this you should make sure to start your minicom/PuTTY as
 the data we receive via our serial communication is not backed up or
 anything, we have to view it live. Once your serial monitor is up you

@@ -1,11 +1,11 @@
 #import "../config.typ": *
 
 = Meet your hardware
-<meet-your-hardware>
+
 Let's get familiar with the hardware we'll be working with.
 
 == micro:bit
-<microbit>
+
 Here are some of the many components on the board:
 
 - A

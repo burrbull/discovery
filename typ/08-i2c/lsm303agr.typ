@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = LSM303AGR
-<lsm303agr>
+
 Both of the motion sensors on the micro:bit, the magnetometer and the
 accelerometer, are packaged in a single component: the LSM303AGR
 integrated circuit. These two sensors can be accessed via an I2C bus.

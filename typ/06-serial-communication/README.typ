@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Serial communication
-<serial-communication>
+
 
 This is what we'll be using. I hope your computer has one!
 Nah, don't worry. This connector, the DE-9, went out of fashion on PCs

@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Using a driver
-<using-a-driver>
+
 As we already discussed in chapter 5 `embedded-hal` provides
 abstractions which can be used to write platform independent code that
 can interact with hardware. In fact all the methods we have used to

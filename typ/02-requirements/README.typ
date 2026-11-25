@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Hardware/knowledge requirements
-<hardwareknowledge-requirements>
+
 The primary knowledge requirement to read this book is to know
 #emph[some] Rust. It's hard for me to quantify #emph[some] but at least
 I can tell you that you don't need to fully grok generics, but you do

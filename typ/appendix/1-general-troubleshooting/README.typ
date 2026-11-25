@@ -1,7 +1,7 @@
 = General troubleshooting
-<general-troubleshooting>
+
 == `cargo-embed` problems
-<cargo-embed-problems>
+
 Most `cargo-embed` problems are either related to not having installed
 the `udev` rules properly (on Linux) or having selected the wrong chip
 configuration in `Embed.toml` so make sure you got both of those right.
@@ -15,11 +15,11 @@ or the
 and ask for help there.
 
 == Cargo problems
-<cargo-problems>
+
 === "can't find crate for `core`"
-<cant-find-crate-for-core>
+
 ==== Symptoms
-<symptoms>
+
 ```
    Compiling volatile-register v0.1.2
    Compiling rlibc v1.0.0
@@ -44,12 +44,12 @@ To learn more, run the command again with --verbose.
 ```
 
 ==== Cause
-<cause>
+
 You forgot to install the proper target for your microcontroller
 (`thumbv7em-none-eabihf` for v2 and `thumbv6m-none-eabi` for v1).
 
 ==== Fix
-<fix>
+
 Install the proper target.
 
 ```console

@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = LED compass
-<led-compass>
+
 In this section, we'll implement a compass using the LEDs on the
 micro:bit. Like proper compasses, our LED compass must point north
 somehow. It will do that by turning on one of its outer LEDs; the LED

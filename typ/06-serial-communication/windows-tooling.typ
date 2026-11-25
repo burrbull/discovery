@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Windows tooling
-<windows-tooling>
+
 Start by unplugging your micro:bit.
 
 Before plugging the micro:bit, run the following command on the

@@ -1,13 +1,13 @@
 #import "../config.typ": *
 
 = General protocol
-<general-protocol>
+
 The I2C protocol is more elaborate than the serial communication
 protocol because it has to support communication between several
 devices. Let's see how it works using examples:
 
 == Controller -\> Target
-<controller---target>
+
 If the Controller wants to send data to the Target:
 
 + Controller: Broadcast START
@@ -24,7 +24,7 @@ bits long. Nothing else would have changed.
 ]
 
 == Controller \<- Target
-<controller---target-1>
+
 If the controller wants to read data from the target:
 
 + C: Broadcast START

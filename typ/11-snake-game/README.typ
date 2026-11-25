@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Snake game
-<snake-game>
+
 We're now going to implement a basic
 #link("https://en.wikipedia.org/wiki/Snake_(video_game_genre)")[snake]
 game that you can play on a micro:bit v2 using its 5x5 LED matrix as a

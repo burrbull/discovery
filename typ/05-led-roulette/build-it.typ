@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Build it
-<build-it>
+
 The first step is to build our "binary" crate. Because the
 microcontroller has a different architecture than your computer we'll
 have to cross compile. Cross compiling in Rust land is as simple as

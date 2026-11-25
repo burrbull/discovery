@@ -1,9 +1,9 @@
 #import "../config.typ": *
 
 = Debug it
-<debug-it>
+
 == How does this even work?
-<how-does-this-even-work>
+
 Before we debug our little program let's take a moment to quickly
 understand what is actually happening here. In the previous chapter we
 already discussed the purpose of the second chip on the board as well as
@@ -18,7 +18,7 @@ will forward the command to the debugging probe on the board via USB
 which then does the job of actually talking to the MCU for us.
 
 == Let's debug!
-<lets-debug>
+
 Since `cargo-embed` is blocking our current shell we can simply open a
 new one and cd back into our project directory. Once we are there we
 first have to open the binary in gdb like this:

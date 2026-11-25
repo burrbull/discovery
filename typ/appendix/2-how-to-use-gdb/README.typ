@@ -1,12 +1,12 @@
 = How to use GDB
-<how-to-use-gdb>
+
 Below are some useful GDB commands that can help us debug our programs.
 This assumes you have
 #link("../../05-led-roulette/flash-it.md")[flashed a program] onto your
 microcontroller and attached GDB to a `cargo-embed` session.
 
 == General Debugging
-<general-debugging>
+
 #quote(block: true)[
 #strong[NOTE:] Many of the commands you see below can be executed using
 a short form. For example, `continue` can simply be used as `c`, or
@@ -16,7 +16,7 @@ to go before GDB doesn't recognize them!
 ]
 
 === Dealing with Breakpoints
-<dealing-with-breakpoints>
+
 - `break $location`: Set a breakpoint at a place in your code. The value
   of `$location` can include:
   - `break *main` - Break on the exact address of the function `main`
@@ -38,7 +38,7 @@ to go before GDB doesn't recognize them!
   - `disable $n`: Disable breakpoint `$n`
 
 === Controlling Execution
-<controlling-execution>
+
 - `continue`: Begin or continue execution of your program
 - `next`: Execute the next line of your program
   - `next $n`: Repeat `next` `$n` number times
@@ -52,7 +52,7 @@ to go before GDB doesn't recognize them!
   - `jump 0x080012f2`: Resume execution at address 0x080012f2
 
 === Printing Information
-<printing-information>
+
 - `print /$f $data` - Print the value contained by the variable `$data`.
   Optionally format the output with `$f`, which can include:
   `txt   x: hexadecimal   d: signed decimal   u: unsigned decimal   o: octal   t: binary   a: address   c: character   f: floating point`
@@ -70,7 +70,7 @@ to go before GDB doesn't recognize them!
     to show the bytes that make up each instruction
 
 === Looking at the Symbol Table
-<looking-at-the-symbol-table>
+
 - `info functions $regex`: Print the names and data types of functions
   matched by `$regex`, omit `$regex` to print all functions
   - `info functions main`: Print names and types of defined functions
@@ -84,7 +84,7 @@ to go before GDB doesn't recognize them!
   - `ptype cp`: Print detailed type information about the variable `cp`
 
 === Poking around the Program Stack
-<poking-around-the-program-stack>
+
 - `backtrace $n`: Print trace of `$n` frames, or omit `$n` to print all
   frames
   - `backtrace 2`: Print trace of first 2 frames
@@ -101,5 +101,4 @@ to go before GDB doesn't recognize them!
     `$sp` in the current frame
 
 === Controlling `cargo-embed` Remotely
-<controlling-cargo-embed-remotely>
 - `monitor reset`: Reset the CPU, starting execution over again

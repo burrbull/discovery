@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = My solution
-<my-solution>
+
 ```rust
 #![deny(unsafe_code)]
 #![no_main]

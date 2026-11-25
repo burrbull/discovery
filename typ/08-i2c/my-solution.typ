@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = My solution
-<my-solution>
+
 ```rust
 #![no_main]
 #![no_std]

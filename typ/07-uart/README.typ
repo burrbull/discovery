@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = UART
-<uart>
+
 The microcontroller has a peripheral called UART, which stands for
 Universal Asynchronous Receiver/Transmitter. This peripheral can be
 configured to work with several communication protocols like the serial
@@ -18,7 +18,7 @@ concern.
 ]
 
 == Setup
-<setup>
+
 As always from now on you will have to modify the `Embed.toml` to match
 your micro:bit version:
 

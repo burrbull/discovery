@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = I2C
-<i2c>
+
 We just saw the serial communication protocol. It's a widely used
 protocol because it's very simple and this simplicity makes it easy to
 implement on top of other protocols like Bluetooth and USB.

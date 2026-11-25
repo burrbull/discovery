@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Echo server
-<echo-server>
+
 Let's merge transmission and reception into a single program and write
 an echo server. An echo server sends back to the client the same text it
 receives. For this application, the microcontroller will be the server

@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Magnitude
-<magnitude>
+
 We have been working with the direction of the magnetic field but what
 is its real magnitude? According to the documentation about the
 #link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.mag_data")[`mag_data()`]

@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = Take 2
-<take-2>
+
 This time, we'll use math to get the precise angle that the magnetic
 field forms with the X and Y axes of the magnetometer.
 

@@ -1,9 +1,9 @@
 #import "../config.typ": *
 
 = Light it up
-<light-it-up>
+
 == embedded-hal
-<embedded-hal>
+
 In this chapter we are going to make one of the many LEDs on the back of
 the micro:bit light up since this is basically the "Hello World" of
 embedded programming. In order to get this task done we will use one of
@@ -12,7 +12,7 @@ the traits provided by `embedded-hal`, specifically the
 trait which allows us to turn a pin on or off.
 
 == The micro:bit LEDs
-<the-microbit-leds>
+
 On the back of the micro:bit you can see a 5x5 square of LEDs, usually
 called an LED matrix. This matrix alignment is used so that instead of
 having to use 25 separate pins to drive every single one of the LEDs, we
@@ -36,7 +36,7 @@ respectively. Luckily for us though we can use the aforementioned
 micro:bit BSP which abstracts all of this nicely away from us.
 
 == Actually lighting it up!
-<actually-lighting-it-up>
+
 The code required to light up an LED in the matrix is actually quite
 simple but it requires a bit of setup. First take a look at it and then
 we can go through it step by step:
@@ -94,7 +94,7 @@ off. Since that is highly unlikely in our case, we can just `unwrap()`
 the result.
 
 == Testing it
-<testing-it>
+
 Testing our little program is quite simple. First put it into
 `src/main.rs`. Afterwards we simply have to run the `cargo embed`
 command from the last section again, let it flash and just like before.

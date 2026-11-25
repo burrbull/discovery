@@ -1,7 +1,7 @@
 #import "../config.typ": *
 
 = My solution
-<my-solution>
+
 What solution did you come up with?
 
 Here's mine, it's probably one of the simplest (but of course not most
