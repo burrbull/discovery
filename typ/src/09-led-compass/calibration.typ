@@ -20,19 +20,20 @@ en: [
   sensor has to be calibrated.
 ]))
 
+#let url_design = "https://www.st.com/resource/en/design_tip/dt0103-compensating-for-magnetometer-installation-error-and-hardiron-effects-using-accelerometerassisted-2d-calibration-stmicroelectronics.pdf"
 #tr((
 en: [
   The calibration involves quite a bit of math (matrices) so we won't
-  cover it here but this
-  #link("https://www.st.com/resource/en/design_tip/dt0103-compensating-for-magnetometer-installation-error-and-hardiron-effects-using-accelerometerassisted-2d-calibration-stmicroelectronics.pdf")[Design Note]
+  cover it here but this #link(url_design)[Design Note]
   describes the procedure if you are interested.
 ]))
 
+#let url_cpp = "https://github.com/lancaster-university/codal-microbit-v2/blob/006abf5566774fbcf674c0c7df27e8a9d20013de/source/MicroBitCompassCalibrator.cpp"
 #tr((
 en: [
   Luckily for us though the group that built the original software for the
   micro:bit already implemented a calibration mechanism in C++ over
-  #link("https://github.com/lancaster-university/codal-microbit-v2/blob/006abf5566774fbcf674c0c7df27e8a9d20013de/source/MicroBitCompassCalibrator.cpp")[here].
+  #link(url_cpp)[here].
 ]))
 
 #tr((

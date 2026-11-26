@@ -3,24 +3,24 @@
 #h1((en: [Snake game]
 ))
 
+#let wiki_snake_game = "https://en.wikipedia.org/wiki/Snake_(video_game_genre)"
 #tr((
 en: [
-  We're now going to implement a basic
-  #link("https://en.wikipedia.org/wiki/Snake_(video_game_genre)")[snake]
+  We're now going to implement a basic #link(wiki_snake_game)[snake]
   game that you can play on a micro:bit v2 using its 5x5 LED matrix as a
   display and its two buttons as controls. In doing so, we will build on
   some of the concepts covered in the earlier chapters of this book, and
   also learn about some new peripherals and concepts.
 ]))
 
+#let url_book = "https://docs.rust-embedded.org/book/concurrency/index.html"
 #tr((
 en: [
   In particular, we will be using the concept of hardware interrupts to
   allow our program to interact with multiple peripherals at once.
   Interrupts are a common way to implement concurrency in embedded
   contexts. There is a good introduction to concurrency in an embedded
-  context in the
-  #link("https://docs.rust-embedded.org/book/concurrency/index.html")[Embedded Rust Book]
+  context in the #link(url_book)[Embedded Rust Book]
   that I suggest you read through before proceeding.
 ]))
 

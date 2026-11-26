@@ -20,10 +20,11 @@ en: [
   much impossible to work with microcontrollers.
 ]))
 
+#let ln_lsm303 = link("https://www.st.com/resource/en/datasheet/lsm303agr.pdf")[LSM303AGR]
 #tr((
 en: [
   We'll be referring to all these documents throughout this book:
-  - #link("https://www.st.com/resource/en/datasheet/lsm303agr.pdf")[LSM303AGR]
+  - #ln_lsm303
 ]))
 
 = #tr((
@@ -31,6 +32,8 @@ en: [
 ))
 <setup-tools>
 
+#let ln_binutils = link("https://github.com/rust-embedded/cargo-binutils")[`cargo-binutils`]
+#let ln_embed = link("https://probe.rs/docs/tools/cargo-embed/")[`cargo-embed`]
 #tr((
 en: [
   We'll use all the tools listed below. Where a minimum version is not
@@ -43,9 +46,9 @@ en: [
     well. Furthermore, some normal `gdb` binaries are built with multiarch
     capabilities as well, you can find further information about this in
     the sub chapters.
-  - #link("https://github.com/rust-embedded/cargo-binutils")[`cargo-binutils`].
+  - #ln_binutils.
     Version 0.3.3 or newer.
-  - #link("https://probe.rs/docs/tools/cargo-embed/")[`cargo-embed`].
+  - #ln_embed.
     Version 0.24.0 or newer.
   - `minicom` on Linux and macOS. Tested version: 2.7.1. Other versions
     will most likely work as well though
@@ -62,10 +65,10 @@ en: [
   en: [`rustc` & Cargo],
 ))
 
+#let ln_rustup = link("https://rustup.rs")
 #tr((
 en: [
-  Install rustup by following the instructions at
-  #link("https://rustup.rs").
+  Install rustup by following the instructions at #ln_rustup.
 ]))
 
 #tr((
@@ -97,13 +100,15 @@ cargo-size 0.3.3
   en: [`cargo-embed`],
 ))
 
+#let url_probers = "https://probe.rs/"
+#let url_prerequisites = "https://probe.rs/docs/getting-started/installation/"
+#let ln_probers = link(url_probers)[`probe-rs`]
 #tr((
 en: [
-  In order to install cargo-embed, first install its
-  #link("https://probe.rs/docs/getting-started/installation/")[prerequisites]
+  In order to install cargo-embed, first install its #link(url_prerequisites)[prerequisites]
   (note: these instructions are part of the more general
-  #link("https://probe.rs/")[`probe-rs`] embedded debugging toolkit). Then
-  install it with cargo:
+  #ln_probers embedded debugging toolkit).
+  Then install it with cargo:
 ]))
 
 ```console
@@ -113,7 +118,7 @@ $ cargo install --locked probe-rs-tools --vers '^0.24'
 #tr((
 en: [
   *NOTE* This may fail due to frequent changes in `probe-rs`. If
-  so, go to #link("https://probe.rs") and follow the current installation
+  so, go to #link(url_probers) and follow the current installation
   instructions there.
 ]))
 
@@ -132,13 +137,13 @@ cargo-embed 0.24.0 (git commit: crates.io)
   en: [This repository],
 ))
 
+#let ln_repository = "https://github.com/rust-embedded/discovery/"
 #tr((
 en: [
   Since this book also contains some small Rust code bases used in various
   chapters you will also have to download its source code. You can do this
   in one of the following ways:
-  - Visit the
-    #link("https://github.com/rust-embedded/discovery/")[repository],
+  - Visit the #link(ln_repository)[repository],
     click the green "Code" button and then the "Download Zip" one
   - Clone it using git (if you know git you presumably already have it
     installed) from the same repository as linked in the zip approach

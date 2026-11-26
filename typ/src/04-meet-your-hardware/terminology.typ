@@ -73,25 +73,25 @@ en: [
   en: [Unifying the layers],
 ))
 
+#let ln_hal = link("https://crates.io/crates/embedded-hal")[`embedded-hal`]
 #tr((
 en: [
   Next we are going to have a look at a very central piece of software in
   the Rust Embedded world:
-  #link("https://crates.io/crates/embedded-hal")[`embedded-hal`]. As its
+  #ln_hal. As its
   name suggests it relates to the 2nd level of abstraction we got to know:
   the HALs. The idea behind
-  #link("https://crates.io/crates/embedded-hal")[`embedded-hal`] is to
+  #ln_hal is to
   provide a set of traits that describe behaviour which is usually shared
   across all implementations of a specific peripheral in all the HALs. For
   example one would always expect to have functions that are capable of
   turning the power on a pin either on or off. For example to switch an
   LED on and off on the board. This allows us to write a driver for, say a
   temperature sensor, that can be used on any chip for which an
-  implementation of the
-  #link("https://crates.io/crates/embedded-hal")[`embedded-hal`] traits
+  implementation of the #ln_hal traits
   exists, simply by writing the driver in such a way that it only relies
-  on the #link("https://crates.io/crates/embedded-hal")[`embedded-hal`]
-  traits. Drivers that are written in such a way are called platform
+  on the #ln_hal traits.
+  Drivers that are written in such a way are called platform
   agnostic and luckily for us most of the drivers on crates.io are
   actually platform agnostic.
 ]))
@@ -100,10 +100,12 @@ en: [
   en: [Further reading],
 ))
 
+#let ln_thezoq2 = link("https://github.com/TheZoq2/")[TheZoq2]
+#let yt_overview = "https://www.youtube.com/watch?v=vLYit_HHPaY"
 #tr((
 en: [
   If you want to learn more about these levels of abstraction, Franz
-  Skarman, a.k.a. #link("https://github.com/TheZoq2/")[TheZoq2], held a
+  Skarman, a.k.a. #ln_thezoq2, held a
   talk about this topic during Oxidize 2020, called
-  #link("https://www.youtube.com/watch?v=vLYit_HHPaY")[An Overview of the Embedded Rust Ecosystem].
+  #link(yt_overview)[An Overview of the Embedded Rust Ecosystem].
 ]))

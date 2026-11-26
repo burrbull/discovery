@@ -74,21 +74,21 @@ en: [
   `Coords` structs without having to worry about ownership.
 ]))
 
+#let url_nrf52 = "https://infocenter.nordicsemi.com/pdf/nRF52833_PS_v1.3.pdf"
+#let wiki_pseudo_random = "https://en.wikipedia.org/wiki/Pseudorandom_number_generator"
+#let wiki_xorshift = "https://en.wikipedia.org/wiki/Xorshift"
 #tr((
 en: [
   We define an associated function, `Coords::random`, which will give us a
   random position on the grid. We will use this later to determine where
   to place the snake's food. To do this, we need a source of random
   numbers. The nRF52833 has a random number generator (RNG) peripheral,
-  documented at section 6.19 of the
-  #link("https://infocenter.nordicsemi.com/pdf/nRF52833_PS_v1.3.pdf")[spec sheet].
+  documented at section 6.19 of the #link(url_nrf52)[spec sheet].
   The HAL gives us a simple interface to the RNG via the
   `microbit::hal::rng::Rng` struct. However, it is a blocking interface,
   and the time needed to generate one random byte of data is variable and
-  unpredictable. We therefore define a
-  #link("https://en.wikipedia.org/wiki/Pseudorandom_number_generator")[pseudo-random]
-  number generator (PRNG) which uses an
-  #link("https://en.wikipedia.org/wiki/Xorshift")[xorshift] algorithm to
+  unpredictable. We therefore define a #link(wiki_pseudo_random)[pseudo-random]
+  number generator (PRNG) which uses an #link(wiki_xorshift)[xorshift] algorithm to
   generate pseudo-random `u32` values that we can use to determine where
   to place food. The algorithm is basic and not cryptographically secure,
   but it is efficient, easy to implement and good enough for our humble

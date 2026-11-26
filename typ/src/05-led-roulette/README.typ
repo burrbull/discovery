@@ -45,13 +45,13 @@ en: [
   systems without OS abstractions like files and sockets).
 ]))
 
+#let ln_cortex_m_rt = link("https://crates.io/crates/cortex-m-rt")[`cortex-m-rt`]
 #tr((
 en: [
   The `no_main` attribute says that this program won't use the standard
   `main` interface, which is tailored for command line applications that
   receive arguments. Instead of the standard `main` we'll use the `entry`
-  attribute from the
-  #link("https://crates.io/crates/cortex-m-rt")[`cortex-m-rt`] crate to
+  attribute from the #ln_cortex_m_rt crate to
   define a custom entry point. In this program we have named the entry
   point "main", but any other name could have been used. The entry point
   function must have signature `fn() -> !`\; this type indicates that the

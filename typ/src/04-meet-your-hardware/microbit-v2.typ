@@ -66,11 +66,12 @@ en: [
   is the nRF52833, what is the Cortex-M4?
 ]))
 
+#let url_arm = "https://www.arm.com/"
 #tr((
 en: [
   You might be surprised to hear that while "Arm-based" chips are quite
   popular, the company behind the "Arm" trademark
-  (#link("https://www.arm.com/")[Arm Holdings]) doesn't actually
+  (#link(url_arm)[Arm Holdings]) doesn't actually
   manufacture chips for purchase. Instead, their primary business model is
   to just _design_ parts of chips. They will then license those
   designs to manufacturers, who will in turn implement the designs

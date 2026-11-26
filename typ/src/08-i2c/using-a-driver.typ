@@ -13,6 +13,7 @@ en: [
   traits `embedded-hal` provides for the first time.
 ]))
 
+#let ln_lsm303 = link("https://crates.io/crates/lsm303agr")[`lsm303agr`]
 #tr((
 en: [
   It would be pointless to implement a driver for our LSM303AGR for every
@@ -20,7 +21,7 @@ en: [
   up). To avoid this a driver can be written that consumes generic types
   that implement `embedded-hal` traits in order to provide a platform
   agnostic version of a driver. Luckily for us this has already been done
-  in the #link("https://crates.io/crates/lsm303agr")[`lsm303agr`] crate.
+  in the #ln_lsm303 crate.
   Hence reading the actual accelerometer and magnetometer values will now
   be basically a plug and play experience (plus reading a bit of
   documentation). In fact the `crates.io` page already provides us with
@@ -46,11 +47,11 @@ fn main() {
 }
 ```
 
+#let ln_hal_i2c = link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/i2c/index.html")[`embedded_hal::blocking::i2c`]
 #tr((
 en: [
 Because we already know how to create an instance of an object that
-implements the
-#link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/i2c/index.html")[`embedded_hal::blocking::i2c`]
+implements the #ln_hal_i2c
 traits from the #link(<read-a-single-register>)[previous page], this
 is quite trivial:
 ]))

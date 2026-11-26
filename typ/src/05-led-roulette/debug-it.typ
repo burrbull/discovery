@@ -7,26 +7,35 @@
   en: [How does this even work?],
 ))
 
-Before we debug our little program let's take a moment to quickly
-understand what is actually happening here. In the previous chapter we
-already discussed the purpose of the second chip on the board as well as
-how it talks to our computer, but how can we actually use it?
+#tr((
+en: [
+  Before we debug our little program let's take a moment to quickly
+  understand what is actually happening here. In the previous chapter we
+  already discussed the purpose of the second chip on the board as well as
+  how it talks to our computer, but how can we actually use it?
+]))
 
-The little option `default.gdb.enabled = true` in `Embed.toml` made
-`cargo-embed` open a so-called "GDB stub" after flashing, this is a
-server that our GDB can connect to and send commands like "set a
-breakpoint at address X" to. The server can then decide on its own how
-to handle this command. In the case of the `cargo-embed` GDB stub it
-will forward the command to the debugging probe on the board via USB
-which then does the job of actually talking to the MCU for us.
+#tr((
+en: [
+  The little option `default.gdb.enabled = true` in `Embed.toml` made
+  `cargo-embed` open a so-called "GDB stub" after flashing, this is a
+  server that our GDB can connect to and send commands like "set a
+  breakpoint at address X" to. The server can then decide on its own how
+  to handle this command. In the case of the `cargo-embed` GDB stub it
+  will forward the command to the debugging probe on the board via USB
+  which then does the job of actually talking to the MCU for us.
+]))
 
 = #tr((
   en: [Let's debug!],
 ))
 
-Since `cargo-embed` is blocking our current shell we can simply open a
-new one and cd back into our project directory. Once we are there we
-first have to open the binary in gdb like this:
+#tr((
+en: [
+  Since `cargo-embed` is blocking our current shell we can simply open a
+  new one and cd back into our project directory. Once we are there we
+  first have to open the binary in gdb like this:
+]))
 
 ```shell
 # For micro:bit v2
@@ -37,38 +46,50 @@ $ gdb target/thumbv6m-none-eabi/debug/led-roulette
 ```
 
 #quote(block: true)[
-*NOTE*: Depending on which GDB you installed you will have to use
-a different command to launch it, check out
-#link(<setup-tools>)[chapter 3] if you forgot which one
-it was.
+#tr((
+en: [
+  *NOTE*: Depending on which GDB you installed you will have to use
+  a different command to launch it, check out
+  #link(<setup-tools>)[chapter 3] if you forgot which one it was.
+]))
 ]
 
 #quote(block: true)[
-*NOTE*: If you are getting
-`target/thumbv7em-none-eabihf/debug/led-roulette: No such file or directory`
-error, try adding `../../` to the file path, for example:
+#tr((
+en: [
+  *NOTE*: If you are getting
+  `target/thumbv7em-none-eabihf/debug/led-roulette: No such file or directory`
+  error, try adding `../../` to the file path, for example:
+]))
 
 ```shell
 $ gdb ../../target/thumbv7em-none-eabihf/debug/led-roulette
 ```
 
-This is caused by each example project being in a `workspace` that
-contains the entire book, and workspaces have a single `target`
-directory. Check out
-#link("https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html#creating-a-workspace")[Workspaces chapter in Rust Book]
-for more.
+#let url_workspace = "https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html#creating-a-workspace"
+#tr((
+en: [
+  This is caused by each example project being in a `workspace` that
+  contains the entire book, and workspaces have a single `target` directory.
+  Check out #link(url_workspace)[Workspaces chapter in Rust Book] for more.
+]))
 ]
 
 #quote(block: true)[
-*NOTE*: If `cargo-embed` prints a lot of warnings here don't
-worry about it. As of now it does not fully implement the GDB protocol
-and thus might not recognize all the commands your GDB is sending to it,
-as long as it does not crash, you are fine.
+#tr((
+en: [
+  *NOTE*: If `cargo-embed` prints a lot of warnings here don't
+  worry about it. As of now it does not fully implement the GDB protocol
+  and thus might not recognize all the commands your GDB is sending to it,
+  as long as it does not crash, you are fine.
+]))
 ]
 
-Next we will have to connect to the GDB stub. It runs on
-`localhost:1337` per default so in order to connect to it run the
-following:
+#tr((
+en: [
+  Next we will have to connect to the GDB stub. It runs on
+  `localhost:1337` per default so in order to connect to it run the following:
+]))
 
 ```shell
 (gdb) target remote :1337
@@ -77,9 +98,12 @@ Remote debugging using :1337
 157     #[derive(Copy, Clone, Debug)]
 ```
 
-Next what we want to do is get to the main function of our program. We
-will do this by first setting a breakpoint there and then continuing
-program execution until we hit the breakpoint:
+#tr((
+en: [
+  Next what we want to do is get to the main function of our program. We
+  will do this by first setting a breakpoint there and then continuing
+  program execution until we hit the breakpoint:
+]))
 
 ```
 (gdb) break main
@@ -92,28 +116,40 @@ Breakpoint 1, led_roulette::__cortex_m_rt_main_trampoline () at src/05-led-roule
 9       #[entry]
 ```
 
-Breakpoints can be used to stop the normal flow of a program. The
-`continue` command will let the program run freely _until_ it
-reaches a breakpoint. In this case, until it reaches the `main` function
-because there's a breakpoint there.
+#tr((
+en: [
+  Breakpoints can be used to stop the normal flow of a program. The
+  `continue` command will let the program run freely _until_ it
+  reaches a breakpoint. In this case, until it reaches the `main` function
+  because there's a breakpoint there.
+]))
 
-Note that GDB output says "Breakpoint 1". Remember that our processor
-can only use a limited amount of these breakpoints, so it's a good idea
-to pay attention to these messages. If you happen to run out of
-breakpoints, you can list all the current ones with `info break` and
-delete desired ones with `delete <breakpoint-num>`.
+#tr((
+en: [
+  Note that GDB output says "Breakpoint 1". Remember that our processor
+  can only use a limited amount of these breakpoints, so it's a good idea
+  to pay attention to these messages. If you happen to run out of
+  breakpoints, you can list all the current ones with `info break` and
+  delete desired ones with `delete <breakpoint-num>`.
+]))
 
-For a nicer debugging experience, we'll be using GDB's Text User
-Interface (TUI). To enter into that mode, on the GDB shell enter the
-following command:
+#tr((
+en: [
+  For a nicer debugging experience, we'll be using GDB's Text User
+  Interface (TUI). To enter into that mode, on the GDB shell enter the
+  following command:
+]))
 
 ```
 (gdb) layout src
 ```
 
 #quote(block: true)[
-*NOTE*: Apologies Windows users. The GDB shipped with the GNU ARM
-Embedded Toolchain doesn't support this TUI mode `:-(`.
+#tr((
+en: [
+  *NOTE*: Apologies Windows users. The GDB shipped with the GNU ARM
+  Embedded Toolchain doesn't support this TUI mode `:-(`.
+]))
 ]
 
 #figure(image("../assets/gdb-layout-src.png", alt: "GDB session"),
@@ -122,9 +158,12 @@ Embedded Toolchain doesn't support this TUI mode `:-(`.
   ]
 )
 
-GDB's break command does not only work for function names, it can also
-break at certain line numbers. If we wanted to break in line 13 we can
-simply do:
+#tr((
+en: [
+  GDB's break command does not only work for function names, it can also
+  break at certain line numbers. If we wanted to break in line 13 we can
+  simply do:
+]))
 
 ```
 (gdb) break 13
@@ -136,15 +175,21 @@ Breakpoint 2, led_roulette::__cortex_m_rt_main () at src/05-led-roulette/src/mai
 (gdb)
 ```
 
-At any point you can leave the TUI mode using the following command:
+#tr((
+en: [
+  At any point you can leave the TUI mode using the following command:
+]))
 
 ```
 (gdb) tui disable
 ```
 
-We are now "on" the `_y = x` statement; that statement hasn't been
-executed yet. This means that `x` is initialized but `_y` is not. Let's
-inspect those stack/local variables using the `print` command:
+#tr((
+en: [
+  We are now "on" the `_y = x` statement; that statement hasn't been
+  executed yet. This means that `x` is initialized but `_y` is not. Let's
+  inspect those stack/local variables using the `print` command:
+]))
 
 ```
 (gdb) print x
@@ -154,28 +199,39 @@ $2 = (*mut i32) 0x20003fe8
 (gdb)
 ```
 
-As expected, `x` contains the value `42`. The command `print &x` prints
-the address of the variable `x`. The interesting bit here is that GDB
-output shows the type of the reference: `i32*`, a pointer to an `i32`
-value.
+#tr((
+en: [
+  As expected, `x` contains the value `42`. The command `print &x` prints
+  the address of the variable `x`. The interesting bit here is that GDB
+  output shows the type of the reference: `i32*`, a pointer to an `i32` value.
+]))
 
-If we want to continue the program execution line by line we can do that
-using the `next` command so let's proceed to the `loop {}` statement:
+#tr((
+en: [
+  If we want to continue the program execution line by line we can do that
+  using the `next` command so let's proceed to the `loop {}` statement:
+]))
 
 ```
 (gdb) next
 16          loop {}
 ```
 
-And `_y` should now be initialized.
+#tr((
+en: [
+  And `_y` should now be initialized.
+]))
 
 ```
 (gdb) print _y
 $5 = 42
 ```
 
-Instead of printing the local variables one by one, you can also use the
-`info locals` command:
+#tr((
+en: [
+  Instead of printing the local variables one by one, you can also use the
+  `info locals` command:
+]))
 
 ```
 (gdb) info locals
@@ -184,15 +240,21 @@ _y = 42
 (gdb)
 ```
 
-If we use `next` again on top of the `loop {}` statement, we'll get
-stuck because the program will never pass that statement. Instead, we'll
-switch to the disassemble view with the `layout asm` command and advance
-one instruction at a time using `stepi`. You can always switch back into
-Rust source code view later by issuing the `layout src` command again.
+#tr((
+en: [
+  If we use `next` again on top of the `loop {}` statement, we'll get
+  stuck because the program will never pass that statement. Instead, we'll
+  switch to the disassemble view with the `layout asm` command and advance
+  one instruction at a time using `stepi`. You can always switch back into
+  Rust source code view later by issuing the `layout src` command again.
+]))
 
 #quote(block: true)[
-*NOTE*: If you used the `next` or `continue` command by mistake
-and GDB got stuck, you can get unstuck by hitting `Ctrl+C`.
+#tr((
+en: [
+  *NOTE*: If you used the `next` or `continue` command by mistake
+  and GDB got stuck, you can get unstuck by hitting `Ctrl+C`.
+]))
 ]
 
 ```
@@ -205,8 +267,11 @@ and GDB got stuck, you can get unstuck by hitting `Ctrl+C`.
   ]
 )
 
-If you are not using the TUI mode, you can use the `disassemble /m`
-command to disassemble the program around the line you are currently at.
+#tr((
+en: [
+  If you are not using the TUI mode, you can use the `disassemble /m`
+  command to disassemble the program around the line you are currently at.
+]))
 
 ```
 (gdb) disassemble /m
@@ -231,12 +296,18 @@ Dump of assembler code for function _ZN12led_roulette18__cortex_m_rt_main17h3e25
 End of assembler dump.
 ```
 
-See the fat arrow `=>` on the left side? It shows the instruction the
-processor will execute next.
+#tr((
+en: [
+  See the fat arrow `=>` on the left side? It shows the instruction the
+  processor will execute next.
+]))
 
-If not inside the TUI mode on each `stepi` command GDB will print the
-statement and the line number of the instruction the processor will
-execute next.
+#tr((
+en: [
+  If not inside the TUI mode on each `stepi` command GDB will print the
+  statement and the line number of the instruction the processor will
+  execute next.
+]))
 
 ```
 (gdb) stepi
@@ -245,8 +316,11 @@ execute next.
 16          loop {}
 ```
 
-One last trick before we move to something more interesting. Enter the
-following commands into GDB:
+#tr((
+en: [
+  One last trick before we move to something more interesting. Enter the
+  following commands into GDB:
+]))
 
 ```
 (gdb) monitor reset
@@ -258,27 +332,42 @@ Breakpoint 1, led_roulette::__cortex_m_rt_main_trampoline () at src/05-led-roule
 (gdb)
 ```
 
-We are now back at the beginning of `main`!
+#tr((
+en: [
+  We are now back at the beginning of `main`!
+]))
 
-`monitor reset` will reset the microcontroller and stop it right at the
-program entry point. The following `continue` command will let the
-program run freely until it reaches the `main` function that has a
-breakpoint on it.
+#tr((
+en: [
+  `monitor reset` will reset the microcontroller and stop it right at the
+  program entry point. The following `continue` command will let the
+  program run freely until it reaches the `main` function that has a
+  breakpoint on it.
+]))
 
-This combo is handy when you, by mistake, skipped over a part of the
-program that you were interested in inspecting. You can easily roll back
-the state of your program back to its very beginning.
+#tr((
+en: [
+  This combo is handy when you, by mistake, skipped over a part of the
+  program that you were interested in inspecting. You can easily roll back
+  the state of your program back to its very beginning.
+]))
 
 #quote(block: true)[
-*The fine print*: This `reset` command doesn't clear or touch
-RAM. That memory will retain its values from the previous run. That
-shouldn't be a problem though, unless your program behavior depends on
-the value of _uninitialized_ variables but that's the definition of
-Undefined Behavior (UB).
+#tr((
+en: [
+  *The fine print*: This `reset` command doesn't clear or touch
+  RAM. That memory will retain its values from the previous run. That
+  shouldn't be a problem though, unless your program behavior depends on
+  the value of _uninitialized_ variables but that's the definition of
+  Undefined Behavior (UB).
+]))
 ]
 
-We are done with this debug session. You can end it with the `quit`
-command.
+#tr((
+en: [
+  We are done with this debug session. You can end it with the `quit`
+  command.
+]))
 
 ```
 (gdb) quit
@@ -293,13 +382,22 @@ Ending remote debugging.
 ```
 
 #quote(block: true)[
-*NOTE*: If the default GDB CLI is not to your liking check out
-#link("https://github.com/cyrus-and/gdb-dashboard#gdb-dashboard")[gdb-dashboard].
-It uses Python to turn the default GDB CLI into a dashboard that shows
-registers, the source view, the assembly view and other things.
+#let ln_dashboard = link("https://github.com/cyrus-and/gdb-dashboard#gdb-dashboard")[gdb-dashboard]
+#tr((
+en: [
+  *NOTE*: If the default GDB CLI is not to your liking check out #ln_dashboard.
+  It uses Python to turn the default GDB CLI into a dashboard that shows
+  registers, the source view, the assembly view and other things
+]))
 ]
 
-If you want to learn more about what GDB can do, check out the section
-#link("../appendix/2-how-to-use-gdb/")[How to use GDB].
+#tr((
+en: [
+  If you want to learn more about what GDB can do, check out the section
+  #link(<how-to-use-gdb>)[How to use GDB].
+]))
 
-What's next? The high level API I promised.
+#tr((
+en: [
+  What's next? The high level API I promised.
+]))

@@ -29,12 +29,11 @@ en: [
   Instead, their registers have to be accessed via the I2C bus.
 ]))
 
+#let url_lsm303 = "https://www.st.com/resource/en/datasheet/lsm303agr.pdf"
 #tr((
 en: [
-  The main source of information about the LSM303AGR is its
-  #link("https://www.st.com/resource/en/datasheet/lsm303agr.pdf")[Data Sheet].
-  Read through it to see how one can read the sensors' registers. That
-  part is in:
+  The main source of information about the LSM303AGR is its #link(url_lsm303)[Data Sheet].
+  Read through it to see how one can read the sensors' registers. That part is in:
 ]))
 
 #quote(block: true)[

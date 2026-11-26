@@ -2,6 +2,7 @@
 
 #h1((en: [General troubleshooting]
 ))
+<general-troubleshooting>
 
 = #tr((
   en: [`cargo-embed` problems],
@@ -14,14 +15,16 @@ en: [
   configuration in `Embed.toml` so make sure you got both of those right.
 ]))
 
+#let url_issues = "https://github.com/rust-embedded/discovery/issues"
+#let url_matrix = "https://matrix.to/#/#rust-embedded:matrix.org"
+#let url_matrix_probe = "https://matrix.to/#/#probe-rs:matrix.org"
 #tr((
 en: [
   If the above does not work out for you, you can open an issue in the
-  #link("https://github.com/rust-embedded/discovery/issues")[`discovery` issue tracker].
+  #link(url_issues)[`discovery` issue tracker].
   Alternatively you can also visit the
-  #link("https://matrix.to/#/#rust-embedded:matrix.org")[Rust Embedded matrix channel]
-  or the
-  #link("https://matrix.to/#/#probe-rs:matrix.org")[probe-rs matrix channel]
+  #link(url_matrix)[Rust Embedded matrix channel]
+  or the #link(url_matrix_probe)[probe-rs matrix channel]
   and ask for help there.
 ]))
 

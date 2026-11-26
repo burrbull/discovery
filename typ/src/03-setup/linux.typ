@@ -75,10 +75,10 @@ en: [
 ]))
 ]
 
+#let url_toolchain = "https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads"
 #tr((
 en: [
-  For distros that don't have packages for
-  #link("https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads")[ARM's pre-built toolchain],
+  For distros that don't have packages for #link(url_toolchain)[ARM's pre-built toolchain],
   download the "Linux 64-bit" file and put its `bin` directory on your
   path. Here's one way to do it:
 ]))

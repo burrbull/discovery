@@ -2,6 +2,7 @@
 
 #h1((en: [How to use GDB]
 ))
+<how-to-use-gdb>
 
 #tr((
 en: [

@@ -12,10 +12,11 @@ en: [
   communication protocol that this cable is/was usually used for.
 ]))
 
+#let wiki_uart = "https://en.wikipedia.org/wiki/Asynchronous_serial_communication"
 #tr((
 en: [
   So what's this
-  #link("https://en.wikipedia.org/wiki/Asynchronous_serial_communication")[_serial communication_]?
+  #link(wiki_uart)[_serial communication_]?
   It's an _asynchronous_ communication protocol where two devices
   exchange data _serially_, as in one bit at a time, using two data
   lines (plus a common ground). The protocol is asynchronous in the sense

@@ -31,16 +31,19 @@ en: [
 ]))
 
 #quote(block: true)[
+#let ln_set_accel_scale = link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.set_accel_scale")[`set_accel_scale`]
+#let ln_countdown = link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/timer/trait.CountDown.html")[`Countdown`]
+#let ln_nb_result = link("https://docs.rs/nb/1.0.0/nb/type.Result.html")[`nb::Result`]
 #tr((
 en: [
   *NOTE* There are two additional APIs that should be useful for
   this task we haven't discussed yet. First the
-  #link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.set_accel_scale")[`set_accel_scale`]
+  #ln_set_accel_scale
   one which you need to measure high g values. Secondly the
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/timer/trait.CountDown.html")[`Countdown`]
+  #ln_countdown
   trait from `embedded_hal`. If you decide to use this to keep your
   measurement intervals you will have to pattern match on the
-  #link("https://docs.rs/nb/1.0.0/nb/type.Result.html")[`nb::Result`] type
+  #ln_nb_result type
   instead of using the `block!` macro we have seen in previous chapters.
 ]))
 ]

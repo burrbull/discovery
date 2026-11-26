@@ -7,13 +7,13 @@
   en: [embedded-hal],
 ))
 
+#let ln_outputpin = link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/digital/v2/trait.OutputPin.html")[`OutputPin`]
 #tr((
 en: [
   In this chapter we are going to make one of the many LEDs on the back of
   the micro:bit light up since this is basically the "Hello World" of
   embedded programming. In order to get this task done we will use one of
-  the traits provided by `embedded-hal`, specifically the
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/digital/v2/trait.OutputPin.html")[`OutputPin`]
+  the traits provided by `embedded-hal`, specifically the #ln_outputpin
   trait which allows us to turn a pin on or off.
 ]))
 
@@ -31,23 +31,23 @@ en: [
 ]))
 
 #quote(block: true)[
+#let url_schematic = "https://tech.microbit.org/hardware/schematic/"
 #tr((
 en: [
-  *NOTE* that the micro:bit v1 team implemented this a little
-  differently. Their
-  #link("https://tech.microbit.org/hardware/schematic/")[schematic page]
-  says that it is actually implemented as a 3x9 matrix but a few columns
-  simply remain unused.
+  *NOTE* that the micro:bit v1 team implemented this a little differently.
+  Their #link(url_schematic)[schematic page] says that it is actually
+  implemented as a 3x9 matrix but a few columns simply remain unused.
 ]))
 ]
 
+#let url_schematic_v2 = "https://github.com/microbit-foundation/microbit-v2-hardware/blob/main/V2.00/MicroBit_V2.0.0_S_schematic.PDF"
+#let url_schematic_v1 = "https://github.com/bbcmicrobit/hardware/blob/master/V1.5/SCH_BBC-Microbit_V1.5.PDF"
 #tr((
 en: [
   Usually in order to determine which specific pins we have to control in
   order to light a specific LED up we would now have to read the
-  #link("https://github.com/microbit-foundation/microbit-v2-hardware/blob/main/V2.00/MicroBit_V2.0.0_S_schematic.PDF")[micro:bit v2 schematic]
-  or the
-  #link("https://github.com/bbcmicrobit/hardware/blob/master/V1.5/SCH_BBC-Microbit_V1.5.PDF")[micro:bit v1 schematic]
+  #link(url_schematic_v2)[micro:bit v2 schematic]
+  or the #link(url_schematic_v1)[micro:bit v1 schematic]
   respectively. Luckily for us though we can use the aforementioned
   micro:bit BSP which abstracts all of this nicely away from us.
 ]))

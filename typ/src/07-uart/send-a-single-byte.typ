@@ -25,13 +25,13 @@ en: [
   with the UARTE for micro:bit v2.
 ]))
 
+#let ln_hal_serial = link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/serial/index.html")[`embedded_hal::serial`]
 #tr((
 en: [
   You will also have noticed that this is the first time we are including
   some code that is not from a library, namely the `serial_setup` module.
   Its only purpose is to provide a nice wrapper around the UARTE so we can
-  use it the exact same way as the UART via the
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/serial/index.html")[`embedded_hal::serial`]
+  use it the exact same way as the UART via the #ln_hal_serial
   traits. If you want, you can check out what exactly the module does, but
   it is not required to understand this chapter in general.
 ]))

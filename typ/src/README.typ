@@ -4,10 +4,10 @@
 ))
 
 #quote(block: true)[
+#let url_rust = "https://www.rust-lang.org/"
 #tr((
 en: [
-  Discover the world of microcontrollers through
-  #link("https://www.rust-lang.org/")[Rust]!
+  Discover the world of microcontrollers through #link(url_rust)[Rust]!
 ]))
 ]
 
@@ -78,25 +78,28 @@ en: [
   en: [Reporting problems],
 ))
 
+#let url_repository = "https://github.com/rust-embedded/discovery"
+#let url_issues = "https://github.com/rust-embedded/discovery/issues"
 #tr((
 en: [
-  The source of this book is in
-  #link("https://github.com/rust-embedded/discovery")[this repository]. If
-  you encounter any typo or problem with the code report it on the
-  #link("https://github.com/rust-embedded/discovery/issues")[issue tracker].
+  The source of this book is in #link(url_repository)[this repository].
+  If you encounter any typo or problem with the code report it on the
+  #link(url_issues)[issue tracker].
 ]))
 
 = #tr((
   en: [Other embedded Rust resources],
 ))
 
+#let url_wg = "https://github.com/rust-embedded/wg"
+#let url_books = "https://docs.rust-embedded.org"
+#let url_faq = "https://docs.rust-embedded.org/faq.html"
 #tr((
 en: [
   This Discovery book is just one of several embedded Rust resources
-  provided by the
-  #link("https://github.com/rust-embedded/wg")[Embedded Working Group].
+  provided by the #link(url_wg)[Embedded Working Group].
   The full selection can be found at
-  #link("https://docs.rust-embedded.org")[The Embedded Rust Bookshelf].
+  #link(url_books)[The Embedded Rust Bookshelf].
   This includes the list of
-  #link("https://docs.rust-embedded.org/faq.html")[Frequently Asked Questions].
+  #link(url_faq)[Frequently Asked Questions].
 ]))

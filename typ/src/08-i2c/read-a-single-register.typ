@@ -54,10 +54,11 @@ en: [
   and TWIM (depending on which chip you use, just like UART and UARTE).
 ]))
 
+#let url_twim = "https://docs.rs/microbit-v2/0.11.0/microbit/hal/twim/index.html"
 #tr((
 en: [
   Now if we put the documentation of the
-  #link("https://docs.rs/microbit-v2/0.11.0/microbit/hal/twim/index.html")[`twi(m)` module]
+  #link(url_twim)[`twi(m)` module]
   from the `microbit` crate together with all the other information we
   have gathered so far we'll end up with this piece of code to read out
   and print the two device IDs:

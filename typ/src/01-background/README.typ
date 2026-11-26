@@ -127,8 +127,7 @@ en: [
   accepted package management solution whereas Rust has Cargo. This makes
   development _much_ easier. And, IMO, easy package management
   encourages code reuse because libraries can be easily integrated into an
-  application which is also a good thing as libraries get more "battle
-  testing".
+  application which is also a good thing as libraries get more "battle testing".
 ]))
 
 = #tr((
@@ -140,6 +139,7 @@ en: [
   Or why should I prefer C over Rust?
 ]))
 
+#let url_rtos = "https://github.com/rust-embedded/awesome-embedded-rust#real-time-operating-system-rtos"
 #tr((
 en: [
   The C ecosystem is way more mature. Off the shelf solutions for several
@@ -148,7 +148,5 @@ en: [
   (RTOS) out there and solve your problem. There are no commercial,
   production-grade RTOSes in Rust yet so you would have to either create
   one yourself or try one of the ones that are in development. You can
-  find a list of those in the
-  #link("https://github.com/rust-embedded/awesome-embedded-rust#real-time-operating-system-rtos")[Awesome Embedded Rust]
-  repository.
+  find a list of those in the #link(url_rtos)[Awesome Embedded Rust] repository.
 ]))

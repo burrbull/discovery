@@ -17,10 +17,10 @@ en: [
   or any other relevant embedded topics, we'd love to have your help!
 ]))
 
+#let ln_new_issue = "https://github.com/rust-embedded/discovery/issues/new"
 #tr((
 en: [
-  Please
-  #link("https://github.com/rust-embedded/discovery/issues/new")[open an issue]
+  Please #link(ln_new_issue)[open an issue]
   if you would like to help, but need assistance or mentoring for how to
   contribute this to the book, or open a Pull Request adding the
   information!
@@ -116,6 +116,7 @@ en: [
   en: [Direct Memory Access (DMA).],
 ))
 
+#let ln_nrf_hal = link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`]
 #tr((
 en: [
   This peripheral is a kind of _asynchronous_ `memcpy`. If you are
@@ -128,8 +129,7 @@ en: [
   to see if it has completed so you can do other stuff while the transfer
   is ongoing. For more information as to how this is implemented you can
   checkout the `serial_setup` module from the UART chapter. If that isn't
-  enough yet you could even try and dive into the code of the
-  #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`].
+  enough yet you could even try and dive into the code of the #ln_nrf_hal.
 ]))
 
 == #tr((
@@ -194,12 +194,11 @@ en: [
   the motor at different loads.
 ]))
 
+#let url_pwm = "https://docs.rs/embedded-hal/0.2.6/embedded_hal/trait.Pwm.html"
 #tr((
 en: [
-  PWM is already abstracted within the
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/trait.Pwm.html")[`embedded-hal` `Pwm` trait]
-  and you will again find implementations of this in the
-  #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`].
+  PWM is already abstracted within the #link(url_pwm)[`embedded-hal` `Pwm` trait]
+  and you will again find implementations of this in the #ln_nrf_hal.
 ]))
 
 == #tr((
@@ -215,13 +214,12 @@ en: [
   pressed).
 ]))
 
+#let url_input_pin = "https://docs.rs/embedded-hal/0.2.6/embedded_hal/digital/v2/trait.InputPin.html"
 #tr((
 en: [
   Again digital inputs are abstracted within the
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/digital/v2/trait.InputPin.html")[`embedded-hal` `InputPin` trait]
-  and of course the
-  #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`] does have an
-  implementation for them.
+  #link(url_input_pin)[`embedded-hal` `InputPin` trait]  and of course the
+  #ln_nrf_hal does have an implementation for them.
 ]))
 
 #tr((
@@ -249,12 +247,11 @@ en: [
   range, that the processor can use in its calculations.
 ]))
 
+#let url_hal_adc = "https://docs.rs/embedded-hal/0.2.6/embedded_hal/adc/index.html"
 #tr((
 en: [
-  Again the
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/adc/index.html")[`embedded-hal` `adc` module]
-  as well as the #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`]
-  got you covered.
+  Again the #link(url_hal_adc)[`embedded-hal` `adc` module]
+  as well as the #ln_nrf_hal got you covered.
 ]))
 
 == #tr((
@@ -287,30 +284,25 @@ en: [
   en: [Other communication protocols],
 ))
 
+#let url_hal_spi = "https://docs.rs/embedded-hal/0.2.6/embedded_hal/spi/index.html"
+#let ln_smoltcp = link("https://github.com/smoltcp-rs/smoltcp")[`smoltcp`]
+#let ln_usb_device = link("https://github.com/mvirkkunen/usb-device")[`usb-device`]
+#let ln_rubble = link("https://github.com/jonas-schievink/rubble")[`rubble`]
 #tr((
 en: [
-  - SPI, abstracted within the
-    #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/spi/index.html")[`embedded-hal` `spi` module]
-    and implemented by the
-    #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`]
+  - SPI, abstracted within the #link(url_hal_spi)[`embedded-hal` `spi` module]
+    and implemented by the #ln_nrf_hal
   - I2S, currently not abstracted within the `embedded-hal` but
-    implemented by the
-    #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`]
-  - Ethernet, there does exist a small TCP/IP stack named
-    #link("https://github.com/smoltcp-rs/smoltcp")[`smoltcp`] which is
+    implemented by the #ln_nrf_hal
+  - Ethernet, there does exist a small TCP/IP stack named #ln_smoltcp which is
     implemented for some chips but the ones on the micro:bit don't feature
     an Ethernet peripheral
-  - USB, there is some experimental work on this, for example with the
-    #link("https://github.com/mvirkkunen/usb-device")[`usb-device`] crate
+  - USB, there is some experimental work on this, for example with the #ln_usb_device crate
   - Bluetooth, there does exist an incomplete BLE stack named
-    #link("https://github.com/jonas-schievink/rubble")[`rubble`] which
-    does support nrf chips.
-  - SMBUS, neither abstracted in `embedded-hal` nor implemented by the
-    #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`] at the moment.
-  - CAN, neither abstracted in `embedded-hal` nor implemented by the
-    #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`] at the moment
-  - IrDA, neither abstracted in `embedded-hal` nor implemented by the
-    #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`] at the moment
+    #ln_rubble which does support nrf chips.
+  - SMBUS, neither abstracted in `embedded-hal` nor implemented by the #ln_nrf_hal at the moment.
+  - CAN, neither abstracted in `embedded-hal` nor implemented by the #ln_nrf_hal at the moment
+  - IrDA, neither abstracted in `embedded-hal` nor implemented by the #ln_nrf_hal at the moment
 ]))
 
 #tr((
@@ -322,13 +314,13 @@ en: [
   and others, SMBUS.
 ]))
 
+#let url_matrix = "https://matrix.to/#/#rust-embedded:matrix.org"
 #tr((
 en: [
   If you happen to be interested in developing abstractions in the
   `embedded-hal` or implementations of peripherals in general, don't be
   shy to open an issue in the HAL repositories. Alternatively you could
-  also join the
-  #link("https://matrix.to/#/#rust-embedded:matrix.org")[Rust Embedded matrix channel]
+  also join the #link(url_matrix)[Rust Embedded matrix channel]
   and get into contact with most of the people who built the stuff from
   above.
 ]))
@@ -407,44 +399,45 @@ en: [
 
 #divider()
 
+#let ln_microbit = link("https://github.com/nrf-rs/microbit/")[`microbit`]
+#let url_awesome = "https://github.com/rust-embedded/awesome-embedded-rust/"
+#let url_rtic = "https://rtic.rs"
+#let ln_hal = link("https://github.com/rust-embedded/embedded-hal")[`embedded-hal`]
+#let ln_quickstart = link("https://docs.rs/cortex-m-quickstart/0.3.1/cortex_m_quickstart/")[`cortex-m-quickstart`]
+#let url_x_motion_demo = "https://mobile.twitter.com/japaricious/status/962770003325005824"
+#let url_japaric_motion = "http://blog.japaric.io/wd-1-2-l3gd20-lsm303dlhc-madgwick/"
+#let url_japaric_io = "http://blog.japaric.io/brave-new-io/"
+#let url_japaric_blog = "http://blog.japaric.io"
+#let url_issue39 = "https://github.com/rust-lang-nursery/embedded-wg/issues/39"
 #tr((
 en: [
   So where to next? There are several options:
-  - You could check out the examples in the
-    #link("https://github.com/nrf-rs/microbit/")[`microbit`] board support
+  - You could check out the examples in the #ln_microbit board support
     crate. All those examples work for the micro:bit board you have.
   - You could join the
-    #link("https://matrix.to/#/#rust-embedded:matrix.org")[Rust Embedded matrix channel],
+    #link(url_matrix)[Rust Embedded matrix channel],
     lots of people who contribute or work on embedded software hang out
     there. Including for example the people who wrote the `microbit` BSP,
     the `nrf52-hal`, `embedded-hal` etc.
   - If you are looking for a general overview of what is available in Rust
-    Embedded right now check out the
-    #link("https://github.com/rust-embedded/awesome-embedded-rust/")[Awesome Rust Embedded]
-    list
+    Embedded right now check out the #link(url_awesome)[Awesome Rust Embedded] list
   - You could check out
-    #link("https://rtic.rs")[Real-Time Interrupt-driven Concurrency]. A
+    #link(url_rtic)[Real-Time Interrupt-driven Concurrency]. A
     very efficient preemptive multitasking framework that supports task
     prioritization and dead lock free execution.
-  - You could check out more abstractions of the
-    #link("https://github.com/rust-embedded/embedded-hal")[`embedded-hal`]
-    project and maybe even try and write your own platform agnostic driver
-    based on it.
-  - You could try running Rust on a different development board. The
-    easiest way to get started is to use the
-    #link("https://docs.rs/cortex-m-quickstart/0.3.1/cortex_m_quickstart/")[`cortex-m-quickstart`]
+  - You could check out more abstractions of the #ln_hal project
+    and maybe even try and write your own platform agnostic driver based on it.
+  - You could try running Rust on a different development board.
+    The easiest way to get started is to use the #ln_quickstart
     Cargo project template.
-  - You could try out
-    #link("https://mobile.twitter.com/japaricious/status/962770003325005824")[this motion sensors demo].
+  - You could try out #link(url_x_motion_demo)[this motion sensors demo].
     Details about the implementation and source code are available in
-    #link("http://blog.japaric.io/wd-1-2-l3gd20-lsm303dlhc-madgwick/")[this blog post].
-  - You could check out
-    #link("http://blog.japaric.io/brave-new-io/")[this blog post] which
+    #link(url_japaric_motion)[this blog post].
+  - You could check out #link(url_japaric_io)[this blog post] which
     describes how Rust type system can prevent bugs in I/O configuration.
-  - You could check out #link("http://blog.japaric.io")[japaric's blog]
+  - You could check out #link(url_japaric_blog)[japaric's blog]
     for miscellaneous topics about embedded development with Rust.
-  - You could join the
-    #link("https://github.com/rust-lang-nursery/embedded-wg/issues/39")[Weekly driver initiative]
+  - You could join the #link(url_issue39)[Weekly driver initiative]
     and help us write generic drivers on top of the `embedded-hal` traits
     and that work for all sorts of platforms (ARM Cortex-M, AVR, MSP430,
     RISCV, etc.)

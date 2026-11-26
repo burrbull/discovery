@@ -4,9 +4,10 @@
 ), offset: whole)
 <install-macos>
 
+#let ln_brew = link("http://brew.sh/")[Homebrew]
 #tr((
 en: [
-  All the tools can be installed using #link("http://brew.sh/")[Homebrew]:
+  All the tools can be installed using #ln_brew:
 ]))
 
 ```console

@@ -14,13 +14,12 @@ en: [
   previous chapter in order to finally make an LED blink.
 ]))
 
+#let ln_delayus = link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayUs.html")[`DelayUs`]
+#let ln_delayms = link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayMs.html")[`DelayMs`]
 #tr((
 en: [
   `embedded-hal` provides us with two abstractions to delay the execution
-  of our program:
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayUs.html")[`DelayUs`]
-  and
-  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayMs.html")[`DelayMs`].
+  of our program: #ln_delayus and #ln_delayms.
   Both of them essentially work the exact same way except that they accept
   different units for their delay function.
 ]))

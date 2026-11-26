@@ -3,13 +3,13 @@
 #h1((en: [Magnitude],
 ), offset: whole)
 
+#let ln_mag_data = link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.mag_data")[`mag_data()`]
 #tr((
 en: [
   We have been working with the direction of the magnetic field but what
-  is its real magnitude? According to the documentation about the
-  #link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.mag_data")[`mag_data()`]
-  function the `x` `y` `z` values we are getting are in nanotesla. That
-  means the only thing we have to compute in order to get the magnitude of
+  is its real magnitude? According to the documentation about the #ln_mag_data
+  function the `x` `y` `z` values we are getting are in nanotesla.
+  That means the only thing we have to compute in order to get the magnitude of
   the magnetic field in nanotesla is the magnitude of the 3D vector that
   our `x` `y` `z` values describe. As you might remember from school this
   is simply:

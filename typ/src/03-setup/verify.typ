@@ -84,6 +84,7 @@ $ sudo udevadm trigger
 = #tr((
   en: [Verifying cargo-embed],
 ))
+<verifying-cargo-embed>
 
 #tr((
 en: [
@@ -191,7 +192,7 @@ en: [
 #tr((
 en: [
   (If it does not, check out
-  #link("../appendix/1-general-troubleshooting/index.html")[general troubleshooting]
+  #link(<general-troubleshooting>)[general troubleshooting]
   instructions.)
 ]))
 
