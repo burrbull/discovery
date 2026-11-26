@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Read a single register]
-))
+#h1((en: [Read a single register],
+), offset: whole)
 
 Let's put all that theory into practice!
 

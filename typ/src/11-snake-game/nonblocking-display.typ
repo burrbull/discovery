@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Using the non-blocking display]
-))
+#h1((en: [Using the non-blocking display],
+), offset: whole)
 
 We now have a basic functioning snake game. But you might find that when
 the snake gets a bit longer, it can be difficult to tell the snake from

@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Naive approach and `write!`]
-))
+#h1((en: [Naive approach and `write!`],
+), offset: whole)
 
 = Naive approach
 

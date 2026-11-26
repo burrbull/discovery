@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Send a string]
-))
+#h1((en: [Send a string],
+), offset: whole)
 
 The next task will be to send a whole string from the microcontroller to
 your computer.

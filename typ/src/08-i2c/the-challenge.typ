@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [The challenge]
-))
+#h1((en: [The challenge],
+), offset: whole)
 
 The challenge for this chapter is, to build a small application that
 communicates with the outside world via the serial interface introduced

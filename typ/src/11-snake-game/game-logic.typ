@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Game logic]
-))
+#h1((en: [Game logic],
+), offset: whole)
 
 First, we are going to describe the game logic. You are probably
 familiar with snake games, but if not, the basic idea is that the player

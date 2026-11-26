@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Send a single byte]
-))
+#h1((en: [Send a single byte],
+), offset: whole)
 
 Our first task will be to send a single byte from the microcontroller to
 the computer over the serial connection.

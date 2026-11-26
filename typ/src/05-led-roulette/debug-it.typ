@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Debug it]
-))
+#h1((en: [Debug it],
+), offset: whole)
 
 = How does this even work?
 

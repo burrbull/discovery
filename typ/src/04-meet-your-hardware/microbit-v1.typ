@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Nordic nRF51822 (the "nRF51", micro:bit v1)]
-))
+#h1((en: [Nordic nRF51822 (the "nRF51", micro:bit v1)],
+), offset: whole)
 
 Our MCU has 48 tiny metal #strong[pins] sitting right underneath it
 (it's a so called

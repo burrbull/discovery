@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Windows]
-))
+#h1((en: [Windows],
+), offset: whole)
 
 = `arm-none-eabi-gdb`
 

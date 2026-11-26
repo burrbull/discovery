@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Take 1]
-))
+#h1((en: [Take 1],
+), offset: whole)
 
 What's the simplest way in which we can implement the LED compass, even
 if it's not perfect?

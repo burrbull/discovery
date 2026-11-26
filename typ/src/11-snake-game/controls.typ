@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Controls]
-))
+#h1((en: [Controls],
+), offset: whole)
 
 Our protagonist will be controlled by the two buttons on the front of
 the micro:bit. Button A will turn to the (snake's) left, and button B

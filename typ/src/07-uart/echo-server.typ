@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Echo server]
-))
+#h1((en: [Echo server],
+), offset: whole)
 
 Let's merge transmission and reception into a single program and write
 an echo server. An echo server sends back to the client the same text it

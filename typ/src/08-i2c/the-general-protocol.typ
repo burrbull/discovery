@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [General protocol]
-))
+#h1((en: [General protocol],
+), offset: whole)
 
 The I2C protocol is more elaborate than the serial communication
 protocol because it has to support communication between several

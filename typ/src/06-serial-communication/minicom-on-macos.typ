@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Minicom on macOS]
-))
+#h1((en: [Minicom on macOS],
+), offset: whole)
 
 == Finding Your Command Key
 

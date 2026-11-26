@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Verify the installation]
-))
+#h1((en: [Verify the installation],
+), offset: whole)
 
 Let's verify that all the tools were installed correctly.
 
@@ -55,8 +55,8 @@ $ sudo udevadm control --reload
 $ sudo udevadm trigger
 ```
 
-#h1((en: [All]
-))
+#h1((en: [All],
+), offset: whole)
 
 = Verifying cargo-embed
 

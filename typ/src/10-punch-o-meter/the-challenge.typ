@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [The challenge]
-))
+#h1((en: [The challenge],
+), offset: whole)
 
 To keep things simple, we'll measure the acceleration only in the X axis
 while the board remains horizontal. That way we won't have to deal with

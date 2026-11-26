@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Rust Embedded terminology]
-))
+#h1((en: [Rust Embedded terminology],
+), offset: whole)
 
 Before we dive into programming the micro:bit let's have a quick look at
 the libraries and terminology that will be important for all the future

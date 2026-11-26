@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [It blinks]
-))
+#h1((en: [It blinks],
+), offset: whole)
 
 = Delaying
 

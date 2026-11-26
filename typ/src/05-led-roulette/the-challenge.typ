@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [The challenge]
-))
+#h1((en: [The challenge],
+), offset: whole)
 
 You are now well armed to face a challenge! Your task will be to
 implement the application I showed you at the beginning of this chapter.

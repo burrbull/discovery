@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Build it]
-))
+#h1((en: [Build it],
+), offset: whole)
 
 The first step is to build our "binary" crate. Because the
 microcontroller has a different architecture than your computer we'll

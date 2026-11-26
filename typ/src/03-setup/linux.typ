@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Linux]
-))
+#h1((en: [Linux],
+), offset: whole)
 
 Here are the installation commands for a few Linux distributions.
 

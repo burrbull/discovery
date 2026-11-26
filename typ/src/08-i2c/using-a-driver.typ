@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Using a driver]
-))
+#h1((en: [Using a driver],
+), offset: whole)
 
 As we already discussed in chapter 5 `embedded-hal` provides
 abstractions which can be used to write platform independent code that

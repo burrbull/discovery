@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Light it up]
-))
+#h1((en: [Light it up],
+), offset: whole)
 
 = embedded-hal
 

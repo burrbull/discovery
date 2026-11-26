@@ -357,7 +357,7 @@
     [
       #book_page(source, out, data, title, depth, sidebar(depth), prev_path, next_path) #lbl(path)
     ]
-    if i == 0 and path != "index" {
+    if i == 0 and not "index" in sources {
       let depth = 0
       book_page(source, data.prefix+"index.html", data, title, depth, sidebar(depth), prev_path, next_path)
     }
@@ -394,10 +394,12 @@
     if path.ends-with("/index") {
       offset = offset - 1
     }
-    if part == "main" and path.starts-with("appendix/") {
-      path = "appendix"
-      counter(heading).update(0)
-      set heading(numbering: "A.1.", offset: offset+1)
+    if path.starts-with("appendix/") {
+      if part == "main" {
+        part = "appendix"
+        counter(heading).update(0)
+      }
+      set heading(numbering: "A.1.", offset: offset)
       source
     } else {
       set heading(offset: offset+1)

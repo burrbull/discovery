@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [Gravity is up?]
-))
+#h1((en: [Gravity is up?],
+), offset: whole)
 
 What's the first thing we'll do?
 

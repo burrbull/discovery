@@ -1,7 +1,7 @@
 #import "../../config.typ": *
 
-#h1((en: [\*nix tooling\*nix tooling]
-))
+#h1((en: [\*nix tooling\*nix tooling],
+), offset: whole)
 
 = Connecting the micro:bit board
 
