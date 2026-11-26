@@ -7,7 +7,7 @@ The first step is to build our "binary" crate. Because the
 microcontroller has a different architecture than your computer we'll
 have to cross compile. Cross compiling in Rust land is as simple as
 passing an extra `--target` flag to `rustc`or Cargo. The complicated
-part is figuring out the argument of that flag: the #emph[name] of the
+part is figuring out the argument of that flag: the _name_ of the
 target.
 
 As we already know the microcontroller on the micro:bit v2 has a
@@ -19,12 +19,12 @@ that architecture:
 - `thumbv6m-none-eabi`, for the Cortex-M0 and Cortex-M1 processors
 - `thumbv7m-none-eabi`, for the Cortex-M3 processor
 - `thumbv7em-none-eabi`, for the Cortex-M4 and Cortex-M7 processors
-- `thumbv7em-none-eabihf`, for the Cortex-M4#strong[F] and
-  Cortex-M7#strong[F] processors
+- `thumbv7em-none-eabihf`, for the Cortex-M4#[*F*] and
+  Cortex-M7#[*F*] processors
 - `thumbv8m.main-none-eabi`, for the Cortex-M33 and Cortex-M35P
   processors
-- `thumbv8m.main-none-eabihf`, for the Cortex-M33#strong[F] and
-  Cortex-M35P#strong[F] processors
+- `thumbv8m.main-none-eabihf`, for the Cortex-M33#[*F*] and
+  Cortex-M35P#[*F*] processors
 
 For the micro:bit v2, we'll use the `thumbv7em-none-eabihf` target, for
 v1 the `thumbv6m-none-eabi` one. Before cross-compiling you have to
@@ -70,7 +70,7 @@ $ cargo build --features v1 --target thumbv6m-none-eabi
 ```
 
 #quote(block: true)[
-#strong[NOTE] Be sure to compile this crate #emph[without]
+*NOTE* Be sure to compile this crate _without_
 optimizations. The provided Cargo.toml file and build command above will
 ensure optimizations are off.
 ]

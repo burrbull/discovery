@@ -5,7 +5,9 @@
 
 Let's get familiar with the hardware we'll be working with.
 
-= micro:bit
+= #tr((
+  en: [micro:bit],
+))
 
 Here are some of the many components on the board:
 

@@ -19,12 +19,12 @@ context in the
 that I suggest you read through before proceeding.
 
 #quote(block: true)[
-#strong[NOTE] This chapter has been developed for the micro:bit v2 only,
+*NOTE* This chapter has been developed for the micro:bit v2 only,
 not the v1. Contributions to port the code to the v1 are welcome.
 ]
 
 #quote(block: true)[
-#strong[NOTE] In this chapter, we are going to use later versions of
+*NOTE* In this chapter, we are going to use later versions of
 certain libraries that have been used in previous chapters. We are going
 to use version 0.13.0 of the `microbit` library (the preceding chapters
 have used 0.12.0). Version 0.13.0 fixes a couple of bugs in the

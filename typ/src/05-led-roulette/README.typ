@@ -7,7 +7,7 @@ Alright, let's start by building the following application:
 
 I'm going to give you a high level API to implement this app but don't
 worry we'll do low level stuff later on. The main goal of this chapter
-is to get familiar with the #emph[flashing] and debugging process.
+is to get familiar with the _flashing_ and debugging process.
 
 The starter code is in the `src` directory of the book repository.
 Inside that directory there are more directories named after each

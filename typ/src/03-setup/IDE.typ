@@ -31,7 +31,9 @@ book. If your IDE is not listed below, please improve this book by
 adding a section, so that the next reader can get the best experience
 out of it.
 
-= How to build with IntelliJ
+= #tr((
+  en: [How to build with IntelliJ],
+))
 
 When editing the IntelliJ build configuration, here are a few
 non-default values: \* You should edit the command. When this book tells

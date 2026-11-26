@@ -64,7 +64,9 @@ output until it has received a certain number of bytes to send (this is
 the case with the UARTE implementation). Calling `flush()` forces it to
 write the bytes it currently has right now instead of waiting for more.
 
-= Testing it
+= #tr((
+  en: [Testing it],
+))
 
 Before flashing this you should make sure to start your minicom/PuTTY as
 the data we receive via our serial communication is not backed up or

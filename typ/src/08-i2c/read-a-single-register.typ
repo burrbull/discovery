@@ -13,7 +13,7 @@ in the LSM303AGR's datasheet on page 39 and are:
 - 0011110 for the magnetometer
 
 #quote(block: true)[
-#strong[NOTE] Remember that these are only the 7 leading bits of the
+*NOTE* Remember that these are only the 7 leading bits of the
 address, the 8th bit is going to be the bit that determines whether we
 are performing a read or write.
 ]
@@ -54,7 +54,9 @@ pass the peripheral as well as the pins that are used to communicate
 with the chip to the constructor; and then the frequency we wish the bus
 to operate on, in this case 100 kHz (`K100`).
 
-= Testing it
+= #tr((
+  en: [Testing it],
+))
 
 As always you have to modify `Embed.toml` to fit your MCU and can then
 use:

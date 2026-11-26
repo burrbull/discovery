@@ -3,7 +3,9 @@
 #h1((en: [Debug it],
 ), offset: whole)
 
-= How does this even work?
+= #tr((
+  en: [How does this even work?],
+))
 
 Before we debug our little program let's take a moment to quickly
 understand what is actually happening here. In the previous chapter we
@@ -18,7 +20,9 @@ to handle this command. In the case of the `cargo-embed` GDB stub it
 will forward the command to the debugging probe on the board via USB
 which then does the job of actually talking to the MCU for us.
 
-= Let's debug!
+= #tr((
+  en: [Let's debug!],
+))
 
 Since `cargo-embed` is blocking our current shell we can simply open a
 new one and cd back into our project directory. Once we are there we
@@ -33,14 +37,14 @@ $ gdb target/thumbv6m-none-eabi/debug/led-roulette
 ```
 
 #quote(block: true)[
-#strong[NOTE]: Depending on which GDB you installed you will have to use
+*NOTE*: Depending on which GDB you installed you will have to use
 a different command to launch it, check out
 #link("../03-setup/index.md#tools")[chapter 3] if you forgot which one
 it was.
 ]
 
 #quote(block: true)[
-#strong[NOTE]: If you are getting
+*NOTE*: If you are getting
 `target/thumbv7em-none-eabihf/debug/led-roulette: No such file or directory`
 error, try adding `../../` to the file path, for example:
 
@@ -56,7 +60,7 @@ for more.
 ]
 
 #quote(block: true)[
-#strong[NOTE]: If `cargo-embed` prints a lot of warnings here don't
+*NOTE*: If `cargo-embed` prints a lot of warnings here don't
 worry about it. As of now it does not fully implement the GDB protocol
 and thus might not recognize all the commands your GDB is sending to it,
 as long as it does not crash, you are fine.
@@ -89,7 +93,7 @@ Breakpoint 1, led_roulette::__cortex_m_rt_main_trampoline () at src/05-led-roule
 ```
 
 Breakpoints can be used to stop the normal flow of a program. The
-`continue` command will let the program run freely #emph[until] it
+`continue` command will let the program run freely _until_ it
 reaches a breakpoint. In this case, until it reaches the `main` function
 because there's a breakpoint there.
 
@@ -108,7 +112,7 @@ following command:
 ```
 
 #quote(block: true)[
-#strong[NOTE]: Apologies Windows users. The GDB shipped with the GNU ARM
+*NOTE*: Apologies Windows users. The GDB shipped with the GNU ARM
 Embedded Toolchain doesn't support this TUI mode `:-(`.
 ]
 
@@ -187,7 +191,7 @@ one instruction at a time using `stepi`. You can always switch back into
 Rust source code view later by issuing the `layout src` command again.
 
 #quote(block: true)[
-#strong[NOTE]: If you used the `next` or `continue` command by mistake
+*NOTE*: If you used the `next` or `continue` command by mistake
 and GDB got stuck, you can get unstuck by hitting `Ctrl+C`.
 ]
 
@@ -266,10 +270,10 @@ program that you were interested in inspecting. You can easily roll back
 the state of your program back to its very beginning.
 
 #quote(block: true)[
-#strong[The fine print]: This `reset` command doesn't clear or touch
+*The fine print*: This `reset` command doesn't clear or touch
 RAM. That memory will retain its values from the previous run. That
 shouldn't be a problem though, unless your program behavior depends on
-the value of #emph[uninitialized] variables but that's the definition of
+the value of _uninitialized_ variables but that's the definition of
 Undefined Behavior (UB).
 ]
 
@@ -289,7 +293,7 @@ Ending remote debugging.
 ```
 
 #quote(block: true)[
-#strong[NOTE]: If the default GDB CLI is not to your liking check out
+*NOTE*: If the default GDB CLI is not to your liking check out
 #link("https://github.com/cyrus-and/gdb-dashboard#gdb-dashboard")[gdb-dashboard].
 It uses Python to turn the default GDB CLI into a dashboard that shows
 registers, the source view, the assembly view and other things.

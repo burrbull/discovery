@@ -7,7 +7,9 @@ Dealing with microcontrollers involves several tools as we'll be dealing
 with an architecture different from your computer's and we'll have to
 run and debug programs on a "remote" device.
 
-= Documentation
+= #tr((
+  en: [Documentation],
+))
 
 Tooling is not everything though. Without documentation, it is pretty
 much impossible to work with microcontrollers.
@@ -16,7 +18,9 @@ We'll be referring to all these documents throughout this book:
 
 - #link("https://www.st.com/resource/en/datasheet/lsm303agr.pdf")[LSM303AGR]
 
-= Tools
+= #tr((
+  en: [Tools],
+))
 
 We'll use all the tools listed below. Where a minimum version is not
 specified, any recent version should work but we have listed the version
@@ -45,7 +49,9 @@ we have tested.
 Next, follow OS-agnostic installation instructions for a few of the
 tools:
 
-== `rustc` & Cargo
+== #tr((
+  en: [`rustc` & Cargo],
+))
 
 Install rustup by following the instructions at
 #link("https://rustup.rs").
@@ -59,7 +65,9 @@ $ rustc -V
 rustc 1.53.0 (53cb7b09b 2021-06-17)
 ```
 
-== `cargo-binutils`
+== #tr((
+  en: [`cargo-binutils`],
+))
 
 ```console
 $ rustup component add llvm-tools
@@ -70,7 +78,9 @@ $ cargo size --version
 cargo-size 0.3.3
 ```
 
-== `cargo-embed`
+== #tr((
+  en: [`cargo-embed`],
+))
 
 In order to install cargo-embed, first install its
 #link("https://probe.rs/docs/getting-started/installation/")[prerequisites]
@@ -82,7 +92,7 @@ install it with cargo:
 $ cargo install --locked probe-rs-tools --vers '^0.24'
 ```
 
-#strong[NOTE] This may fail due to frequent changes in `probe-rs`. If
+*NOTE* This may fail due to frequent changes in `probe-rs`. If
 so, go to #link("https://probe.rs") and follow the current installation
 instructions there.
 
@@ -94,7 +104,9 @@ $ cargo embed --version
 cargo-embed 0.24.0 (git commit: crates.io)
 ```
 
-== This repository
+== #tr((
+  en: [This repository],
+))
 
 Since this book also contains some small Rust code bases used in various
 chapters you will also have to download its source code. You can do this
@@ -106,7 +118,9 @@ in one of the following ways:
 - Clone it using git (if you know git you presumably already have it
   installed) from the same repository as linked in the zip approach
 
-== OS specific instructions
+== #tr((
+  en: [OS specific instructions],
+))
 
 Now follow the instructions specific to the OS you are using:
 

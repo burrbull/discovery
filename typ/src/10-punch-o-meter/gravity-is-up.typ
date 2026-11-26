@@ -26,7 +26,7 @@ the board to align the gravity to the X or Y axis but the acceleration
 measured by the accelerometer is always pointing up.
 
 What happens here is that the accelerometer is measuring the
-#emph[proper acceleration] of the board not the acceleration #emph[you]
+_proper acceleration_ of the board not the acceleration _you_
 are observing. This proper acceleration is the acceleration of the board
 as seen from an observer that's in free fall. An observer that's in free
 fall is moving toward the center of the Earth with an acceleration of

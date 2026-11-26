@@ -12,7 +12,9 @@ This book is an introductory course on microcontroller-based embedded
 systems that uses Rust as the teaching language rather than the usual
 C/C++.
 
-= Scope
+= #tr((
+  en: [Scope],
+))
 
 The following topics will be covered (eventually, I hope):
 
@@ -29,19 +31,23 @@ The following topics will be covered (eventually, I hope):
 - Control systems concepts: sensors, calibration, digital filters,
   actuators, open loop control, closed loop control, etc.
 
-= Approach
+= #tr((
+  en: [Approach],
+))
 
 - Beginner friendly. No previous experience with microcontrollers or
   embedded systems is required.
 
 - Hands on. Plenty of exercises to put the theory into practice.
-  #emph[You] will be doing most of the work here.
+  _You_ will be doing most of the work here.
 
 - Tool centered. We'll make plenty use of tooling to ease development.
   "Real" debugging, with GDB, and logging will be introduced early on.
   Using LEDs as a debugging mechanism has no place here.
 
-= Non-goals
+= #tr((
+  en: [Non-goals],
+))
 
 What's out of scope for this book:
 
@@ -59,14 +65,18 @@ What's out of scope for this book:
 Also I don't intend to port this material to other development boards;
 this book will make exclusive use of the micro:bit development board.
 
-= Reporting problems
+= #tr((
+  en: [Reporting problems],
+))
 
 The source of this book is in
 #link("https://github.com/rust-embedded/discovery")[this repository]. If
 you encounter any typo or problem with the code report it on the
 #link("https://github.com/rust-embedded/discovery/issues")[issue tracker].
 
-= Other embedded Rust resources
+= #tr((
+  en: [Other embedded Rust resources],
+))
 
 This Discovery book is just one of several embedded Rust resources
 provided by the

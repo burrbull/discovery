@@ -11,14 +11,14 @@ We won't be dealing with the DE-9 connector itself but with the
 communication protocol that this cable is/was usually used for.
 
 So what's this
-#link("https://en.wikipedia.org/wiki/Asynchronous_serial_communication")[#emph[serial communication]]?
-It's an #emph[asynchronous] communication protocol where two devices
-exchange data #emph[serially], as in one bit at a time, using two data
+#link("https://en.wikipedia.org/wiki/Asynchronous_serial_communication")[_serial communication_]?
+It's an _asynchronous_ communication protocol where two devices
+exchange data _serially_, as in one bit at a time, using two data
 lines (plus a common ground). The protocol is asynchronous in the sense
 that neither of the shared lines carries a clock signal. Instead, both
 parties must agree on how fast data will be sent along the wire
-#emph[before] the communication occurs. This protocol allows
-#emph[duplex] communication as data can be sent from A to B and from B
+_before_ the communication occurs. This protocol allows
+_duplex_ communication as data can be sent from A to B and from B
 to A simultaneously.
 
 We'll be using this protocol to exchange data between the
@@ -33,9 +33,9 @@ the positioning information they receive via serial communication.
 The next practical question you probably want to ask is: How fast can we
 send data through this protocol?
 
-This protocol works with frames. Each frame has one #emph[start] bit, 5
-to 9 bits of payload (data) and 1 to 2 #emph[stop bits]. The speed of
-the protocol is known as #emph[baud rate] and it's quoted in bits per
+This protocol works with frames. Each frame has one _start_ bit, 5
+to 9 bits of payload (data) and 1 to 2 _stop bits_. The speed of
+the protocol is known as _baud rate_ and it's quoted in bits per
 second (bps). Common baud rates are: 9600, 19200, 38400, 57600 and
 115200 bps.
 

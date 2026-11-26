@@ -15,7 +15,7 @@ $ mode
 It will print a list of devices that are connected to your computer. The
 ones that start with `COM` in their names are serial devices. This is
 the kind of device we'll be working with. Take note of all the `COM`
-#emph[ports] `mode` outputs #emph[before] plugging the serial module.
+_ports_ `mode` outputs _before_ plugging the serial module.
 
 Now, plug in the micro:bit and run the `mode` command again. If you see
 a new `COM` port appear on the list, then that's the COM port assigned

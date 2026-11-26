@@ -7,7 +7,7 @@ We have barely scratched the surface! There's lots of stuff left for you
 to explore.
 
 #quote(block: true)[
-#strong[NOTE:] If you're reading this, and you'd like to help add
+*NOTE*: If you're reading this, and you'd like to help add
 examples or exercises to the Discovery book for any of the items below,
 or any other relevant embedded topics, we'd love to have your help!
 
@@ -18,13 +18,17 @@ contribute this to the book, or open a Pull Request adding the
 information!
 ]
 
-= Topics about embedded software
+= #tr((
+  en: [Topics about embedded software],
+))
 
 These topics discuss strategies for writing embedded software. Although
 many problems can be solved in different ways, these sections talk about
 some strategies, and when they make sense (or don't make sense) to use.
 
-== Multitasking
+== #tr((
+  en: [Multitasking],
+))
 
 Most of our programs executed a single task. How could we achieve
 multitasking in a system with no OS, and thus no threads? There are two
@@ -32,23 +36,25 @@ main approaches to multitasking: preemptive multitasking and cooperative
 multitasking.
 
 In preemptive multitasking a task that's currently being executed can,
-at any point in time, be #emph[preempted] (interrupted) by another task.
+at any point in time, be _preempted_ (interrupted) by another task.
 On preemption, the first task will be suspended and the processor will
 instead execute the second task. At some point the first task will be
 resumed. Microcontrollers provide hardware support for preemption in the
-form of #emph[interrupts]. We were introduced to interrupts when we
+form of _interrupts_. We were introduced to interrupts when we
 built our snake game in chapter 11.
 
 In cooperative multitasking a task that's being executed will run until
-it reaches a #emph[suspension point]. When the processor reaches that
+it reaches a _suspension point_. When the processor reaches that
 suspension point it will stop executing the current task and instead go
 and execute a different task. At some point the first task will be
 resumed. The main difference between these two approaches to
-multitasking is that in cooperative multitasking #emph[yields] execution
-control at #emph[known] suspension points instead of being forcefully
+multitasking is that in cooperative multitasking _yields_ execution
+control at _known_ suspension points instead of being forcefully
 preempted at any point of its execution.
 
-== Sleeping
+== #tr((
+  en: [Sleeping],
+))
 
 All our programs have been continuously polling peripherals to see if
 there's anything that needs to be done. However, sometimes there's
@@ -62,7 +68,9 @@ below for what exactly those are) are one of the events that wake up the
 microcontroller but there are others and the `wfi` and `wfe` are the
 instructions that make the processor "sleep".
 
-= Topics related to microcontroller capabilities
+= #tr((
+  en: [Topics related to microcontroller capabilities],
+))
 
 Microcontrollers (like our nRF52/nRF51) have many capabilities. However,
 many share similar capabilities that can be used to solve all sorts of
@@ -71,9 +79,11 @@ different problems.
 These topics discuss some of those capabilities, and how they can be
 used effectively in embedded development.
 
-== Direct Memory Access (DMA).
+== #tr((
+  en: [Direct Memory Access (DMA).],
+))
 
-This peripheral is a kind of #emph[asynchronous] `memcpy`. If you are
+This peripheral is a kind of _asynchronous_ `memcpy`. If you are
 working with a micro:bit v2 you have actually already used this, the HAL
 does this for you with the UARTE and TWIM peripherals. A DMA peripheral
 can be used to perform bulk transfers of data. Either from RAM to RAM,
@@ -86,10 +96,12 @@ checkout the `serial_setup` module from the UART chapter. If that isn't
 enough yet you could even try and dive into the code of the
 #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`].
 
-== Interrupts
+== #tr((
+  en: [Interrupts],
+))
 
 In order to interact with the real world, it is often necessary for the
-microcontroller to respond #emph[immediately] when some kind of event
+microcontroller to respond _immediately_ when some kind of event
 occurs.
 
 Microcontrollers have the ability to be interrupted, meaning when a
@@ -108,7 +120,9 @@ concepts of `Send` and `Sync` when sharing data between our main
 application, and code that executes as part of handling an interrupt
 event.
 
-== Pulse Width Modulation (PWM)
+== #tr((
+  en: [Pulse Width Modulation (PWM)],
+))
 
 In a nutshell, PWM is turning on something and then turning it off
 periodically while keeping some proportion ("duty cycle") between the
@@ -118,7 +132,7 @@ high frequency, this can be used to dim the LED. A low duty cycle, say
 duty cycle, say 90% on time and 10% off time, will make the LED much
 brighter (almost as if it were fully powered).
 
-In general, PWM can be used to control how much #emph[power] is given to
+In general, PWM can be used to control how much _power_ is given to
 some electric device. With proper (power) electronics between a
 microcontroller and an electrical motor, PWM can be used to control how
 much power is given to the motor thus it can be used to control its
@@ -131,7 +145,9 @@ PWM is already abstracted within the
 and you will again find implementations of this in the
 #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`].
 
-== Digital inputs
+== #tr((
+  en: [Digital inputs],
+))
 
 We have used the microcontroller pins as digital outputs, to drive LEDs.
 When building our snake game, we also caught a glimpse of how these pins
@@ -145,10 +161,12 @@ and of course the
 #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`] does have an
 implementation for them.
 
-\(#emph[spoilers] reading the binary state of switches / buttons is not
+(_spoilers_ reading the binary state of switches / buttons is not
 as straightforward as it sounds \;-) )
 
-== Analog-to-Digital Converters (ADC)
+== #tr((
+  en: [Analog-to-Digital Converters (ADC)],
+))
 
 There are a lot of digital sensors out there. You can use a protocol
 like I2C and SPI to read them. But analog sensors also exist! These
@@ -164,7 +182,9 @@ Again the
 as well as the #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`]
 got you covered.
 
-== Digital-to-Analog Converters (DAC)
+== #tr((
+  en: [Digital-to-Analog Converters (DAC)],
+))
 
 As you might expect a DAC is exactly the opposite of ADC. You can write
 some digital value into a register to produce a voltage in the
@@ -173,14 +193,18 @@ When this analog pin is connected to some appropriate electronics and
 the register is written to at some constant, fast rate (frequency) with
 the right values you can produce sounds or even music!
 
-== Real Time Clock (RTC)
+== #tr((
+  en: [Real Time Clock (RTC)],
+))
 
 This peripheral can be used to track time in "human format". Seconds,
 minutes, hours, days, months and years. This peripheral handles the
 translation from "ticks" to these human friendly units of time. It even
 handles leap years and Daylight Save Time for you!
 
-== Other communication protocols
+== #tr((
+  en: [Other communication protocols],
+))
 
 - SPI, abstracted within the
   #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/spi/index.html")[`embedded-hal` `spi` module]
@@ -219,13 +243,17 @@ also join the
 and get into contact with most of the people who built the stuff from
 above.
 
-= General Embedded-Relevant Topics
+= #tr((
+  en: [General Embedded-Relevant Topics],
+))
 
 These topics cover items that are not specific to our device, or the
 hardware on it. Instead, they discuss useful techniques that could be
 used on embedded systems.
 
-== Gyroscopes
+== #tr((
+  en: [Gyroscopes],
+))
 
 As part of our Punch-o-meter exercise, we used the Accelerometer to
 measure changes in acceleration in three dimensions. But there are other
@@ -238,7 +266,9 @@ sensor like a gyroscope can also be combined with data from
 accelerometer using a technique called Sensor Fusion (see below for more
 information).
 
-== Servo and Stepper Motors
+== #tr((
+  en: [Servo and Stepper Motors],
+))
 
 While some motors are used primarily just to spin in one direction or
 the other, for example driving a remote control car forwards or
@@ -250,7 +280,9 @@ allow for more precise control of how many turns are being made by the
 motor, or can even position the motor in one specific place, for example
 if we wanted to move the arms of a clock to a particular direction.
 
-== Sensor fusion
+== #tr((
+  en: [Sensor fusion],
+))
 
 The micro:bit contains two motion sensors: an accelerometer and a
 magnetometer. On their own these measure: (proper) acceleration and (the

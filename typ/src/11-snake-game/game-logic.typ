@@ -14,7 +14,9 @@ snake crashes into the edge of the grid, but given the small size of our
 grid we are going to implement a "wraparound" rule where, if the snake
 goes off one edge of the grid, it will continue from the opposite edge.
 
-= The `game` module
+= #tr((
+  en: [The `game` module],
+))
 
 The code in this section should go in a separate file, `game.rs`, in our
 `src` directory.
@@ -421,7 +423,9 @@ impl Game {
 }
 ```
 
-= The `main` file
+= #tr((
+  en: [The `main` file],
+))
 
 The following code should be placed in our `main.rs` file.
 

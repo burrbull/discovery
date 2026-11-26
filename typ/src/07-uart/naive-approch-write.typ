@@ -3,7 +3,9 @@
 #h1((en: [Naive approach and `write!`],
 ), offset: whole)
 
-= Naive approach
+= #tr((
+  en: [Naive approach],
+))
 
 You probably came up with a program similar to the following:
 
@@ -73,7 +75,9 @@ While this is a perfectly valid implementation, at some point you might
 want to have all the nice perks of `print!` such as argument formatting
 and so on. If you are wondering how to do that, read on.
 
-= `write!` and `core::fmt::Write`
+= #tr((
+  en: [`write!` and `core::fmt::Write`],
+))
 
 The `core::fmt::Write` trait allows us to use any struct that implements
 it in basically the same way as we use `print!` in the `std` world. In

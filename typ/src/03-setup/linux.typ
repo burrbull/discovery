@@ -5,10 +5,12 @@
 
 Here are the installation commands for a few Linux distributions.
 
-= Ubuntu 20.04 or newer / Debian 10 or newer
+= #tr((
+  en: [Ubuntu 20.04 or newer / Debian 10 or newer],
+))
 
 #quote(block: true)[
-#strong[NOTE] `gdb-multiarch` is the GDB command you'll use to debug
+*NOTE* `gdb-multiarch` is the GDB command you'll use to debug
 your ARM Cortex-M programs
 ]
 
@@ -18,10 +20,12 @@ $ sudo apt-get install \
   minicom
 ```
 
-= Fedora 32 or newer
+= #tr((
+  en: [Fedora 32 or newer],
+))
 
 #quote(block: true)[
-#strong[NOTE] `gdb` is the GDB command you'll use to debug your ARM
+*NOTE* `gdb` is the GDB command you'll use to debug your ARM
 Cortex-M programs
 ]
 
@@ -31,10 +35,12 @@ $ sudo dnf install \
   minicom
 ```
 
-= Arch Linux
+= #tr((
+  en: [Arch Linux],
+))
 
 #quote(block: true)[
-#strong[NOTE] `arm-none-eabi-gdb` is the GDB command you'll use to debug
+*NOTE* `arm-none-eabi-gdb` is the GDB command you'll use to debug
 your ARM Cortex-M programs
 ]
 
@@ -44,10 +50,12 @@ $ sudo pacman -S \
   minicom
 ```
 
-= Other distros
+= #tr((
+  en: [Other distros],
+))
 
 #quote(block: true)[
-#strong[NOTE] `arm-none-eabi-gdb` is the GDB command you'll use to debug
+*NOTE* `arm-none-eabi-gdb` is the GDB command you'll use to debug
 your ARM Cortex-M programs
 ]
 
@@ -68,7 +76,9 @@ appropriate shell init file (e.g.~`~/.zshrc` or `~/.bashrc`):
 PATH=$PATH:$HOME/local/gcc-arm-none-eabi-9-2020-q2-update/bin
 ```
 
-= udev rules
+= #tr((
+  en: [udev rules],
+))
 
 These rules let you use USB devices like the micro:bit without root
 privilege, i.e.~`sudo`.

@@ -5,9 +5,13 @@
 
 Let's verify that all the tools were installed correctly.
 
-= Linux only
+= #tr((
+  en: [Linux only],
+))
 
-== Verify permissions
+== #tr((
+  en: [Verify permissions],
+))
 
 Connect the micro:bit to your computer using a USB cable.
 
@@ -22,7 +26,7 @@ $ # ^^^        ^^^
 
 In my case, the micro:bit got connected to the bus \#1 and got
 enumerated as the device \#65. This means the file
-`/dev/bus/usb/001/065` #emph[is] the micro:bit. Let's check the file
+`/dev/bus/usb/001/065` _is_ the micro:bit. Let's check the file
 permissions:
 
 ```console
@@ -58,7 +62,9 @@ $ sudo udevadm trigger
 #h1((en: [All],
 ), offset: whole)
 
-= Verifying cargo-embed
+= #tr((
+  en: [Verifying cargo-embed],
+))
 
 First, connect the micro:bit to your Computer using a USB cable.
 

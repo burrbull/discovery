@@ -3,7 +3,9 @@
 #h1((en: [Minicom on macOS],
 ), offset: whole)
 
-== Finding Your Command Key
+== #tr((
+  en: [Finding Your Command Key],
+))
 
 ```shell
 $ # start minicom in setup mode

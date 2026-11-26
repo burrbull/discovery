@@ -3,7 +3,9 @@
 #h1((en: [Light it up],
 ), offset: whole)
 
-= embedded-hal
+= #tr((
+  en: [embedded-hal],
+))
 
 In this chapter we are going to make one of the many LEDs on the back of
 the micro:bit light up since this is basically the "Hello World" of
@@ -12,7 +14,9 @@ the traits provided by `embedded-hal`, specifically the
 #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/digital/v2/trait.OutputPin.html")[`OutputPin`]
 trait which allows us to turn a pin on or off.
 
-= The micro:bit LEDs
+= #tr((
+  en: [The micro:bit LEDs],
+))
 
 On the back of the micro:bit you can see a 5x5 square of LEDs, usually
 called an LED matrix. This matrix alignment is used so that instead of
@@ -21,7 +25,7 @@ can just use 10 (5+5) pins in order to control which column and which
 row of our matrix lights up.
 
 #quote(block: true)[
-#strong[NOTE] that the micro:bit v1 team implemented this a little
+*NOTE* that the micro:bit v1 team implemented this a little
 differently. Their
 #link("https://tech.microbit.org/hardware/schematic/")[schematic page]
 says that it is actually implemented as a 3x9 matrix but a few columns
@@ -36,7 +40,9 @@ or the
 respectively. Luckily for us though we can use the aforementioned
 micro:bit BSP which abstracts all of this nicely away from us.
 
-= Actually lighting it up!
+= #tr((
+  en: [Actually lighting it up!],
+))
 
 The code required to light up an LED in the matrix is actually quite
 simple but it requires a bit of setup. First take a look at it and then
@@ -77,7 +83,7 @@ also takes ownership of the Rust representation of the other chips on
 the board.
 
 #quote(block: true)[
-#strong[NOTE]: If you are wondering why we have to call `unwrap()` here,
+*NOTE*: If you are wondering why we have to call `unwrap()` here,
 in theory it is possible for `take()` to be called more than once. This
 would lead to the peripherals being represented by two separate
 variables and thus lots of possible confusing behaviour because two
@@ -94,7 +100,9 @@ hardware can possibly return an error, even just toggling a pin on or
 off. Since that is highly unlikely in our case, we can just `unwrap()`
 the result.
 
-= Testing it
+= #tr((
+  en: [Testing it],
+))
 
 Testing our little program is quite simple. First put it into
 `src/main.rs`. Afterwards we simply have to run the `cargo embed`

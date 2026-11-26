@@ -3,7 +3,9 @@
 #h1((en: [\*nix tooling\*nix tooling],
 ), offset: whole)
 
-= Connecting the micro:bit board
+= #tr((
+  en: [Connecting the micro:bit board],
+))
 
 If you connect the micro:bit board to your computer you should see a new
 TTY device appear in `/dev`.
@@ -35,7 +37,9 @@ $ echo 'Hello, world!' > /dev/ttyACM0
 You should see the orange LED on the micro:bit, right next to the USB
 port, blink for a moment, whenever you enter this command.
 
-= minicom
+= #tr((
+  en: [minicom],
+))
 
 We'll use the program `minicom` to interact with the serial device using
 the keyboard.
@@ -55,7 +59,7 @@ pu xonxoff No
 ```
 
 #quote(block: true)[
-#strong[NOTE] Make sure this file ends in a newline! Otherwise,
+*NOTE* Make sure this file ends in a newline! Otherwise,
 `minicom` will fail to read it.
 ]
 
@@ -80,11 +84,13 @@ This tells `minicom` to open the serial device at `/dev/ttyACM0` and set
 its baud rate to 115200. A text-based user interface (TUI) will pop out.
 
 You can now send data using the keyboard! Go ahead and type something.
-Note that the text UI will #emph[not] echo back what you type. If you
+Note that the text UI will _not_ echo back what you type. If you
 pay attention to the yellow LED on top of the micro:bit though, you will
 notice that it blinks whenever you type something.
 
-= `minicom` commands
+= #tr((
+  en: [`minicom` commands],
+))
 
 `minicom` exposes commands via keyboard shortcuts. On Linux, the
 shortcuts start with `Ctrl+A`. On Mac, the shortcuts start with the
@@ -96,7 +102,7 @@ shortcuts start with `Ctrl+A`. On Mac, the shortcuts start with the
 - `Ctrl+A` + `Q`. Quit with no reset
 
 #quote(block: true)[
-#strong[NOTE] Mac users: In the above commands, replace `Ctrl+A` with
+*NOTE* Mac users: In the above commands, replace `Ctrl+A` with
 `Meta`.
 ]
 

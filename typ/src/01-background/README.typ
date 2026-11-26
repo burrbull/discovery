@@ -3,18 +3,22 @@
 #h1((en: [Background]
 ))
 
-= What's a microcontroller?
+= #tr((
+  en: [What's a microcontroller?],
+))
 
-A microcontroller is a #emph[system] on a chip. Whereas your computer is
+A microcontroller is a _system_ on a chip. Whereas your computer is
 made up of several discrete components: a processor, RAM, storage, an
 Ethernet port, etc.; a microcontroller has all those types of components
 built into a single "chip" or package. This makes it possible to build
 systems with fewer parts.
 
-= What can you do with a microcontroller?
+= #tr((
+  en: [What can you do with a microcontroller?],
+))
 
 Lots of things! Microcontrollers are the central part of what are known
-as "#emph[embedded] systems". Embedded systems are everywhere, but you
+as "_embedded_ systems". Embedded systems are everywhere, but you
 don't usually notice them. They control the machines that wash your
 clothes, print your documents, and cook your food. Embedded systems keep
 the buildings that you live and work in at a comfortable temperature,
@@ -25,7 +29,7 @@ Most embedded systems operate without user intervention. Even if they
 expose a user interface like a washing machine does; most of their
 operation is done on their own.
 
-Embedded systems are often used to #emph[control] a physical process. To
+Embedded systems are often used to _control_ a physical process. To
 make this possible, they have one or more devices to tell them about the
 state of the world ("sensors"), and one or more devices which allow them
 to change things ("actuators"). For example, a building climate control
@@ -35,7 +39,9 @@ system might have:
 - Actuators which control the speed of fans.
 - Actuators which cause heat to be added or removed from the building.
 
-= When should I use a microcontroller?
+= #tr((
+  en: [When should I use a microcontroller?],
+))
 
 Many of the embedded systems listed above could be implemented with a
 computer running Linux (for example a "Raspberry Pi"). Why use a
@@ -44,29 +50,31 @@ program.
 
 Some reasons might include:
 
-#strong[Cost.] A microcontroller is much cheaper than a general purpose
+*Cost*. A microcontroller is much cheaper than a general purpose
 computer. Not only is the microcontroller cheaper; it also requires many
 fewer external electrical components to operate. This makes Printed
 Circuit Boards (PCB) smaller and cheaper to design and manufacture.
 
-#strong[Power consumption.] Most microcontrollers consume a fraction of
+*Power consumption*. Most microcontrollers consume a fraction of
 the power of a full blown processor. For applications which run on
 batteries, that makes a huge difference.
 
-#strong[Responsiveness.] To accomplish their purpose, some embedded
+*Responsiveness*. To accomplish their purpose, some embedded
 systems must always react within a limited time interval (e.g.~the
 "anti-lock" braking system of a car). If the system misses this type of
-#emph[deadline], a catastrophic failure might occur. Such a deadline is
+_deadline_, a catastrophic failure might occur. Such a deadline is
 called a "hard real time" requirement. An embedded system which is bound
 by such a deadline is referred to as a "hard real-time system". A
 general purpose computer and OS usually has many software components
 which share the computer's processing resources. This makes it harder to
 guarantee execution of a program within tight time constraints.
 
-#strong[Reliability.] In systems with fewer components (both hardware
+*Reliability*. In systems with fewer components (both hardware
 and software), there is less to go wrong!
 
-= When should I #emph[not] use a microcontroller?
+= #tr((
+  en: [When should I _not_ use a microcontroller?],
+))
 
 Where heavy computations are involved. To keep their power consumption
 low, microcontrollers have very limited computational resources
@@ -75,18 +83,22 @@ hardware support for floating point operations. On those devices,
 performing a simple addition of single precision numbers can take
 hundreds of CPU cycles.
 
-= Why use Rust and not C?
+= #tr((
+  en: [Why use Rust and not C?],
+))
 
 Hopefully, I don't need to convince you here as you are probably
 familiar with the language differences between Rust and C. One point I
 do want to bring up is package management. C lacks an official, widely
 accepted package management solution whereas Rust has Cargo. This makes
-development #emph[much] easier. And, IMO, easy package management
+development _much_ easier. And, IMO, easy package management
 encourages code reuse because libraries can be easily integrated into an
 application which is also a good thing as libraries get more "battle
 testing".
 
-= Why should I not use Rust?
+= #tr((
+  en: [Why should I not use Rust?],
+))
 
 Or why should I prefer C over Rust?
 

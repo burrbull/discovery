@@ -5,7 +5,7 @@
 
 To keep things simple, we'll measure the acceleration only in the X axis
 while the board remains horizontal. That way we won't have to deal with
-subtracting that #emph[fictitious] `1g` we observed before which would
+subtracting that _fictitious_ `1g` we observed before which would
 be hard because that `1g` could have X Y Z components depending on how
 the board is oriented.
 
@@ -23,7 +23,7 @@ Here's what the punch-o-meter must do:
 Give it a try and let me know how hard you can punch `;-)`.
 
 #quote(block: true)[
-#strong[NOTE] There are two additional APIs that should be useful for
+*NOTE* There are two additional APIs that should be useful for
 this task we haven't discussed yet. First the
 #link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.set_accel_scale")[`set_accel_scale`]
 one which you need to measure high g values. Secondly the

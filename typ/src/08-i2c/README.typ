@@ -11,7 +11,7 @@ However, its simplicity is also a downside. More elaborated data
 exchanges, like reading a digital sensor, would require the sensor
 vendor to come up with another protocol on top of it.
 
-\(Un)Luckily for us, there are #emph[plenty] of other communication
+\(Un)Luckily for us, there are _plenty_ of other communication
 protocols in the embedded space. Some of them are widely used in digital
 sensors.
 
@@ -19,20 +19,20 @@ The micro:bit board we are using has two motion sensors in it: an
 accelerometer and a magnetometer. Both of these sensors are packaged
 into a single component and can be accessed via an I2C bus.
 
-I2C stands for Inter-Integrated Circuit and is a #emph[synchronous]
-#emph[serial] communication protocol. It uses two lines to exchange
+I2C stands for Inter-Integrated Circuit and is a _synchronous_
+_serial_ communication protocol. It uses two lines to exchange
 data: a data line (SDA) and a clock line (SCL). Because a clock line is
-used to synchronize the communication, this is a #emph[synchronous]
+used to synchronize the communication, this is a _synchronous_
 protocol.
 
-This protocol uses a #emph[controller] #emph[target] model where the
-controller is the device that #emph[starts] and drives the communication
+This protocol uses a _controller target_ model where the
+controller is the device that _starts_ and drives the communication
 with a target device. Several devices, both controllers and targets, can
 be connected to the same bus at the same time. A controller device can
 communicate with a specific target device by first broadcasting its
-#emph[address] to the bus. This address can be 7 bits or 10 bits long.
-Once a controller has #emph[started] a communication with a target, no
-other device can make use of the bus until the controller #emph[stops]
+_address_ to the bus. This address can be 7 bits or 10 bits long.
+Once a controller has _started_ a communication with a target, no
+other device can make use of the bus until the controller _stops_
 the communication.
 
 The clock line determines how fast data can be exchanged and it usually

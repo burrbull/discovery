@@ -7,7 +7,7 @@ Flashing is the process of moving our program into the microcontroller's
 (persistent) memory. Once flashed, the microcontroller will execute the
 flashed program every time it is powered on.
 
-In this case, our `led-roulette` program will be the #emph[only] program
+In this case, our `led-roulette` program will be the _only_ program
 in the microcontroller memory. By this I mean that there's nothing else
 running on the microcontroller: no OS, no "daemon", nothing.
 `led-roulette` has full control over the device.

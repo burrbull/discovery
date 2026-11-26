@@ -9,9 +9,9 @@ somehow. It will do that by turning on one of its outer LEDs; the LED
 turned on should point towards north.
 
 Magnetic fields have both a magnitude, measured in Gauss or Teslas, and
-a #emph[direction]. The magnetometer on the micro:bit measures both the
+a _direction_. The magnetometer on the micro:bit measures both the
 magnitude and the direction of an external magnetic field but it reports
-back the #emph[decomposition] of said field along #emph[its axes].
+back the _decomposition_ of said field along _its axes_.
 
 The magnetometer has three axes associated to it. The X and Y axes
 basically span the plane that is the floor. The Z axis is pointing "out"

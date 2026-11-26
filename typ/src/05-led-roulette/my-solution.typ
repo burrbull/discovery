@@ -140,7 +140,7 @@ Total              208617
 ```
 
 #quote(block: true)[
-#strong[NOTE] The Cargo project is already configured to build the
+*NOTE* The Cargo project is already configured to build the
 release binary using LTO.
 ]
 

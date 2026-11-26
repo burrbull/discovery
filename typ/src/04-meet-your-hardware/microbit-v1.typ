@@ -3,10 +3,10 @@
 #h1((en: [Nordic nRF51822 (the "nRF51", micro:bit v1)],
 ), offset: whole)
 
-Our MCU has 48 tiny metal #strong[pins] sitting right underneath it
+Our MCU has 48 tiny metal *pins* sitting right underneath it
 (it's a so called
 #link("https://en.wikipedia.org/wiki/Flat_no-leads_package")[QFN48]
-chip). These pins are connected to #strong[traces], the little "roads"
+chip). These pins are connected to *traces*, the little "roads"
 that act as the wires connecting components together on the board. The
 MCU can dynamically alter the electrical properties of the pins. This
 works similar to a light switch altering how electrical current flows
@@ -48,7 +48,9 @@ The product specification does of course contain a lot more useful
 information about the chip, for example that it is based on an ARM®
 Cortex™-M0 32-bit processor.
 
-== Arm? Cortex-M0?
+== #tr((
+  en: [Arm? Cortex-M0?],
+))
 
 If our chip is manufactured by Nordic, then who is Arm? And if our chip
 is the nRF51822, what is the Cortex-M0?
@@ -57,11 +59,11 @@ You might be surprised to hear that while "Arm-based" chips are quite
 popular, the company behind the "Arm" trademark
 (#link("https://www.arm.com/")[Arm Holdings]) doesn't actually
 manufacture chips for purchase. Instead, their primary business model is
-to just #emph[design] parts of chips. They will then license those
+to just _design_ parts of chips. They will then license those
 designs to manufacturers, who will in turn implement the designs
 (perhaps with some of their own tweaks) in the form of physical hardware
 that can then be sold. Arm's strategy here is different from companies
-like Intel, which both designs #emph[and] manufactures their chips.
+like Intel, which both designs _and_ manufactures their chips.
 
 Arm licenses a bunch of different designs. Their "Cortex-M" family of
 designs are mainly used as the core in microcontrollers. For example,
