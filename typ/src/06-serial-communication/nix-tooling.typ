@@ -1,7 +1,8 @@
 #import "../../config.typ": *
 
-#h1((en: [\*nix tooling\*nix tooling],
+#h1((en: [\*nix tooling],
 ), offset: whole)
+<nix-tooling>
 
 = #tr((
   en: [Connecting the micro:bit board],
