@@ -3,7 +3,10 @@
 #h1((en: [macOS],
 ), offset: whole)
 
-All the tools can be installed using #link("http://brew.sh/")[Homebrew]:
+#tr((
+en: [
+  All the tools can be installed using #link("http://brew.sh/")[Homebrew]:
+]))
 
 ```console
 $ # ARM GCC debugger
@@ -16,4 +19,7 @@ $ # lsusb (list connected USB devices)
 $ brew install lsusb
 ```
 
-That's all! Go to the #link("verify.md")[next section].
+#tr((
+en: [
+  That's all! Go to the #link("verify.md")[next section].
+]))

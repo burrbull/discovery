@@ -3,7 +3,10 @@
 #h1((en: [Verify the installation],
 ), offset: whole)
 
-Let's verify that all the tools were installed correctly.
+#tr((
+en: [
+  Let's verify that all the tools were installed correctly.
+]))
 
 = #tr((
   en: [Linux only],
@@ -13,10 +16,16 @@ Let's verify that all the tools were installed correctly.
   en: [Verify permissions],
 ))
 
-Connect the micro:bit to your computer using a USB cable.
+#tr((
+en: [
+  Connect the micro:bit to your computer using a USB cable.
+]))
 
-The micro:bit should now appear as a USB device (file) in
-`/dev/bus/usb`. Let's find out how it got enumerated:
+#tr((
+en: [
+  The micro:bit should now appear as a USB device (file) in
+  `/dev/bus/usb`. Let's find out how it got enumerated:
+]))
 
 ```console
 $ lsusb | grep -i "NXP ARM mbed"
@@ -24,18 +33,24 @@ Bus 001 Device 065: ID 0d28:0204 NXP ARM mbed
 $ # ^^^        ^^^
 ```
 
-In my case, the micro:bit got connected to the bus \#1 and got
-enumerated as the device \#65. This means the file
-`/dev/bus/usb/001/065` _is_ the micro:bit. Let's check the file
-permissions:
+#tr((
+en: [
+  In my case, the micro:bit got connected to the bus \#1 and got
+  enumerated as the device \#65. This means the file
+  `/dev/bus/usb/001/065` _is_ the micro:bit. Let's check the file
+  permissions:
+]))
 
 ```console
 $ ls -l /dev/bus/usb/001/065
 crw-rw-r--+ 1 nobody nobody 189, 64 Sep  5 14:27 /dev/bus/usb/001/065
 ```
 
-The permissions should be `crw-rw-r--+`, note the `+` at the end, then
-see your access rights by running the following command.
+#tr((
+en: [
+  The permissions should be `crw-rw-r--+`, note the `+` at the end, then
+  see your access rights by running the following command.
+]))
 
 ```console
 $ getfacl /dev/bus/usb/001/065
@@ -50,9 +65,12 @@ mask::rw-
 other::r-
 ```
 
-You should see your username in the list above with the `rw-`
-permissions, if not … then check your
-#link("linux.md#udev-rules")[udev rules] and try re-loading them with:
+#tr((
+en: [
+  You should see your username in the list above with the `rw-`
+  permissions, if not … then check your
+  #link("linux.md#udev-rules")[udev rules] and try re-loading them with:
+]))
 
 ```console
 $ sudo udevadm control --reload
@@ -66,15 +84,24 @@ $ sudo udevadm trigger
   en: [Verifying cargo-embed],
 ))
 
-First, connect the micro:bit to your Computer using a USB cable.
+#tr((
+en: [
+  First, connect the micro:bit to your Computer using a USB cable.
+]))
 
-At least an orange LED right next to the USB port of the micro:bit
-should light up. Furthermore, if you have never flashed another program
-on to your micro:bit, the default program the micro:bit ships with
-should start blinking the red LEDs on its back, you can ignore them.
+#tr((
+en: [
+  At least an orange LED right next to the USB port of the micro:bit
+  should light up. Furthermore, if you have never flashed another program
+  on to your micro:bit, the default program the micro:bit ships with
+  should start blinking the red LEDs on its back, you can ignore them.
+]))
 
-Now let's see if probe-rs, and by extensions cargo-embed can see your
-micro:bit, you can do this by running the following command.
+#tr((
+en: [
+  Now let's see if probe-rs, and by extensions cargo-embed can see your
+  micro:bit, you can do this by running the following command.
+]))
 
 ```console
 $ probe-rs list
@@ -82,8 +109,11 @@ The following debug probes were found:
 [0]: BBC micro:bit CMSIS-DAP -- 0d28:0204:990636020005282030f57fa14252d446000000006e052820 (CMSIS-DAP)
 ```
 
-Or if you want more information about the micro:bits debug capabilities
-then you can run:
+#tr((
+en: [
+  Or if you want more information about the micro:bits debug capabilities
+  then you can run:
+]))
 
 ```console
 $ probe-rs info
@@ -115,9 +145,12 @@ Debugging RISC-V targets over SWD is not supported. For these targets, JTAG is t
 Debugging Xtensa targets over SWD is not supported. For these targets, JTAG is the only supported protocol. Xtensa specific information cannot be printed.
 ```
 
-Next up you will have to modify `Embed.toml` in the `src/03-setup`
-directory of the book's source code. In the `default.general` section
-you will find two commented out chip variants:
+#tr((
+en: [
+  Next up you will have to modify `Embed.toml` in the `src/03-setup`
+  directory of the book's source code. In the `default.general` section
+  you will find two commented out chip variants:
+]))
 
 ```toml
 [default.general]
@@ -125,10 +158,16 @@ you will find two commented out chip variants:
 # chip = "nrf51822_xxAA" # uncomment this line for micro:bit V1
 ```
 
-If you are working with the micro:bit v2 board uncomment the first, for
-the v1 uncomment the second line.
+#tr((
+en: [
+  If you are working with the micro:bit v2 board uncomment the first, for
+  the v1 uncomment the second line.
+]))
 
-Next run one of these commands:
+#tr((
+en: [
+  Next run one of these commands:
+]))
 
 ```
 $ # make sure you are in src/03-setup of the books source code
@@ -141,14 +180,23 @@ $ rustup target add thumbv6m-none-eabi
 $ cargo embed --target thumbv6m-none-eabi
 ```
 
-If everything works correctly cargo-embed should first compile the small
-example program in this directory, then flash it and finally open a nice
-text based user interface that prints Hello World.
+#tr((
+en: [
+  If everything works correctly cargo-embed should first compile the small
+  example program in this directory, then flash it and finally open a nice
+  text based user interface that prints Hello World.
+]))
 
-\(If it does not, check out
-#link("../appendix/1-general-troubleshooting/index.html")[general troubleshooting]
-instructions.)
+#tr((
+en: [
+  (If it does not, check out
+  #link("../appendix/1-general-troubleshooting/index.html")[general troubleshooting]
+  instructions.)
+]))
 
-This output is coming from the small Rust program you just flashed on to
-your micro:bit. Everything is working properly and you can continue with
-the next chapters!
+#tr((
+en: [
+  This output is coming from the small Rust program you just flashed on to
+  your micro:bit. Everything is working properly and you can continue with
+  the next chapters!
+]))

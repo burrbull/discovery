@@ -3,15 +3,21 @@
 #h1((en: [Linux],
 ), offset: whole)
 
-Here are the installation commands for a few Linux distributions.
+#tr((
+en: [
+  Here are the installation commands for a few Linux distributions.
+]))
 
 = #tr((
   en: [Ubuntu 20.04 or newer / Debian 10 or newer],
 ))
 
 #quote(block: true)[
-*NOTE* `gdb-multiarch` is the GDB command you'll use to debug
-your ARM Cortex-M programs
+#tr((
+en: [
+  *NOTE* `gdb-multiarch` is the GDB command you'll use to debug
+  your ARM Cortex-M programs
+]))
 ]
 
 ```console
@@ -25,8 +31,11 @@ $ sudo apt-get install \
 ))
 
 #quote(block: true)[
-*NOTE* `gdb` is the GDB command you'll use to debug your ARM
-Cortex-M programs
+#tr((
+en: [
+  *NOTE* `gdb` is the GDB command you'll use to debug your ARM
+  Cortex-M programs
+]))
 ]
 
 ```console
@@ -40,8 +49,11 @@ $ sudo dnf install \
 ))
 
 #quote(block: true)[
-*NOTE* `arm-none-eabi-gdb` is the GDB command you'll use to debug
-your ARM Cortex-M programs
+#tr((
+en: [
+  *NOTE* `arm-none-eabi-gdb` is the GDB command you'll use to debug
+  your ARM Cortex-M programs
+]))
 ]
 
 ```console
@@ -55,22 +67,31 @@ $ sudo pacman -S \
 ))
 
 #quote(block: true)[
-*NOTE* `arm-none-eabi-gdb` is the GDB command you'll use to debug
-your ARM Cortex-M programs
+#tr((
+en: [
+  *NOTE* `arm-none-eabi-gdb` is the GDB command you'll use to debug
+  your ARM Cortex-M programs
+]))
 ]
 
-For distros that don't have packages for
-#link("https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads")[ARM's pre-built toolchain],
-download the "Linux 64-bit" file and put its `bin` directory on your
-path. Here's one way to do it:
+#tr((
+en: [
+  For distros that don't have packages for
+  #link("https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads")[ARM's pre-built toolchain],
+  download the "Linux 64-bit" file and put its `bin` directory on your
+  path. Here's one way to do it:
+]))
 
 ```console
 $ mkdir -p ~/local && cd ~/local
 $ tar xjf /path/to/downloaded/file/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
 ```
 
-Then, use your editor of choice to append to your `PATH` in the
-appropriate shell init file (e.g.~`~/.zshrc` or `~/.bashrc`):
+#tr((
+en: [
+  Then, use your editor of choice to append to your `PATH` in the
+  appropriate shell init file (e.g.~`~/.zshrc` or `~/.bashrc`):
+]))
 
 ```
 PATH=$PATH:$HOME/local/gcc-arm-none-eabi-9-2020-q2-update/bin
@@ -80,10 +101,16 @@ PATH=$PATH:$HOME/local/gcc-arm-none-eabi-9-2020-q2-update/bin
   en: [udev rules],
 ))
 
-These rules let you use USB devices like the micro:bit without root
-privilege, i.e.~`sudo`.
+#tr((
+en: [
+  These rules let you use USB devices like the micro:bit without root
+  privilege, i.e.~`sudo`.
+]))
 
-Create this file in `/etc/udev/rules.d` with the content shown below.
+#tr((
+en: [
+  Create this file in `/etc/udev/rules.d` with the content shown below.
+]))
 
 ```console
 $ cat /etc/udev/rules.d/69-microbit.rules
@@ -99,17 +126,26 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="0d28", ATTR{idProduct}=="0204", TAG+="uaccess
 LABEL="microbit_rules_end"
 ```
 
-Then reload the udev rules with:
+#tr((
+en: [
+  Then reload the udev rules with:
+]))
 
 ```console
 $ sudo udevadm control --reload
 ```
 
-If you had any board plugged to your computer, unplug them and then plug
-them in again, or run the following command.
+#tr((
+en: [
+  If you had any board plugged to your computer, unplug them and then plug
+  them in again, or run the following command.
+]))
 
 ```console
 $ sudo udevadm trigger
 ```
 
-Now, go to the #link("verify.md")[next section].
+#tr((
+en: [
+  Now, go to the #link("verify.md")[next section].
+]))
