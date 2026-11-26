@@ -58,5 +58,5 @@ as a virtual serial device.
 Now, let's get familiar with the serial module and the serial
 communication tools that your OS offers. Pick a route:
 
-- #link("nix-tooling.md")[\*nix]
-- #link("windows-tooling.md")[Windows]
+- #link(<nix-tooling>)[\*nix]
+- #link(<windows-tooling>)[Windows]

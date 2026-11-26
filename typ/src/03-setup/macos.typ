@@ -2,6 +2,7 @@
 
 #h1((en: [macOS],
 ), offset: whole)
+<install-macos>
 
 #tr((
 en: [
@@ -21,5 +22,5 @@ $ brew install lsusb
 
 #tr((
 en: [
-  That's all! Go to the #link("verify.md")[next section].
+  That's all! Go to the #link(<verify-installation>)[next section].
 ]))

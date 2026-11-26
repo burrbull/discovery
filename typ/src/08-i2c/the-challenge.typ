@@ -9,7 +9,7 @@ in the last chapter. It should be able to receive the commands
 "magnetometer" as well as "accelerometer" and then print the
 corresponding sensor data in response. This time no template code will
 be provided since all you need is already provided in the
-#link("../07-uart/index.md")[UART] and this chapter. However, here are a
+#link(<uart>)[UART] and this chapter. However, here are a
 few clues:
 
 - You might be interested in `core::str::from_utf8` to convert the bytes

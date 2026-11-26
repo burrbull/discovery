@@ -2,6 +2,7 @@
 
 #h1((en: [UART]
 ))
+<uart>
 
 The microcontroller has a peripheral called UART, which stands for
 Universal Asynchronous Receiver/Transmitter. This peripheral can be

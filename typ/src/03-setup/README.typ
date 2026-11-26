@@ -29,6 +29,7 @@ en: [
 = #tr((
   en: [Tools],
 ))
+<setup-tools>
 
 #tr((
 en: [
@@ -150,7 +151,7 @@ en: [
 #tr((
 en: [
   Now follow the instructions specific to the OS you are using:
-  - #link("linux.md")[Linux]
-  - #link("windows.md")[Windows]
-  - #link("macos.md")[macOS]
+  - #link(<install-linux>)[Linux]
+  - #link(<install-windows>)[Windows]
+  - #link(<install-macos>)[macOS]
 ]))

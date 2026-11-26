@@ -9,7 +9,7 @@ Perform a sanity check!
 
 You should already be able to write a program that continuously prints
 the accelerometer data on the RTT console from the
-#link("../08-i2c/index.md")[I2C chapter]. Do you observe something
+#link(<i2c>)[I2C chapter]. Do you observe something
 interesting even when holding the board parallel to the floor with the
 LED side facing down?
 

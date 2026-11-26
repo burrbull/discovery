@@ -2,6 +2,7 @@
 
 #h1((en: [Flash it],
 ), offset: whole)
+<led-roulette-flash>
 
 Flashing is the process of moving our program into the microcontroller's
 (persistent) memory. Once flashed, the microcontroller will execute the

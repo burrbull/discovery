@@ -2,6 +2,7 @@
 
 #h1((en: [Windows tooling],
 ), offset: whole)
+<windows-tooling>
 
 Start by unplugging your micro:bit.
 

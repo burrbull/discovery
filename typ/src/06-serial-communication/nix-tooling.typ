@@ -106,4 +106,4 @@ shortcuts start with `Ctrl+A`. On Mac, the shortcuts start with the
 `Meta`.
 ]
 
-#link("minicom-on-macos.md")[Can't find the Meta key?]
+#link(<minicom-on-macos>)[Can't find the Meta key?]

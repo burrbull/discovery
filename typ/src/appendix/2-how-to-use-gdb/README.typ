@@ -5,7 +5,7 @@
 
 Below are some useful GDB commands that can help us debug our programs.
 This assumes you have
-#link("../../05-led-roulette/flash-it.md")[flashed a program] onto your
+#link(<led-roulette-flash>)[flashed a program] onto your
 microcontroller and attached GDB to a `cargo-embed` session.
 
 = #tr((

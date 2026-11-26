@@ -6,6 +6,7 @@
 = #tr((
   en: [`arm-none-eabi-gdb`],
 ))
+<install-windows>
 
 #tr((
 en: [
@@ -35,5 +36,5 @@ en: [
 
 #tr((
 en: [
-  Now, go to the #link("verify.md")[next section].
+  Now, go to the #link(<verify-installation>)[next section].
 ]))

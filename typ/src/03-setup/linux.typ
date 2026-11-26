@@ -2,6 +2,7 @@
 
 #h1((en: [Linux],
 ), offset: whole)
+<install-linux>
 
 #tr((
 en: [
@@ -100,6 +101,7 @@ PATH=$PATH:$HOME/local/gcc-arm-none-eabi-9-2020-q2-update/bin
 = #tr((
   en: [udev rules],
 ))
+<linux-udev-rules>
 
 #tr((
 en: [
@@ -147,5 +149,5 @@ $ sudo udevadm trigger
 
 #tr((
 en: [
-  Now, go to the #link("verify.md")[next section].
+  Now, go to the #link(<verify-installation>)[next section].
 ]))

@@ -2,6 +2,7 @@
 
 #h1((en: [Minicom on macOS],
 ), offset: whole)
+<minicom-on-macos>
 
 == #tr((
   en: [Finding Your Command Key],

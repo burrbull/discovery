@@ -2,6 +2,7 @@
 
 #h1((en: [Read a single register],
 ), offset: whole)
+<read-a-single-register>
 
 Let's put all that theory into practice!
 

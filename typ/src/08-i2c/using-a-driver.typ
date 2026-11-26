@@ -43,7 +43,7 @@ fn main() {
 Because we already know how to create an instance of an object that
 implements the
 #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/i2c/index.html")[`embedded_hal::blocking::i2c`]
-traits from the #link("read-a-single-register.md")[previous page], this
+traits from the #link(<read-a-single-register>)[previous page], this
 is quite trivial:
 
 ```rust

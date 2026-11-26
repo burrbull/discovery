@@ -19,7 +19,7 @@ of the floor, so upwards.
 
 You should already be able to write a program that continuously prints
 the magnetometer data on the RTT console from the
-#link("../08-i2c/index.md")[I2C chapter]. After you wrote that program,
+#link(<i2c>)[I2C chapter]. After you wrote that program,
 locate where north is at your current location. Then line up your
 micro:bit with that direction and observe how the sensor's measurements
 look.

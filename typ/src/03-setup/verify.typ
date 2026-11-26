@@ -2,6 +2,7 @@
 
 #h1((en: [Verify the installation],
 ), offset: whole)
+<verify-installation>
 
 #tr((
 en: [
@@ -69,7 +70,7 @@ other::r-
 en: [
   You should see your username in the list above with the `rw-`
   permissions, if not … then check your
-  #link("linux.md#udev-rules")[udev rules] and try re-loading them with:
+  #link(<linux-udev-rules>)[udev rules] and try re-loading them with:
 ]))
 
 ```console

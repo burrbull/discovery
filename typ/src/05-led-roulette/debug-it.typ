@@ -39,7 +39,7 @@ $ gdb target/thumbv6m-none-eabi/debug/led-roulette
 #quote(block: true)[
 *NOTE*: Depending on which GDB you installed you will have to use
 a different command to launch it, check out
-#link("../03-setup/index.md#tools")[chapter 3] if you forgot which one
+#link(<setup-tools>)[chapter 3] if you forgot which one
 it was.
 ]
 
