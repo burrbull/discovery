@@ -1,8 +1,9 @@
 #import "../config.typ": *
 
-= Light it up
+#h1((en: [Light it up]
+))
 
-== embedded-hal
+= embedded-hal
 
 In this chapter we are going to make one of the many LEDs on the back of
 the micro:bit light up since this is basically the "Hello World" of
@@ -11,7 +12,7 @@ the traits provided by `embedded-hal`, specifically the
 #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/digital/v2/trait.OutputPin.html")[`OutputPin`]
 trait which allows us to turn a pin on or off.
 
-== The micro:bit LEDs
+= The micro:bit LEDs
 
 On the back of the micro:bit you can see a 5x5 square of LEDs, usually
 called an LED matrix. This matrix alignment is used so that instead of
@@ -35,7 +36,7 @@ or the
 respectively. Luckily for us though we can use the aforementioned
 micro:bit BSP which abstracts all of this nicely away from us.
 
-== Actually lighting it up!
+= Actually lighting it up!
 
 The code required to light up an LED in the matrix is actually quite
 simple but it requires a bit of setup. First take a look at it and then
@@ -93,7 +94,7 @@ hardware can possibly return an error, even just toggling a pin on or
 off. Since that is highly unlikely in our case, we can just `unwrap()`
 the result.
 
-== Testing it
+= Testing it
 
 Testing our little program is quite simple. First put it into
 `src/main.rs`. Afterwards we simply have to run the `cargo embed`

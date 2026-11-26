@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= LSM303AGR
+#h1((en: [LSM303AGR]
+))
 
 Both of the motion sensors on the micro:bit, the magnetometer and the
 accelerometer, are packaged in a single component: the LSM303AGR

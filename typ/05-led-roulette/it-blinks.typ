@@ -1,8 +1,9 @@
 #import "../config.typ": *
 
-= It blinks
+#h1((en: [It blinks]
+))
 
-== Delaying
+= Delaying
 
 Now we're going to take a brief look into delay abstractions provided by
 `embedded-hal` before combining this with the GPIO abstractions from the
@@ -76,7 +77,7 @@ And now after putting the code into `src/main.rs` and another quick
 "`1000 ms passed`" being sent to your console every second from your
 MCU.
 
-== Blinking
+= Blinking
 
 Now we've arrived at the point where we can combine our new knowledge
 about GPIO and delay abstractions in order to actually make an LED on

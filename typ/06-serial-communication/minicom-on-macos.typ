@@ -1,8 +1,9 @@
 #import "../config.typ": *
 
-= Minicom on macOS
+#h1((en: [Minicom on macOS]
+))
 
-=== Finding Your Command Key
+== Finding Your Command Key
 
 ```shell
 $ # start minicom in setup mode

@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Punch-o-meter
+#h1((en: [Punch-o-meter]
+))
 
 In this section we'll be playing with the accelerometer that's in the
 board.

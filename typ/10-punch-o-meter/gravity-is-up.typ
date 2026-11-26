@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Gravity is up?
+#h1((en: [Gravity is up?]
+))
 
 What's the first thing we'll do?
 

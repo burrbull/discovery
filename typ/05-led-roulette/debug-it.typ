@@ -1,8 +1,9 @@
 #import "../config.typ": *
 
-= Debug it
+#h1((en: [Debug it]
+))
 
-== How does this even work?
+= How does this even work?
 
 Before we debug our little program let's take a moment to quickly
 understand what is actually happening here. In the previous chapter we
@@ -17,7 +18,7 @@ to handle this command. In the case of the `cargo-embed` GDB stub it
 will forward the command to the debugging probe on the board via USB
 which then does the job of actually talking to the MCU for us.
 
-== Let's debug!
+= Let's debug!
 
 Since `cargo-embed` is blocking our current shell we can simply open a
 new one and cd back into our project directory. Once we are there we

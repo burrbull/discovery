@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= My solution
+#h1((en: [My solution]
+))
 
 ```rust
 #![no_main]

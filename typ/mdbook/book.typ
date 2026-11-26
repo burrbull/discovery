@@ -357,7 +357,7 @@
     [
       #book_page(source, out, data, title, depth, sidebar(depth), prev_path, next_path) #lbl(path)
     ]
-    if i == 0 {
+    if i == 0 and path != "index" {
       let depth = 0
       book_page(source, data.prefix+"index.html", data, title, depth, sidebar(depth), prev_path, next_path)
     }

@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Receive a single byte
+#h1((en: [Receive a single byte]
+))
 
 So far we can send data from the microcontroller to your computer. It's
 time to try the opposite: receiving data from your computer. Luckily

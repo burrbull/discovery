@@ -1,6 +1,9 @@
-= General troubleshooting
+#import "../../config.typ": *
 
-== `cargo-embed` problems
+#h1((en: [General troubleshooting]
+))
+
+= `cargo-embed` problems
 
 Most `cargo-embed` problems are either related to not having installed
 the `udev` rules properly (on Linux) or having selected the wrong chip
@@ -14,11 +17,11 @@ or the
 #link("https://matrix.to/#/#probe-rs:matrix.org")[probe-rs matrix channel]
 and ask for help there.
 
-== Cargo problems
+= Cargo problems
 
-=== "can't find crate for `core`"
+== "can't find crate for `core`"
 
-==== Symptoms
+=== Symptoms
 
 ```
    Compiling volatile-register v0.1.2
@@ -43,12 +46,12 @@ error: Could not compile `r0`.
 To learn more, run the command again with --verbose.
 ```
 
-==== Cause
+=== Cause
 
 You forgot to install the proper target for your microcontroller
 (`thumbv7em-none-eabihf` for v2 and `thumbv6m-none-eabi` for v1).
 
-==== Fix
+=== Fix
 
 Install the proper target.
 

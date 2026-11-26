@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= My solution
+#h1((en: [My solution]
+))
 
 ```rust
 #![deny(unsafe_code)]

@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Read a single register
+#h1((en: [Read a single register]
+))
 
 Let's put all that theory into practice!
 
@@ -44,9 +45,7 @@ from the `microbit` crate together with all the other information we
 have gathered so far we'll end up with this piece of code to read out
 and print the two device IDs:
 
-```rust
-{{#include src/main.rs}}
-```
+#insert-code(read("src/main.rs"))
 
 Apart from the initialization, this piece of code should be straight
 forward if you understood the I2C protocol as described before. The
@@ -55,7 +54,7 @@ pass the peripheral as well as the pins that are used to communicate
 with the chip to the constructor; and then the frequency we wish the bus
 to operate on, in this case 100 kHz (`K100`).
 
-== Testing it
+= Testing it
 
 As always you have to modify `Embed.toml` to fit your MCU and can then
 use:

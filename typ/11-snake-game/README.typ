@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Snake game
+#h1((en: [Snake game]
+))
 
 We're now going to implement a basic
 #link("https://en.wikipedia.org/wiki/Snake_(video_game_genre)")[snake]

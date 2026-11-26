@@ -1,11 +1,14 @@
-= How to use GDB
+#import "../../config.typ": *
+
+#h1((en: [How to use GDB]
+))
 
 Below are some useful GDB commands that can help us debug our programs.
 This assumes you have
 #link("../../05-led-roulette/flash-it.md")[flashed a program] onto your
 microcontroller and attached GDB to a `cargo-embed` session.
 
-== General Debugging
+= General Debugging
 
 #quote(block: true)[
 #strong[NOTE:] Many of the commands you see below can be executed using
@@ -15,7 +18,7 @@ with the commands below, try to see how short you can get the commands
 to go before GDB doesn't recognize them!
 ]
 
-=== Dealing with Breakpoints
+== Dealing with Breakpoints
 
 - `break $location`: Set a breakpoint at a place in your code. The value
   of `$location` can include:
@@ -37,7 +40,7 @@ to go before GDB doesn't recognize them!
 - `disable`: Disable all set breakpoints
   - `disable $n`: Disable breakpoint `$n`
 
-=== Controlling Execution
+== Controlling Execution
 
 - `continue`: Begin or continue execution of your program
 - `next`: Execute the next line of your program
@@ -51,7 +54,7 @@ to go before GDB doesn't recognize them!
   - `jump 123`: Resume execution at line 123
   - `jump 0x080012f2`: Resume execution at address 0x080012f2
 
-=== Printing Information
+== Printing Information
 
 - `print /$f $data` - Print the value contained by the variable `$data`.
   Optionally format the output with `$f`, which can include:
@@ -69,7 +72,7 @@ to go before GDB doesn't recognize them!
   - `disassemble /r main`: Disassemble the function `main`, using `/r`
     to show the bytes that make up each instruction
 
-=== Looking at the Symbol Table
+== Looking at the Symbol Table
 
 - `info functions $regex`: Print the names and data types of functions
   matched by `$regex`, omit `$regex` to print all functions
@@ -83,7 +86,7 @@ to go before GDB doesn't recognize them!
 - `ptype $data`: Print more detailed information about `$data`
   - `ptype cp`: Print detailed type information about the variable `cp`
 
-=== Poking around the Program Stack
+== Poking around the Program Stack
 
 - `backtrace $n`: Print trace of `$n` frames, or omit `$n` to print all
   frames
@@ -100,5 +103,5 @@ to go before GDB doesn't recognize them!
   - `info registers $sp`: Print the value of the stack pointer register
     `$sp` in the current frame
 
-=== Controlling `cargo-embed` Remotely
+== Controlling `cargo-embed` Remotely
 - `monitor reset`: Reset the CPU, starting execution over again

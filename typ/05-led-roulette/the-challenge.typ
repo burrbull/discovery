@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= The challenge
+#h1((en: [The challenge]
+))
 
 You are now well armed to face a challenge! Your task will be to
 implement the application I showed you at the beginning of this chapter.

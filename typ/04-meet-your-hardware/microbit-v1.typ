@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Nordic nRF51822 (the "nRF51", micro:bit v1)
+#h1((en: [Nordic nRF51822 (the "nRF51", micro:bit v1)]
+))
 
 Our MCU has 48 tiny metal #strong[pins] sitting right underneath it
 (it's a so called
@@ -47,7 +48,7 @@ The product specification does of course contain a lot more useful
 information about the chip, for example that it is based on an ARM®
 Cortex™-M0 32-bit processor.
 
-=== Arm? Cortex-M0?
+== Arm? Cortex-M0?
 
 If our chip is manufactured by Nordic, then who is Arm? And if our chip
 is the nRF51822, what is the Cortex-M0?

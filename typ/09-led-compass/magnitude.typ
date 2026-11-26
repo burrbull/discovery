@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Magnitude
+#h1((en: [Magnitude]
+))
 
 We have been working with the direction of the magnetic field but what
 is its real magnitude? According to the documentation about the

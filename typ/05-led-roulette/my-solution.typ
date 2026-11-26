@@ -1,15 +1,14 @@
 #import "../config.typ": *
 
-= My solution
+#h1((en: [My solution]
+))
 
 What solution did you come up with?
 
 Here's mine, it's probably one of the simplest (but of course not most
 beautiful) way to generate the required matrix:
 
-```rust
-{{#include examples/my-solution.rs}}
-```
+#insert-code(read("examples/my-solution.rs"))
 
 One more thing! Check that your solution also works when compiled in
 "release" mode:

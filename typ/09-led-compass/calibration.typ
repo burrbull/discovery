@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Calibration
+#h1((en: [Calibration]
+))
 
 One very important thing to do before using a sensor and trying to
 develop an application using it is verifying that it's output is

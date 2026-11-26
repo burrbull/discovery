@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= LED roulette
+#h1((en: [LED roulette]
+))
 
 Alright, let's start by building the following application:
 
@@ -16,9 +17,7 @@ projects.
 Now, jump into the `src/05-led-roulette` directory. Check the
 `src/main.rs` file:
 
-```rust
-{{#include src/main.rs}}
-```
+#insert-code(read("src/main.rs"))
 
 Microcontroller programs are different from standard programs in two
 aspects: `#![no_std]` and `#![no_main]`.
@@ -47,9 +46,7 @@ target device. This modified linking process is a requirement of the
 
 Furthermore, there is also an `Embed.toml` file
 
-```toml
-{{#include Embed.toml}}
-```
+#insert-code(read("Embed.toml"), lang: "toml")
 
 This file tells `cargo-embed` that:
 

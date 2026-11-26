@@ -1,6 +1,7 @@
 #import "config.typ": *
 
-= What's left for you to explore
+#h1((en: [What's left for you to explore]
+))
 
 We have barely scratched the surface! There's lots of stuff left for you
 to explore.
@@ -17,13 +18,13 @@ contribute this to the book, or open a Pull Request adding the
 information!
 ]
 
-== Topics about embedded software
+= Topics about embedded software
 
 These topics discuss strategies for writing embedded software. Although
 many problems can be solved in different ways, these sections talk about
 some strategies, and when they make sense (or don't make sense) to use.
 
-=== Multitasking
+== Multitasking
 
 Most of our programs executed a single task. How could we achieve
 multitasking in a system with no OS, and thus no threads? There are two
@@ -47,7 +48,7 @@ multitasking is that in cooperative multitasking #emph[yields] execution
 control at #emph[known] suspension points instead of being forcefully
 preempted at any point of its execution.
 
-=== Sleeping
+== Sleeping
 
 All our programs have been continuously polling peripherals to see if
 there's anything that needs to be done. However, sometimes there's
@@ -61,7 +62,7 @@ below for what exactly those are) are one of the events that wake up the
 microcontroller but there are others and the `wfi` and `wfe` are the
 instructions that make the processor "sleep".
 
-== Topics related to microcontroller capabilities
+= Topics related to microcontroller capabilities
 
 Microcontrollers (like our nRF52/nRF51) have many capabilities. However,
 many share similar capabilities that can be used to solve all sorts of
@@ -70,7 +71,7 @@ different problems.
 These topics discuss some of those capabilities, and how they can be
 used effectively in embedded development.
 
-=== Direct Memory Access (DMA).
+== Direct Memory Access (DMA).
 
 This peripheral is a kind of #emph[asynchronous] `memcpy`. If you are
 working with a micro:bit v2 you have actually already used this, the HAL
@@ -85,7 +86,7 @@ checkout the `serial_setup` module from the UART chapter. If that isn't
 enough yet you could even try and dive into the code of the
 #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`].
 
-=== Interrupts
+== Interrupts
 
 In order to interact with the real world, it is often necessary for the
 microcontroller to respond #emph[immediately] when some kind of event
@@ -107,7 +108,7 @@ concepts of `Send` and `Sync` when sharing data between our main
 application, and code that executes as part of handling an interrupt
 event.
 
-=== Pulse Width Modulation (PWM)
+== Pulse Width Modulation (PWM)
 
 In a nutshell, PWM is turning on something and then turning it off
 periodically while keeping some proportion ("duty cycle") between the
@@ -130,7 +131,7 @@ PWM is already abstracted within the
 and you will again find implementations of this in the
 #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`].
 
-=== Digital inputs
+== Digital inputs
 
 We have used the microcontroller pins as digital outputs, to drive LEDs.
 When building our snake game, we also caught a glimpse of how these pins
@@ -147,7 +148,7 @@ implementation for them.
 \(#emph[spoilers] reading the binary state of switches / buttons is not
 as straightforward as it sounds \;-) )
 
-=== Analog-to-Digital Converters (ADC)
+== Analog-to-Digital Converters (ADC)
 
 There are a lot of digital sensors out there. You can use a protocol
 like I2C and SPI to read them. But analog sensors also exist! These
@@ -163,7 +164,7 @@ Again the
 as well as the #link("https://github.com/nrf-rs/nrf-hal")[`nrf52-hal`]
 got you covered.
 
-=== Digital-to-Analog Converters (DAC)
+== Digital-to-Analog Converters (DAC)
 
 As you might expect a DAC is exactly the opposite of ADC. You can write
 some digital value into a register to produce a voltage in the
@@ -172,14 +173,14 @@ When this analog pin is connected to some appropriate electronics and
 the register is written to at some constant, fast rate (frequency) with
 the right values you can produce sounds or even music!
 
-=== Real Time Clock (RTC)
+== Real Time Clock (RTC)
 
 This peripheral can be used to track time in "human format". Seconds,
 minutes, hours, days, months and years. This peripheral handles the
 translation from "ticks" to these human friendly units of time. It even
 handles leap years and Daylight Save Time for you!
 
-=== Other communication protocols
+== Other communication protocols
 
 - SPI, abstracted within the
   #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/spi/index.html")[`embedded-hal` `spi` module]
@@ -218,13 +219,13 @@ also join the
 and get into contact with most of the people who built the stuff from
 above.
 
-== General Embedded-Relevant Topics
+= General Embedded-Relevant Topics
 
 These topics cover items that are not specific to our device, or the
 hardware on it. Instead, they discuss useful techniques that could be
 used on embedded systems.
 
-=== Gyroscopes
+== Gyroscopes
 
 As part of our Punch-o-meter exercise, we used the Accelerometer to
 measure changes in acceleration in three dimensions. But there are other
@@ -237,7 +238,7 @@ sensor like a gyroscope can also be combined with data from
 accelerometer using a technique called Sensor Fusion (see below for more
 information).
 
-=== Servo and Stepper Motors
+== Servo and Stepper Motors
 
 While some motors are used primarily just to spin in one direction or
 the other, for example driving a remote control car forwards or
@@ -249,7 +250,7 @@ allow for more precise control of how many turns are being made by the
 motor, or can even position the motor in one specific place, for example
 if we wanted to move the arms of a clock to a particular direction.
 
-=== Sensor fusion
+== Sensor fusion
 
 The micro:bit contains two motion sensors: an accelerometer and a
 magnetometer. On their own these measure: (proper) acceleration and (the

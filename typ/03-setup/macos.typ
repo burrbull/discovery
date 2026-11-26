@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= macOS
+#h1((en: [macOS]
+))
 
 All the tools can be installed using #link("http://brew.sh/")[Homebrew]:
 

@@ -1,12 +1,13 @@
 #import "../config.typ": *
 
-= Verify the installation
+#h1((en: [Verify the installation]
+))
 
 Let's verify that all the tools were installed correctly.
 
-== Linux only
+= Linux only
 
-=== Verify permissions
+== Verify permissions
 
 Connect the micro:bit to your computer using a USB cable.
 
@@ -54,9 +55,10 @@ $ sudo udevadm control --reload
 $ sudo udevadm trigger
 ```
 
-= All
+#h1((en: [All]
+))
 
-== Verifying cargo-embed
+= Verifying cargo-embed
 
 First, connect the micro:bit to your Computer using a USB cable.
 

@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Hardware/knowledge requirements
+#h1((en: [Hardware/knowledge requirements]
+))
 
 The primary knowledge requirement to read this book is to know
 #emph[some] Rust. It's hard for me to quantify #emph[some] but at least

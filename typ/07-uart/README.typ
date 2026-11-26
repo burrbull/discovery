@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= UART
+#h1((en: [UART]
+))
 
 The microcontroller has a peripheral called UART, which stands for
 Universal Asynchronous Receiver/Transmitter. This peripheral can be
@@ -17,11 +18,9 @@ has to talk to it differently. However, this will of course not be our
 concern.
 ]
 
-== Setup
+= Setup
 
 As always from now on you will have to modify the `Embed.toml` to match
 your micro:bit version:
 
-```toml
-{{#include Embed.toml}}
-```
+#insert-code(read("Embed.toml"), lang: "toml")

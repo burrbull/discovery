@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Getting the most out of your IDE
+#h1((en: [Getting the most out of your IDE]
+))
 
 All code in this book assumes that you use a simple terminal to build
 your code, run it, and interact with it. It also makes no assumption
@@ -11,7 +12,8 @@ type annotation, your preferred shortcuts and much more. This section
 explains how to get the most out of your IDE using the code obtained
 from this book's repo.
 
-= Auto-completion, type annotation, and more
+#h1((en: [Auto]
+))-completion, type annotation, and more
 
 Some IDEs fail to understand the code, because they fail to determine
 whether a term is defined in the microbit or microbit-v2 codebase. If
@@ -21,14 +23,15 @@ references to the version of microbit you are not using. That is: in the
 `Cargo.toml` file you must remove the dependency and features you do not
 use (the part guarded by `#[cfg(feature = "vI")]` and the guard itself)
 
-= IDE configuration
+#h1((en: [IDE configuration]
+))
 
 Below, we explain how to configure your IDE to get the most out of this
 book. If your IDE is not listed below, please improve this book by
 adding a section, so that the next reader can get the best experience
 out of it.
 
-== How to build with IntelliJ
+= How to build with IntelliJ
 
 When editing the IntelliJ build configuration, here are a few
 non-default values: \* You should edit the command. When this book tells

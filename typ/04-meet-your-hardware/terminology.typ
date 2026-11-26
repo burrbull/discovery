@@ -1,18 +1,19 @@
 #import "../config.typ": *
 
-= Rust Embedded terminology
+#h1((en: [Rust Embedded terminology]
+))
 
 Before we dive into programming the micro:bit let's have a quick look at
 the libraries and terminology that will be important for all the future
 chapters.
 
-== Abstraction layers
+= Abstraction layers
 
 For any fully supported microcontroller/board with a microcontroller you
 will usually hear the following terms being used for their levels of
 abstraction:
 
-=== Peripheral Access Crate (PAC)
+== Peripheral Access Crate (PAC)
 
 The job of the PAC is to provide a safe (ish) direct interface to the
 peripherals of the chip, allowing you to configure every last bit
@@ -23,7 +24,7 @@ fulfill your needs or when you are developing them. The PAC we are
 #link("https://crates.io/crates/nrf52833-pac")[nRF52] or for the
 #link("https://crates.io/crates/nrf51-pac")[nRF51].
 
-=== The Hardware Abstraction Layer (HAL)
+== The Hardware Abstraction Layer (HAL)
 
 The job of the HAL is to build up on top of the chip's PAC and provide
 an abstraction that is actually usable for someone who does not know
@@ -33,7 +34,7 @@ to send data around via the peripheral. We are going to use the
 #link("https://crates.io/crates/nrf52833-hal")[nRF52-hal] or the
 #link("https://crates.io/crates/nrf51-hal")[nRF51-hal] respectively.
 
-=== The Board Support Crate (historically called Board Support Package, or BSP)
+== The Board Support Crate (historically called Board Support Package, or BSP)
 
 The job of the BSP is to abstract a whole board (such as the micro:bit)
 away at once. That means it has to provide abstractions to use both the
@@ -45,7 +46,7 @@ though, the micro:bit does actually have a
 #link("https://crates.io/crates/microbit")[BSP] so we are going to use
 that on top of our HAL as well.
 
-== Unifying the layers
+= Unifying the layers
 
 Next we are going to have a look at a very central piece of software in
 the Rust Embedded world:
@@ -67,7 +68,7 @@ traits. Drivers that are written in such a way are called platform
 agnostic and luckily for us most of the drivers on crates.io are
 actually platform agnostic.
 
-== Further reading
+= Further reading
 
 If you want to learn more about these levels of abstraction, Franz
 Skarman, a.k.a. #link("https://github.com/TheZoq2/")[TheZoq2], held a

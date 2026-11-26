@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Reverse a string
+#h1((en: [Reverse a string]
+))
 
 Alright, next let's make the server more interesting by having it
 respond to the client with the reverse of the text that they sent. The

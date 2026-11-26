@@ -2,7 +2,7 @@
 #import "mdbook/lib.typ": book
 
 #let sources = (
-  "README": (
+  "index": (
     content: include "README.typ",
     title: tr((
       en: [Introduction],

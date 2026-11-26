@@ -1,8 +1,9 @@
 #import "../config.typ": *
 
-= Windows
+#h1((en: [Windows]
+))
 
-== `arm-none-eabi-gdb`
+= `arm-none-eabi-gdb`
 
 ARM provides `.exe` installers for Windows. Grab one from
 #link("https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads")[here],
@@ -16,7 +17,7 @@ $ arm-none-eabi-gcc -v
 gcc version 5.4.1 20160919 (release) (..)
 ```
 
-== PuTTY
+= PuTTY
 
 Download the latest `putty.exe` from
 #link("http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html")[this site]

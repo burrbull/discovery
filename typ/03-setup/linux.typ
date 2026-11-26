@@ -1,10 +1,11 @@
 #import "../config.typ": *
 
-= Linux
+#h1((en: [Linux]
+))
 
 Here are the installation commands for a few Linux distributions.
 
-== Ubuntu 20.04 or newer / Debian 10 or newer
+= Ubuntu 20.04 or newer / Debian 10 or newer
 
 #quote(block: true)[
 #strong[NOTE] `gdb-multiarch` is the GDB command you'll use to debug
@@ -17,7 +18,7 @@ $ sudo apt-get install \
   minicom
 ```
 
-== Fedora 32 or newer
+= Fedora 32 or newer
 
 #quote(block: true)[
 #strong[NOTE] `gdb` is the GDB command you'll use to debug your ARM
@@ -30,7 +31,7 @@ $ sudo dnf install \
   minicom
 ```
 
-== Arch Linux
+= Arch Linux
 
 #quote(block: true)[
 #strong[NOTE] `arm-none-eabi-gdb` is the GDB command you'll use to debug
@@ -43,7 +44,7 @@ $ sudo pacman -S \
   minicom
 ```
 
-== Other distros
+= Other distros
 
 #quote(block: true)[
 #strong[NOTE] `arm-none-eabi-gdb` is the GDB command you'll use to debug
@@ -67,7 +68,7 @@ appropriate shell init file (e.g.~`~/.zshrc` or `~/.bashrc`):
 PATH=$PATH:$HOME/local/gcc-arm-none-eabi-9-2020-q2-update/bin
 ```
 
-== udev rules
+= udev rules
 
 These rules let you use USB devices like the micro:bit without root
 privilege, i.e.~`sudo`.

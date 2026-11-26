@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Send a single byte
+#h1((en: [Send a single byte]
+))
 
 Our first task will be to send a single byte from the microcontroller to
 the computer over the serial connection.
@@ -8,9 +9,7 @@ the computer over the serial connection.
 In order to do that we will use the following snippet (this one is
 already in `07-uart/src/main.rs`):
 
-```rust
-{{#include src/main.rs}}
-```
+#insert-code(read("src/main.rs"))
 
 The most prevalent new thing here is obviously the `cfg` directives to
 conditionally include/exclude parts of the code. This is mostly just
@@ -65,7 +64,7 @@ output until it has received a certain number of bytes to send (this is
 the case with the UARTE implementation). Calling `flush()` forces it to
 write the bytes it currently has right now instead of waiting for more.
 
-== Testing it
+= Testing it
 
 Before flashing this you should make sure to start your minicom/PuTTY as
 the data we receive via our serial communication is not backed up or

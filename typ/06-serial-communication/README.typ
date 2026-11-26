@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Serial communication
+#h1((en: [Serial communication]
+))
 
 
 This is what we'll be using. I hope your computer has one!

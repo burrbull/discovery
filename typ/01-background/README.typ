@@ -1,8 +1,9 @@
 #import "../config.typ": *
 
-= Background
+#h1((en: [Background]
+))
 
-== What's a microcontroller?
+= What's a microcontroller?
 
 A microcontroller is a #emph[system] on a chip. Whereas your computer is
 made up of several discrete components: a processor, RAM, storage, an
@@ -10,7 +11,7 @@ Ethernet port, etc.; a microcontroller has all those types of components
 built into a single "chip" or package. This makes it possible to build
 systems with fewer parts.
 
-== What can you do with a microcontroller?
+= What can you do with a microcontroller?
 
 Lots of things! Microcontrollers are the central part of what are known
 as "#emph[embedded] systems". Embedded systems are everywhere, but you
@@ -34,7 +35,7 @@ system might have:
 - Actuators which control the speed of fans.
 - Actuators which cause heat to be added or removed from the building.
 
-== When should I use a microcontroller?
+= When should I use a microcontroller?
 
 Many of the embedded systems listed above could be implemented with a
 computer running Linux (for example a "Raspberry Pi"). Why use a
@@ -65,7 +66,7 @@ guarantee execution of a program within tight time constraints.
 #strong[Reliability.] In systems with fewer components (both hardware
 and software), there is less to go wrong!
 
-== When should I #emph[not] use a microcontroller?
+= When should I #emph[not] use a microcontroller?
 
 Where heavy computations are involved. To keep their power consumption
 low, microcontrollers have very limited computational resources
@@ -74,7 +75,7 @@ hardware support for floating point operations. On those devices,
 performing a simple addition of single precision numbers can take
 hundreds of CPU cycles.
 
-== Why use Rust and not C?
+= Why use Rust and not C?
 
 Hopefully, I don't need to convince you here as you are probably
 familiar with the language differences between Rust and C. One point I
@@ -85,7 +86,7 @@ encourages code reuse because libraries can be easily integrated into an
 application which is also a good thing as libraries get more "battle
 testing".
 
-== Why should I not use Rust?
+= Why should I not use Rust?
 
 Or why should I prefer C over Rust?
 

@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= Game logic
+#h1((en: [Game logic]
+))
 
 First, we are going to describe the game logic. You are probably
 familiar with snake games, but if not, the basic idea is that the player
@@ -13,7 +14,7 @@ snake crashes into the edge of the grid, but given the small size of our
 grid we are going to implement a "wraparound" rule where, if the snake
 goes off one edge of the grid, it will continue from the opposite edge.
 
-== The `game` module
+= The `game` module
 
 The code in this section should go in a separate file, `game.rs`, in our
 `src` directory.
@@ -420,7 +421,7 @@ impl Game {
 }
 ```
 
-== The `main` file
+= The `main` file
 
 The following code should be placed in our `main.rs` file.
 

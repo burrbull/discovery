@@ -1,12 +1,13 @@
 #import "../config.typ": *
 
-= General protocol
+#h1((en: [General protocol]
+))
 
 The I2C protocol is more elaborate than the serial communication
 protocol because it has to support communication between several
 devices. Let's see how it works using examples:
 
-== Controller -\> Target
+= Controller -\> Target
 
 If the Controller wants to send data to the Target:
 
@@ -23,7 +24,7 @@ If the Controller wants to send data to the Target:
 bits long. Nothing else would have changed.
 ]
 
-== Controller \<- Target
+= Controller \<- Target
 
 If the controller wants to read data from the target:
 

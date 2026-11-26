@@ -76,3 +76,7 @@
   }
   title(it)*/
 }
+
+#import "mdbook/lib.typ": insert-code
+
+#let insert-code = insert-code.with(tgt: tgt)

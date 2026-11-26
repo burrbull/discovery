@@ -1,6 +1,7 @@
 #import "../config.typ": *
 
-= I2C
+#h1((en: [I2C]
+))
 
 We just saw the serial communication protocol. It's a widely used
 protocol because it's very simple and this simplicity makes it easy to
