@@ -3,14 +3,17 @@
 #h1((en: [Magnitude],
 ), offset: whole)
 
-We have been working with the direction of the magnetic field but what
-is its real magnitude? According to the documentation about the
-#link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.mag_data")[`mag_data()`]
-function the `x` `y` `z` values we are getting are in nanotesla. That
-means the only thing we have to compute in order to get the magnitude of
-the magnetic field in nanotesla is the magnitude of the 3D vector that
-our `x` `y` `z` values describe. As you might remember from school this
-is simply:
+#tr((
+en: [
+  We have been working with the direction of the magnetic field but what
+  is its real magnitude? According to the documentation about the
+  #link("https://docs.rs/lsm303agr/0.2.2/lsm303agr/struct.Lsm303agr.html#method.mag_data")[`mag_data()`]
+  function the `x` `y` `z` values we are getting are in nanotesla. That
+  means the only thing we have to compute in order to get the magnitude of
+  the magnetic field in nanotesla is the magnitude of the 3D vector that
+  our `x` `y` `z` values describe. As you might remember from school this
+  is simply:
+]))
 
 ```rust
 // core doesn't have this function yet so we use libm, just like with
@@ -19,7 +22,10 @@ use libm::sqrtf;
 let magnitude = sqrtf(x * x + y * y + z * z);
 ```
 
-Putting all this together in a program:
+#tr((
+en: [
+  Putting all this together in a program:
+]))
 
 ```rust
 #![deny(unsafe_code)]
@@ -82,16 +88,28 @@ fn main() -> ! {
 }
 ```
 
-This program will report the magnitude (strength) of the magnetic field
-in nanotesla (`nT`) and milligauss (`mG`). The magnitude of the Earth's
-magnetic field is in the range of `250 mG` to `650 mG` (the magnitude
-varies depending on your geographical location) so you should see a
-value in that range or close to that range -- I see a magnitude of
-around `340 mG`.
+#tr((
+en: [
+  This program will report the magnitude (strength) of the magnetic field
+  in nanotesla (`nT`) and milligauss (`mG`). The magnitude of the Earth's
+  magnetic field is in the range of `250 mG` to `650 mG` (the magnitude
+  varies depending on your geographical location) so you should see a
+  value in that range or close to that range -- I see a magnitude of
+  around `340 mG`.
+]))
 
-Some questions:
+#tr((
+en: [
+  Some questions:
+]))
 
-Without moving the board, what value do you see? Do you always see the
-same value?
+#tr((
+en: [
+  Without moving the board, what value do you see? Do you always see the
+  same value?
+]))
 
-If you rotate the board, does the magnitude change? Should it change?
+#tr((
+en: [
+  If you rotate the board, does the magnitude change? Should it change?
+]))

@@ -3,23 +3,29 @@
 #h1((en: [Game logic],
 ), offset: whole)
 
-First, we are going to describe the game logic. You are probably
-familiar with snake games, but if not, the basic idea is that the player
-guides a snake around a 2D grid. At any given time, there is some "food"
-at a random location on the grid and the goal of the game is to get the
-snake to "eat" as much food as possible. Each time the snake eats some
-food it grows in length. The player loses if the snake crashes into its
-own tail. In some variants of the game, the player also loses if the
-snake crashes into the edge of the grid, but given the small size of our
-grid we are going to implement a "wraparound" rule where, if the snake
-goes off one edge of the grid, it will continue from the opposite edge.
+#tr((
+en: [
+  First, we are going to describe the game logic. You are probably
+  familiar with snake games, but if not, the basic idea is that the player
+  guides a snake around a 2D grid. At any given time, there is some "food"
+  at a random location on the grid and the goal of the game is to get the
+  snake to "eat" as much food as possible. Each time the snake eats some
+  food it grows in length. The player loses if the snake crashes into its
+  own tail. In some variants of the game, the player also loses if the
+  snake crashes into the edge of the grid, but given the small size of our
+  grid we are going to implement a "wraparound" rule where, if the snake
+  goes off one edge of the grid, it will continue from the opposite edge.
+]))
 
 = #tr((
   en: [The `game` module],
 ))
 
-The code in this section should go in a separate file, `game.rs`, in our
-`src` directory.
+#tr((
+en: [
+  The code in this section should go in a separate file, `game.rs`, in our
+  `src` directory.
+]))
 
 ```rust
 use heapless::FnvIndexSet;
@@ -60,29 +66,35 @@ impl Coords {
 }
 ```
 
-We use a `Coords` struct to refer to a position on the grid. Because
-`Coords` only contains two integers, we tell the compiler to derive an
-implementation of the `Copy` trait for it, so we can pass around
-`Coords` structs without having to worry about ownership.
+#tr((
+en: [
+  We use a `Coords` struct to refer to a position on the grid. Because
+  `Coords` only contains two integers, we tell the compiler to derive an
+  implementation of the `Copy` trait for it, so we can pass around
+  `Coords` structs without having to worry about ownership.
+]))
 
-We define an associated function, `Coords::random`, which will give us a
-random position on the grid. We will use this later to determine where
-to place the snake's food. To do this, we need a source of random
-numbers. The nRF52833 has a random number generator (RNG) peripheral,
-documented at section 6.19 of the
-#link("https://infocenter.nordicsemi.com/pdf/nRF52833_PS_v1.3.pdf")[spec sheet].
-The HAL gives us a simple interface to the RNG via the
-`microbit::hal::rng::Rng` struct. However, it is a blocking interface,
-and the time needed to generate one random byte of data is variable and
-unpredictable. We therefore define a
-#link("https://en.wikipedia.org/wiki/Pseudorandom_number_generator")[pseudo-random]
-number generator (PRNG) which uses an
-#link("https://en.wikipedia.org/wiki/Xorshift")[xorshift] algorithm to
-generate pseudo-random `u32` values that we can use to determine where
-to place food. The algorithm is basic and not cryptographically secure,
-but it is efficient, easy to implement and good enough for our humble
-snake game. Our `Prng` struct requires an initial seed value, which we
-get from the RNG peripheral.
+#tr((
+en: [
+  We define an associated function, `Coords::random`, which will give us a
+  random position on the grid. We will use this later to determine where
+  to place the snake's food. To do this, we need a source of random
+  numbers. The nRF52833 has a random number generator (RNG) peripheral,
+  documented at section 6.19 of the
+  #link("https://infocenter.nordicsemi.com/pdf/nRF52833_PS_v1.3.pdf")[spec sheet].
+  The HAL gives us a simple interface to the RNG via the
+  `microbit::hal::rng::Rng` struct. However, it is a blocking interface,
+  and the time needed to generate one random byte of data is variable and
+  unpredictable. We therefore define a
+  #link("https://en.wikipedia.org/wiki/Pseudorandom_number_generator")[pseudo-random]
+  number generator (PRNG) which uses an
+  #link("https://en.wikipedia.org/wiki/Xorshift")[xorshift] algorithm to
+  generate pseudo-random `u32` values that we can use to determine where
+  to place food. The algorithm is basic and not cryptographically secure,
+  but it is efficient, easy to implement and good enough for our humble
+  snake game. Our `Prng` struct requires an initial seed value, which we
+  get from the RNG peripheral.
+]))
 
 ```rust
 /// A basic pseudo-random number generator.
@@ -111,10 +123,13 @@ impl Prng {
 }
 ```
 
-We also need to define a few `enum`s that help us manage the game's
-state: direction of movement, direction to turn, the current game status
-and the outcome of a particular "step" in the game (ie, a single
-movement of the snake).
+#tr((
+en: [
+  We also need to define a few `enum`s that help us manage the game's
+  state: direction of movement, direction to turn, the current game status
+  and the outcome of a particular "step" in the game (ie, a single
+  movement of the snake).
+]))
 
 ```rust
 /// Define the directions the snake can move.
@@ -153,11 +168,14 @@ enum StepOutcome {
 }
 ```
 
-Next up we define a `Snake` struct, which keeps track of the coordinates
-occupied by the snake and its direction of travel. We use a queue
-(`heapless::spsc::Queue`) to keep track of the order of coordinates and
-a hash set (`heapless::FnvIndexSet`) to allow for quick collision
-detection. The `Snake` has methods to allow it to move.
+#tr((
+en: [
+  Next up we define a `Snake` struct, which keeps track of the coordinates
+  occupied by the snake and its direction of travel. We use a queue
+  (`heapless::spsc::Queue`) to keep track of the order of coordinates and
+  a hash set (`heapless::FnvIndexSet`) to allow for quick collision
+  detection. The `Snake` has methods to allow it to move.
+]))
 
 ```rust
 use heapless::spsc::Queue;
@@ -236,18 +254,24 @@ impl Snake {
 }
 ```
 
-The `Game` struct keeps track of the game state. It holds a `Snake`
-object, the current coordinates of the food, the speed of the game
-(which is used to determine the time that elapses between each movement
-of the snake), the status of the game (whether the game is ongoing or
-the player has won or lost) and the player's score.
+#tr((
+en: [
+  The `Game` struct keeps track of the game state. It holds a `Snake`
+  object, the current coordinates of the food, the speed of the game
+  (which is used to determine the time that elapses between each movement
+  of the snake), the status of the game (whether the game is ongoing or
+  the player has won or lost) and the player's score.
+]))
 
-This struct contains methods to handle each step of the game,
-determining the snake's next move and updating the game state
-accordingly. It also contains two methods--`game_matrix` and
-`score_matrix`--that output 2D arrays of values which can be used to
-display the game state or the player score on the LED matrix (as we will
-see later).
+#tr((
+en: [
+  This struct contains methods to handle each step of the game,
+  determining the snake's next move and updating the game state
+  accordingly. It also contains two methods--`game_matrix` and
+  `score_matrix`--that output 2D arrays of values which can be used to
+  display the game state or the player score on the LED matrix (as we will
+  see later).
+]))
 
 ```rust
 /// Struct to hold game state and associated behaviour
@@ -427,7 +451,10 @@ impl Game {
   en: [The `main` file],
 ))
 
-The following code should be placed in our `main.rs` file.
+#tr((
+en: [
+  The following code should be placed in our `main.rs` file.
+]))
 
 ```rust
 #![no_main]
@@ -481,39 +508,53 @@ fn main() -> ! {
 }
 ```
 
-After initialising the board and its timer and RNG peripherals, we
-initialise a `Game` struct and a `Display` from the
-`microbit::display::blocking` module.
+#tr((
+en: [
+  After initialising the board and its timer and RNG peripherals, we
+  initialise a `Game` struct and a `Display` from the
+  `microbit::display::blocking` module.
+]))
 
-In our "game loop" (which runs inside of the "main loop" we place in our
-`main` function), we repeatedly perform the following steps:
+#tr((
+en: [
+  In our "game loop" (which runs inside of the "main loop" we place in our
+  `main` function), we repeatedly perform the following steps:
+  + Get a 5x5 array of bytes representing the grid. The `Game::get_matrix`
+    method takes three integer arguments (which should be between 0 and 9,
+    inclusive) which will, eventually, represent how brightly the head,
+    tail and food should be displayed. The basic `Display` we are using at
+    this point does not support variable brightness, so we just provide
+    values of 9 for each (but any non-zero value would work) at this
+    stage.
+  + Display the matrix, for an amount of time determined by the
+    `Game::step_len_ms` method. As currently implemented, this method
+    basically provides for 1 second between steps, reducing by 200ms every
+    time the player scores 5 points (eating 1 piece of food = 1 point),
+    subject to a floor of 200ms.
+  + Check the game status. If it is `Ongoing` (which is its initial
+    value), run a step of the game and update the game state (including
+    its `status` property). Otherwise, the game is over, so flash the
+    current image three times, then show the player's score (represented
+    as a number of illuminated LEDs corresponding to the score), and exit
+    the game loop.
+]))
 
-+ Get a 5x5 array of bytes representing the grid. The `Game::get_matrix`
-  method takes three integer arguments (which should be between 0 and 9,
-  inclusive) which will, eventually, represent how brightly the head,
-  tail and food should be displayed. The basic `Display` we are using at
-  this point does not support variable brightness, so we just provide
-  values of 9 for each (but any non-zero value would work) at this
-  stage.
-+ Display the matrix, for an amount of time determined by the
-  `Game::step_len_ms` method. As currently implemented, this method
-  basically provides for 1 second between steps, reducing by 200ms every
-  time the player scores 5 points (eating 1 piece of food = 1 point),
-  subject to a floor of 200ms.
-+ Check the game status. If it is `Ongoing` (which is its initial
-  value), run a step of the game and update the game state (including
-  its `status` property). Otherwise, the game is over, so flash the
-  current image three times, then show the player's score (represented
-  as a number of illuminated LEDs corresponding to the score), and exit
-  the game loop.
+#tr((
+en: [
+  Our main loop just runs the game loop repeatedly, resetting the game's
+  state after each iteration.
+]))
 
-Our main loop just runs the game loop repeatedly, resetting the game's
-state after each iteration.
+#tr((
+en: [
+  If you run this, you should see two LEDs illuminated halfway down the
+  display (the snake's head in the middle and its tail to the left). You
+  will also see another LED illuminated somewhere on the board,
+  representing the snake's food. Approximately each second, the snake will
+  move one space to the right.
+]))
 
-If you run this, you should see two LEDs illuminated halfway down the
-display (the snake's head in the middle and its tail to the left). You
-will also see another LED illuminated somewhere on the board,
-representing the snake's food. Approximately each second, the snake will
-move one space to the right.
-
-Next we will add an ability to control the snake's movements.
+#tr((
+en: [
+  Next we will add an ability to control the snake's movements.
+]))

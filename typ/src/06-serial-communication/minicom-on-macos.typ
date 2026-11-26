@@ -13,5 +13,8 @@ $ # start minicom in setup mode
 $ minicom -s
 ```
 
-+ Select `Keyboard and Misc Functions`
-+ Look at the first option `A - Command key is`
+#tr((
+en: [
+  + Select `Keyboard and Misc Functions`
+  + Look at the first option `A - Command key is`
+]))

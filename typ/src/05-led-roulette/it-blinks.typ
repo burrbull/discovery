@@ -7,23 +7,32 @@
   en: [Delaying],
 ))
 
-Now we're going to take a brief look into delay abstractions provided by
-`embedded-hal` before combining this with the GPIO abstractions from the
-previous chapter in order to finally make an LED blink.
+#tr((
+en: [
+  Now we're going to take a brief look into delay abstractions provided by
+  `embedded-hal` before combining this with the GPIO abstractions from the
+  previous chapter in order to finally make an LED blink.
+]))
 
-`embedded-hal` provides us with two abstractions to delay the execution
-of our program:
-#link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayUs.html")[`DelayUs`]
-and
-#link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayMs.html")[`DelayMs`].
-Both of them essentially work the exact same way except that they accept
-different units for their delay function.
+#tr((
+en: [
+  `embedded-hal` provides us with two abstractions to delay the execution
+  of our program:
+  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayUs.html")[`DelayUs`]
+  and
+  #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/delay/trait.DelayMs.html")[`DelayMs`].
+  Both of them essentially work the exact same way except that they accept
+  different units for their delay function.
+]))
 
-Inside our MCU, several so-called "timers" exist. They can do various
-things regarding time for us, including simply pausing the execution of
-our program for a fixed amount of time. A very simple delay-based
-program that prints something every second might for example look like
-this:
+#tr((
+en: [
+  Inside our MCU, several so-called "timers" exist. They can do various
+  things regarding time for us, including simply pausing the execution of
+  our program for a fixed amount of time. A very simple delay-based
+  program that prints something every second might for example look like
+  this:
+]))
 
 ```rs
 #![deny(unsafe_code)]
@@ -51,13 +60,19 @@ fn main() -> ! {
 }
 ```
 
-Note that we changed our panic implementation from `panic_halt` to
-`panic_rtt_target` here. This will require you to uncomment the two RTT
-lines from `Cargo.toml` and comment the `panic-halt` one out, since Rust
-only allows one panic implementation at a time.
+#tr((
+en: [
+  Note that we changed our panic implementation from `panic_halt` to
+  `panic_rtt_target` here. This will require you to uncomment the two RTT
+  lines from `Cargo.toml` and comment the `panic-halt` one out, since Rust
+  only allows one panic implementation at a time.
+]))
 
-In order to actually see the prints we have to change `Embed.toml` like
-this:
+#tr((
+en: [
+  In order to actually see the prints we have to change `Embed.toml` like
+  this:
+]))
 
 ```
 [default.general]
@@ -74,20 +89,26 @@ enabled = true
 enabled = false
 ```
 
-And now after putting the code into `src/main.rs` and another quick
-`cargo embed` (again with the same flags you used before) you should see
-"`1000 ms passed`" being sent to your console every second from your
-MCU.
+#tr((
+en: [
+  And now after putting the code into `src/main.rs` and another quick
+  `cargo embed` (again with the same flags you used before) you should see
+  "`1000 ms passed`" being sent to your console every second from your
+  MCU.
+]))
 
 = #tr((
   en: [Blinking],
 ))
 
-Now we've arrived at the point where we can combine our new knowledge
-about GPIO and delay abstractions in order to actually make an LED on
-the back of the micro:bit blink. The resulting program is really just a
-mash-up of the one above and the one that turned an LED on in the last
-section and looks like this:
+#tr((
+en: [
+  Now we've arrived at the point where we can combine our new knowledge
+  about GPIO and delay abstractions in order to actually make an LED on
+  the back of the micro:bit blink. The resulting program is really just a
+  mash-up of the one above and the one that turned an LED on in the last
+  section and looks like this:
+]))
 
 ```rs
 #![deny(unsafe_code)]
@@ -122,7 +143,10 @@ fn main() -> ! {
 }
 ```
 
-And after putting the code into `src/main.rs` and a final `cargo embed`
-(with the proper flags) you should see the LED we light up before
-blinking as well as a print, every time the LED changes from off to on
-and vice versa.
+#tr((
+en: [
+  And after putting the code into `src/main.rs` and a final `cargo embed`
+  (with the proper flags) you should see the LED we light up before
+  blinking as well as a print, every time the LED changes from off to on
+  and vice versa.
+]))

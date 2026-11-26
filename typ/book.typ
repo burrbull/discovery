@@ -370,11 +370,12 @@
   ),
 )
 
+#let book_cfg = toml("book.toml")
 #book(
   tgt,
   sources,
   lang,
   languages,
-  book_title: "Discovery",
-  git: "https://github.com/rust-embedded/discovery",
+  book_title: book_cfg.book.title,
+  git: book_cfg.output.html.git-repository-url,
 )

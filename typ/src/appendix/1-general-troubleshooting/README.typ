@@ -7,17 +7,23 @@
   en: [`cargo-embed` problems],
 ))
 
-Most `cargo-embed` problems are either related to not having installed
-the `udev` rules properly (on Linux) or having selected the wrong chip
-configuration in `Embed.toml` so make sure you got both of those right.
+#tr((
+en: [
+  Most `cargo-embed` problems are either related to not having installed
+  the `udev` rules properly (on Linux) or having selected the wrong chip
+  configuration in `Embed.toml` so make sure you got both of those right.
+]))
 
-If the above does not work out for you, you can open an issue in the
-#link("https://github.com/rust-embedded/discovery/issues")[`discovery` issue tracker].
-Alternatively you can also visit the
-#link("https://matrix.to/#/#rust-embedded:matrix.org")[Rust Embedded matrix channel]
-or the
-#link("https://matrix.to/#/#probe-rs:matrix.org")[probe-rs matrix channel]
-and ask for help there.
+#tr((
+en: [
+  If the above does not work out for you, you can open an issue in the
+  #link("https://github.com/rust-embedded/discovery/issues")[`discovery` issue tracker].
+  Alternatively you can also visit the
+  #link("https://matrix.to/#/#rust-embedded:matrix.org")[Rust Embedded matrix channel]
+  or the
+  #link("https://matrix.to/#/#probe-rs:matrix.org")[probe-rs matrix channel]
+  and ask for help there.
+]))
 
 = #tr((
   en: [Cargo problems],
@@ -58,14 +64,21 @@ To learn more, run the command again with --verbose.
   en: [Cause],
 ))
 
-You forgot to install the proper target for your microcontroller
-(`thumbv7em-none-eabihf` for v2 and `thumbv6m-none-eabi` for v1).
+#tr((
+en: [
+  You forgot to install the proper target for your microcontroller
+  (`thumbv7em-none-eabihf` for v2 and `thumbv6m-none-eabi` for v1).
+]))
 
 === #tr((
   en: [Fix],
 ))
 
-Install the proper target.
+#tr((
+en: [
+  Install the proper target.
+]))
+
 
 ```console
 # micro:bit v2

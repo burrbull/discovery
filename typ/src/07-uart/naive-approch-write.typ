@@ -7,7 +7,10 @@
   en: [Naive approach],
 ))
 
-You probably came up with a program similar to the following:
+#tr((
+en: [
+  You probably came up with a program similar to the following:
+]))
 
 ```rs
 #![no_main]
@@ -71,18 +74,24 @@ fn main() -> ! {
 }
 ```
 
-While this is a perfectly valid implementation, at some point you might
-want to have all the nice perks of `print!` such as argument formatting
-and so on. If you are wondering how to do that, read on.
+#tr((
+en: [
+  While this is a perfectly valid implementation, at some point you might
+  want to have all the nice perks of `print!` such as argument formatting
+  and so on. If you are wondering how to do that, read on.
+]))
 
 = #tr((
   en: [`write!` and `core::fmt::Write`],
 ))
 
-The `core::fmt::Write` trait allows us to use any struct that implements
-it in basically the same way as we use `print!` in the `std` world. In
-this case, the `Uart` struct from the `nrf` HAL does implement
-`core::fmt::Write` so we can refactor our previous program into this:
+#tr((
+en: [
+  The `core::fmt::Write` trait allows us to use any struct that implements
+  it in basically the same way as we use `print!` in the `std` world. In
+  this case, the `Uart` struct from the `nrf` HAL does implement
+  `core::fmt::Write` so we can refactor our previous program into this:
+]))
 
 ```rs
 #![no_main]
@@ -145,6 +154,9 @@ fn main() -> ! {
 }
 ```
 
-If you were to flash this program onto your micro:bit, you'll see that
-it is functionally equivalent to the iterator-based program you came up
-with.
+#tr((
+en: [
+  If you were to flash this program onto your micro:bit, you'll see that
+  it is functionally equivalent to the iterator-based program you came up
+  with.
+]))

@@ -3,86 +3,107 @@
 #h1((en: [Rust Embedded terminology],
 ), offset: whole)
 
-Before we dive into programming the micro:bit let's have a quick look at
-the libraries and terminology that will be important for all the future
-chapters.
+#tr((
+en: [
+  Before we dive into programming the micro:bit let's have a quick look at
+  the libraries and terminology that will be important for all the future
+  chapters.
+]))
 
 = #tr((
   en: [Abstraction layers],
 ))
 
-For any fully supported microcontroller/board with a microcontroller you
-will usually hear the following terms being used for their levels of
-abstraction:
+#tr((
+en: [
+  For any fully supported microcontroller/board with a microcontroller you
+  will usually hear the following terms being used for their levels of
+  abstraction:
+]))
 
 == #tr((
   en: [Peripheral Access Crate (PAC)],
 ))
 
-The job of the PAC is to provide a safe (ish) direct interface to the
-peripherals of the chip, allowing you to configure every last bit
-however you want (of course also in wrong ways). Usually you only ever
-have to deal with the PAC if either the layers that are higher up don't
-fulfill your needs or when you are developing them. The PAC we are
-(implicitly) going to use is either the one for the
-#link("https://crates.io/crates/nrf52833-pac")[nRF52] or for the
-#link("https://crates.io/crates/nrf51-pac")[nRF51].
+#tr((
+en: [
+  The job of the PAC is to provide a safe (ish) direct interface to the
+  peripherals of the chip, allowing you to configure every last bit
+  however you want (of course also in wrong ways). Usually you only ever
+  have to deal with the PAC if either the layers that are higher up don't
+  fulfill your needs or when you are developing them. The PAC we are
+  (implicitly) going to use is either the one for the
+  #link("https://crates.io/crates/nrf52833-pac")[nRF52] or for the
+  #link("https://crates.io/crates/nrf51-pac")[nRF51].
+]))
 
 == #tr((
   en: [The Hardware Abstraction Layer (HAL)],
 ))
 
-The job of the HAL is to build up on top of the chip's PAC and provide
-an abstraction that is actually usable for someone who does not know
-about all the special behaviour of this chip. Usually they abstract
-whole peripherals away into single structs that can for example be used
-to send data around via the peripheral. We are going to use the
-#link("https://crates.io/crates/nrf52833-hal")[nRF52-hal] or the
-#link("https://crates.io/crates/nrf51-hal")[nRF51-hal] respectively.
+#tr((
+en: [
+  The job of the HAL is to build up on top of the chip's PAC and provide
+  an abstraction that is actually usable for someone who does not know
+  about all the special behaviour of this chip. Usually they abstract
+  whole peripherals away into single structs that can for example be used
+  to send data around via the peripheral. We are going to use the
+  #link("https://crates.io/crates/nrf52833-hal")[nRF52-hal] or the
+  #link("https://crates.io/crates/nrf51-hal")[nRF51-hal] respectively.
+]))
 
 == #tr((
   en: [The Board Support Crate (historically called Board Support Package, or BSP)],
 ))
 
-The job of the BSP is to abstract a whole board (such as the micro:bit)
-away at once. That means it has to provide abstractions to use both the
-microcontroller as well as the sensors, LEDs etc. that might be present
-on the board. Quite often (especially with custom-made boards) you will
-just be working with a HAL for the chip and build the drivers for the
-sensors either yourself or search for them on crates.io. Luckily for us
-though, the micro:bit does actually have a
-#link("https://crates.io/crates/microbit")[BSP] so we are going to use
-that on top of our HAL as well.
+#tr((
+en: [
+  The job of the BSP is to abstract a whole board (such as the micro:bit)
+  away at once. That means it has to provide abstractions to use both the
+  microcontroller as well as the sensors, LEDs etc. that might be present
+  on the board. Quite often (especially with custom-made boards) you will
+  just be working with a HAL for the chip and build the drivers for the
+  sensors either yourself or search for them on crates.io. Luckily for us
+  though, the micro:bit does actually have a
+  #link("https://crates.io/crates/microbit")[BSP] so we are going to use
+  that on top of our HAL as well.
+]))
 
 = #tr((
   en: [Unifying the layers],
 ))
 
-Next we are going to have a look at a very central piece of software in
-the Rust Embedded world:
-#link("https://crates.io/crates/embedded-hal")[`embedded-hal`]. As its
-name suggests it relates to the 2nd level of abstraction we got to know:
-the HALs. The idea behind
-#link("https://crates.io/crates/embedded-hal")[`embedded-hal`] is to
-provide a set of traits that describe behaviour which is usually shared
-across all implementations of a specific peripheral in all the HALs. For
-example one would always expect to have functions that are capable of
-turning the power on a pin either on or off. For example to switch an
-LED on and off on the board. This allows us to write a driver for, say a
-temperature sensor, that can be used on any chip for which an
-implementation of the
-#link("https://crates.io/crates/embedded-hal")[`embedded-hal`] traits
-exists, simply by writing the driver in such a way that it only relies
-on the #link("https://crates.io/crates/embedded-hal")[`embedded-hal`]
-traits. Drivers that are written in such a way are called platform
-agnostic and luckily for us most of the drivers on crates.io are
-actually platform agnostic.
+#tr((
+en: [
+  Next we are going to have a look at a very central piece of software in
+  the Rust Embedded world:
+  #link("https://crates.io/crates/embedded-hal")[`embedded-hal`]. As its
+  name suggests it relates to the 2nd level of abstraction we got to know:
+  the HALs. The idea behind
+  #link("https://crates.io/crates/embedded-hal")[`embedded-hal`] is to
+  provide a set of traits that describe behaviour which is usually shared
+  across all implementations of a specific peripheral in all the HALs. For
+  example one would always expect to have functions that are capable of
+  turning the power on a pin either on or off. For example to switch an
+  LED on and off on the board. This allows us to write a driver for, say a
+  temperature sensor, that can be used on any chip for which an
+  implementation of the
+  #link("https://crates.io/crates/embedded-hal")[`embedded-hal`] traits
+  exists, simply by writing the driver in such a way that it only relies
+  on the #link("https://crates.io/crates/embedded-hal")[`embedded-hal`]
+  traits. Drivers that are written in such a way are called platform
+  agnostic and luckily for us most of the drivers on crates.io are
+  actually platform agnostic.
+]))
 
 = #tr((
   en: [Further reading],
 ))
 
-If you want to learn more about these levels of abstraction, Franz
-Skarman, a.k.a. #link("https://github.com/TheZoq2/")[TheZoq2], held a
-talk about this topic during Oxidize 2020, called
-#link("https://www.youtube.com/watch?v=vLYit_HHPaY")[An Overview of the Embedded Rust Ecosystem].
+#tr((
+en: [
+  If you want to learn more about these levels of abstraction, Franz
+  Skarman, a.k.a. #link("https://github.com/TheZoq2/")[TheZoq2], held a
+  talk about this topic during Oxidize 2020, called
+  #link("https://www.youtube.com/watch?v=vLYit_HHPaY")[An Overview of the Embedded Rust Ecosystem].
+]))

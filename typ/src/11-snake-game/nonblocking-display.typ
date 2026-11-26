@@ -3,21 +3,30 @@
 #h1((en: [Using the non-blocking display],
 ), offset: whole)
 
-We now have a basic functioning snake game. But you might find that when
-the snake gets a bit longer, it can be difficult to tell the snake from
-the food, and to tell which direction the snake is heading, because all
-LEDs are the same brightness. Let's fix that.
+#tr((
+en: [
+  We now have a basic functioning snake game. But you might find that when
+  the snake gets a bit longer, it can be difficult to tell the snake from
+  the food, and to tell which direction the snake is heading, because all
+  LEDs are the same brightness. Let's fix that.
+]))
 
-The `microbit` library makes available two different interfaces to the
-LED matrix: a basic, blocking interface, which we have been using, and a
-non-blocking interface which allows you to customise the brightness of
-each LED. At the hardware level, each LED is either "on" or "off", but
-the `microbit::display::nonblocking` module simulates ten levels of
-brightness for each LED by rapidly switching the LED on and off.
+#tr((
+en: [
+  The `microbit` library makes available two different interfaces to the
+  LED matrix: a basic, blocking interface, which we have been using, and a
+  non-blocking interface which allows you to customise the brightness of
+  each LED. At the hardware level, each LED is either "on" or "off", but
+  the `microbit::display::nonblocking` module simulates ten levels of
+  brightness for each LED by rapidly switching the LED on and off.
+]))
 
-The code to interact with the non-blocking interface is pretty simple
-and will follow a similar structure to the code we used to interact with
-the buttons.
+#tr((
+en: [
+  The code to interact with the non-blocking interface is pretty simple
+  and will follow a similar structure to the code we used to interact with
+  the buttons.
+]))
 
 ```rust
 use core::cell::RefCell;
@@ -41,13 +50,19 @@ pub(crate) fn init_display(board_timer: TIMER1, board_display: DisplayPins) {
 }
 ```
 
-First, we initialise a `microbit::display::nonblocking::Display` struct
-representing the LED display, passing it the board's `TIMER1` and
-`DisplayPins` peripherals. Then we store the display in a Mutex.
-Finally, we unmask the `TIMER1` interrupt.
+#tr((
+en: [
+  First, we initialise a `microbit::display::nonblocking::Display` struct
+  representing the LED display, passing it the board's `TIMER1` and
+  `DisplayPins` peripherals. Then we store the display in a Mutex.
+  Finally, we unmask the `TIMER1` interrupt.
+]))
 
-We then define a couple of convenience functions which allow us to
-easily set (or unset) the image to be displayed.
+#tr((
+en: [
+  We then define a couple of convenience functions which allow us to
+  easily set (or unset) the image to be displayed.
+]))
 
 ```rust
 use tiny_led_matrix::Render;
@@ -73,25 +88,34 @@ pub(crate) fn clear_display() {
 }
 ```
 
-`display_image` takes an image and tells the display to show it. Like
-the `Display::show` method that it calls, this function takes a struct
-that implements the `tiny_led_matrix::Render` trait. That trait ensures
-that the struct contains the data and methods necessary for the
-`Display` to render it on the LED matrix. The two implementations of
-`Render` provided by the `microbit::display::nonblocking` module are
-`BitImage` and `GreyscaleImage`. In a `BitImage`, each "pixel" (or LED)
-is either illuminated or not (like when we used the blocking interface),
-whereas in a `GreyscaleImage` each "pixel" can have a different
-brightness.
+#tr((
+en: [
+  `display_image` takes an image and tells the display to show it. Like
+  the `Display::show` method that it calls, this function takes a struct
+  that implements the `tiny_led_matrix::Render` trait. That trait ensures
+  that the struct contains the data and methods necessary for the
+  `Display` to render it on the LED matrix. The two implementations of
+  `Render` provided by the `microbit::display::nonblocking` module are
+  `BitImage` and `GreyscaleImage`. In a `BitImage`, each "pixel" (or LED)
+  is either illuminated or not (like when we used the blocking interface),
+  whereas in a `GreyscaleImage` each "pixel" can have a different
+  brightness.
+]))
 
+#tr((
+en: [
 `clear_display` does exactly as the name suggests.
+]))
 
-Finally, we use the `interrupt` macro to define a handler for the
-`TIMER1` interrupt. This interrupt fires many times a second, and this
-is what allows the `Display` to rapidly cycle the different LEDs on and
-off to give the illusion of varying brightness levels. All our handler
-code does is call the `Display::handle_display_event` method, which
-handles this.
+#tr((
+en: [
+  Finally, we use the `interrupt` macro to define a handler for the
+  `TIMER1` interrupt. This interrupt fires many times a second, and this
+  is what allows the `Display` to rapidly cycle the different LEDs on and
+  off to give the illusion of varying brightness levels. All our handler
+  code does is call the `Display::handle_display_event` method, which
+  handles this.
+]))
 
 ```rust
 use microbit::pac::interrupt;
@@ -108,9 +132,12 @@ fn TIMER1() {
 }
 ```
 
-Now we just need to update our `main` function to call `init_display`
-and use the new functions we have defined to interact with our fancy new
-display.
+#tr((
+en: [
+  Now we just need to update our `main` function to call `init_display`
+  and use the new functions we have defined to interact with our fancy new
+  display.
+]))
 
 ```rust
 #![no_main]

@@ -3,24 +3,30 @@
 #h1((en: [Using a driver],
 ), offset: whole)
 
-As we already discussed in chapter 5 `embedded-hal` provides
-abstractions which can be used to write platform independent code that
-can interact with hardware. In fact all the methods we have used to
-interact with hardware in chapter 7 and up until now in chapter 8 were
-from traits, defined by `embedded-hal`. Now we'll make actual use of the
-traits `embedded-hal` provides for the first time.
+#tr((
+en: [
+  As we already discussed in chapter 5 `embedded-hal` provides
+  abstractions which can be used to write platform independent code that
+  can interact with hardware. In fact all the methods we have used to
+  interact with hardware in chapter 7 and up until now in chapter 8 were
+  from traits, defined by `embedded-hal`. Now we'll make actual use of the
+  traits `embedded-hal` provides for the first time.
+]))
 
-It would be pointless to implement a driver for our LSM303AGR for every
-platform embedded Rust supports (and new ones that might eventually pop
-up). To avoid this a driver can be written that consumes generic types
-that implement `embedded-hal` traits in order to provide a platform
-agnostic version of a driver. Luckily for us this has already been done
-in the #link("https://crates.io/crates/lsm303agr")[`lsm303agr`] crate.
-Hence reading the actual accelerometer and magnetometer values will now
-be basically a plug and play experience (plus reading a bit of
-documentation). In fact the `crates.io` page already provides us with
-everything we need to know in order to read accelerometer data but using
-a Raspberry Pi. We'll just have to adapt it to our chip:
+#tr((
+en: [
+  It would be pointless to implement a driver for our LSM303AGR for every
+  platform embedded Rust supports (and new ones that might eventually pop
+  up). To avoid this a driver can be written that consumes generic types
+  that implement `embedded-hal` traits in order to provide a platform
+  agnostic version of a driver. Luckily for us this has already been done
+  in the #link("https://crates.io/crates/lsm303agr")[`lsm303agr`] crate.
+  Hence reading the actual accelerometer and magnetometer values will now
+  be basically a plug and play experience (plus reading a bit of
+  documentation). In fact the `crates.io` page already provides us with
+  everything we need to know in order to read accelerometer data but using
+  a Raspberry Pi. We'll just have to adapt it to our chip:
+]))
 
 ```rust
 use linux_embedded_hal::I2cdev;
@@ -40,11 +46,14 @@ fn main() {
 }
 ```
 
+#tr((
+en: [
 Because we already know how to create an instance of an object that
 implements the
 #link("https://docs.rs/embedded-hal/0.2.6/embedded_hal/blocking/i2c/index.html")[`embedded_hal::blocking::i2c`]
 traits from the #link(<read-a-single-register>)[previous page], this
 is quite trivial:
+]))
 
 ```rust
 #![deny(unsafe_code)]
@@ -97,8 +106,11 @@ fn main() -> ! {
 }
 ```
 
-Just like the last snippet you should just be able to try this out like
-this:
+#tr((
+en: [
+  Just like the last snippet you should just be able to try this out like
+  this:
+]))
 
 ```console
 # For micro:bit v2
@@ -108,5 +120,8 @@ $ cargo embed --features v2 --target thumbv7em-none-eabihf
 $ cargo embed --features v1 --target thumbv6m-none-eabi
 ```
 
-Furthermore if you (physically) move around your micro:bit a little you
-should see the acceleration numbers that are being printed change.
+#tr((
+en: [
+  Furthermore if you (physically) move around your micro:bit a little you
+  should see the acceleration numbers that are being printed change.
+]))

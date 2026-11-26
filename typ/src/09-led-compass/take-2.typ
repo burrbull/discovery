@@ -3,17 +3,29 @@
 #h1((en: [Take 2],
 ), offset: whole)
 
-This time, we'll use math to get the precise angle that the magnetic
-field forms with the X and Y axes of the magnetometer.
+#tr((
+en: [
+  This time, we'll use math to get the precise angle that the magnetic
+  field forms with the X and Y axes of the magnetometer.
+]))
 
-We'll use the `atan2` function. This function returns an angle in the
-`-PI` to `PI` range. The graphic below shows how this angle is measured:
+#tr((
+en: [
+  We'll use the `atan2` function. This function returns an angle in the
+  `-PI` to `PI` range. The graphic below shows how this angle is measured:
+]))
 
-Although not explicitly shown in this graph the X axis points to the
-right and the Y axis points up.
+#tr((
+en: [
+  Although not explicitly shown in this graph the X axis points to the
+  right and the Y axis points up.
+]))
 
-Here's the starter code. `theta`, in radians, has already been computed.
-You need to pick which LED to turn on based on the value of `theta`.
+#tr((
+en: [
+  Here's the starter code. `theta`, in radians, has already been computed.
+  You need to pick which LED to turn on based on the value of `theta`.
+]))
 
 ```rs
 #![deny(unsafe_code)]
@@ -85,12 +97,14 @@ fn main() -> ! {
 }
 ```
 
-Suggestions/tips:
-
-- A whole circle rotation equals 360 degrees.
-- `PI` radians is equivalent to 180 degrees.
-- If `theta` was zero, which direction are you pointing at?
-- If `theta` was, instead, very close to zero, which direction are you
-  pointing at?
-- If `theta` kept increasing, at what value would you change the
-  direction
+#tr((
+en: [
+  Suggestions/tips:
+  - A whole circle rotation equals 360 degrees.
+  - `PI` radians is equivalent to 180 degrees.
+  - If `theta` was zero, which direction are you pointing at?
+  - If `theta` was, instead, very close to zero, which direction are you
+    pointing at?
+  - If `theta` kept increasing, at what value would you change the
+    direction
+]))

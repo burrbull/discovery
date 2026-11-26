@@ -3,15 +3,24 @@
 #h1((en: [My solution],
 ), offset: whole)
 
-What solution did you come up with?
+#tr((
+en: [
+  What solution did you come up with?
+]))
 
-Here's mine, it's probably one of the simplest (but of course not most
-beautiful) way to generate the required matrix:
+#tr((
+en: [
+  Here's mine, it's probably one of the simplest (but of course not most
+  beautiful) way to generate the required matrix:
+]))
 
 #insert-code(read("examples/my-solution.rs"))
 
-One more thing! Check that your solution also works when compiled in
-"release" mode:
+#tr((
+en: [
+  One more thing! Check that your solution also works when compiled in
+  "release" mode:
+]))
 
 ```console
 # For micro:bit v2
@@ -23,8 +32,11 @@ $ cargo embed --features v1 --target thumbv6m-none-eabi --release
   (...)
 ```
 
-If you want to debug your "release" mode binary you'll have to use a
-different GDB command:
+#tr((
+en: [
+  If you want to debug your "release" mode binary you'll have to use a
+  different GDB command:
+]))
 
 ```console
 # For micro:bit v2
@@ -34,9 +46,12 @@ $ gdb target/thumbv7em-none-eabihf/release/led-roulette
 $ gdb target/thumbv6m-none-eabi/release/led-roulette
 ```
 
-Binary size is something we should always keep an eye on! How big is
-your solution? You can check that using the `size` command on the
-release binary:
+#tr((
+en: [
+  Binary size is something we should always keep an eye on! How big is
+  your solution? You can check that using the `size` command on the
+  release binary:
+]))
 
 ```console
 # For micro:bit v2
@@ -140,17 +155,23 @@ Total              208617
 ```
 
 #quote(block: true)[
-*NOTE* The Cargo project is already configured to build the
-release binary using LTO.
+#tr((
+en: [
+  *NOTE* The Cargo project is already configured to build the
+  release binary using LTO.
+]))
 ]
 
-Know how to read this output? The `text` section contains the program
-instructions. On the other hand, the `data` and `bss` sections contain
-variables statically allocated in RAM (`static` variables). If you
-remember back in the specification of the microcontroller on your
-micro:bit, you should notice that its flash memory is actually far too
-small to contain this binary, so how is this possible? As we can see
-from the size statistics most of the binary is actually made up of
-debugging related sections, those are however not flashed to the
-microcontroller at any time, after all they aren't relevant for the
-execution.
+#tr((
+en: [
+  Know how to read this output? The `text` section contains the program
+  instructions. On the other hand, the `data` and `bss` sections contain
+  variables statically allocated in RAM (`static` variables). If you
+  remember back in the specification of the microcontroller on your
+  micro:bit, you should notice that its flash memory is actually far too
+  small to contain this binary, so how is this possible? As we can see
+  from the size statistics most of the binary is actually made up of
+  debugging related sections, those are however not flashed to the
+  microcontroller at any time, after all they aren't relevant for the
+  execution.
+]))
