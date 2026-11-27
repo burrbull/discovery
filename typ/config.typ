@@ -5,7 +5,7 @@
   "en": [English],
   //"de": [German],
   //"ja": [Japanese],
-  //"ru": [Russian],
+  "ru": [Russian],
   //"uk": [Ukrainian],
   //"zh": [Chinese]
 )
