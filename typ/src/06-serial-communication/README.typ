@@ -3,6 +3,17 @@
 #h1((en: [Serial communication]
 ))
 
+#if tgt == "html" {
+  import html
+  link("https://en.wikipedia.org/wiki/File:Serial_port.jpg",
+  html.img(
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Serial_port.jpg/960px-Serial_port.jpg",
+    height: 240,
+    alt: "Standard serial port connector DE-9"
+  ))
+}
+
+
 #tr((
 en: [
   This is what we'll be using. I hope your computer has one!

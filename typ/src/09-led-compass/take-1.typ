@@ -16,6 +16,11 @@ en: [
   horizontal position and thus the compass is in the XY plane.
 ]))
 
+#align(center, image(
+  "../assets/quadrants.png",
+  alt: "Quadrants"
+))
+
 #tr((
 en: [
   If we only looked at the signs of the X and Y components we could

@@ -116,6 +116,11 @@ en: [
   its baud rate to 115200. A text-based user interface (TUI) will pop out.
 ]))
 
+#align(center, image(
+  "../assets/minicom.png",
+  alt: "minicom"
+))
+
 #tr((
 en: [
   You can now send data using the keyboard! Go ahead and type something.

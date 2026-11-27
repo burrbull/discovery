@@ -12,6 +12,11 @@ en: [
   en: [micro:bit],
 ))
 
+#align(center, image(
+  "../assets/microbit-v2.jpg",
+  alt: "micro:bit"
+))
+
 #let wiki_microcontroller = "https://en.wikipedia.org/wiki/Microcontroller"
 #let wiki_magnetometer = "https://en.wikipedia.org/wiki/Magnetometer"
 #let wiki_accelerometer = "https://en.wikipedia.org/wiki/Accelerometer"

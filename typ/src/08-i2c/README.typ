@@ -41,6 +41,16 @@ en: [
   protocol.
 ]))
 
+#if tgt == "html" {
+  import html
+  html.img(
+    src: "https://upload.wikimedia.org/wikipedia/commons/0/04/I2C_controller-target.svg",
+    height: 360,
+    alt: "I2C bus",
+    class: "white_bg",
+  )
+}
+
 #tr((
 en: [
   This protocol uses a _controller target_ model where the

@@ -17,6 +17,20 @@ en: [
 #tr((
 en: [
   If the Controller wants to send data to the Target:
+]))
+
+#if tgt == "html" {
+  import html
+  html.img(
+    src: "https://upload.wikimedia.org/wikipedia/commons/0/04/I2C_controller-target.svg",
+    height: 360,
+    alt: "I2C bus",
+    class: "white_bg",
+  )
+}
+
+#tr((
+en: [
   + Controller: Broadcast START
   + C: Broadcast target address (7 bits) + the R/W (8th) bit set to WRITE
   + Target: Responds ACK (ACKnowledgement)
@@ -41,6 +55,20 @@ en: [
 #tr((
 en: [
   If the controller wants to read data from the target:
+]))
+
+#if tgt == "html" {
+  import html
+  html.img(
+    src: "https://upload.wikimedia.org/wikipedia/commons/0/04/I2C_controller-target.svg",
+    height: 360,
+    alt: "I2C bus",
+    class: "white_bg",
+  )
+}
+
+#tr((
+en: [
   + C: Broadcast START
   + C: Broadcast target address (7 bits) + the R/W (8th) bit set to READ
   + T: Responds with ACK

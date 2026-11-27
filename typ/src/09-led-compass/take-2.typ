@@ -15,6 +15,15 @@ en: [
   `-PI` to `PI` range. The graphic below shows how this angle is measured:
 ]))
 
+#if tgt == "html" {
+  import html
+  html.img(
+    src: "https://upload.wikimedia.org/wikipedia/commons/0/03/Atan2_60.svg",
+    alt: "atan2",
+    class: "white_bg",
+  )
+}
+
 #tr((
 en: [
   Although not explicitly shown in this graph the X axis points to the

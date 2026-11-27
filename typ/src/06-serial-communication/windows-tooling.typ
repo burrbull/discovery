@@ -39,6 +39,11 @@ en: [
   Now launch `putty`. A GUI will pop out.
 ]))
 
+#align(center, image(
+  "../assets/putty-settings.png",
+  alt: "PuTTY settings"
+))
+
 #tr((
 en: [
   On the starter screen, which should have the "Session" category open,
@@ -62,6 +67,11 @@ en: [
 en: [
   Finally, click the Open button. A console will show up now:
 ]))
+
+#align(center, image(
+  "../assets/putty-console.png",
+  alt: "PuTTY console"
+))
 
 #tr((
 en: [
